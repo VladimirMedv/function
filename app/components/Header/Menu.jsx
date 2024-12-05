@@ -14,11 +14,11 @@ const Menu = () => {
   return (
     <nav className='flex items-center justify-between'>
       {/* Основное меню */}
-      <ul className='hidden md:flex space-x-[20px] md:space-x-[40px]'>
+      <ul className='hidden md:flex space-x-[20px] md:space-x-[40px] font-light 2lg:text-[22px] md:text-sm text-text'>
         <li>
           <Link
             href='/projects'
-            className='2lg:text-[22px] md:text-sm text-text hover:underline hover:text-secondary transition-all font-normal'
+            className=' hover:underline hover:text-secondary transition-all'
           >
             Projects
           </Link>
@@ -26,7 +26,7 @@ const Menu = () => {
         <li>
           <Link
             href='/services'
-            className='2lg:text-[22px] md:text-sm text-text hover:underline hover:text-secondary transition-all font-normal'
+            className='hover:underline hover:text-secondary transition-all'
           >
             Services
           </Link>
@@ -34,7 +34,7 @@ const Menu = () => {
         <li>
           <Link
             href='/about'
-            className='2lg:text-[22px] md:text-sm text-text hover:underline hover:text-secondary transition-all font-normal'
+            className='hover:underline hover:text-secondary transition-all'
           >
             About
           </Link>
@@ -42,7 +42,7 @@ const Menu = () => {
         <li>
           <Link
             href='/contacts'
-            className='2lg:text-[22px] md:text-sm text-text hover:underline hover:text-secondary transition-all font-normal'
+            className='hover:underline hover:text-secondary transition-all'
           >
             Contact Us
           </Link>

@@ -17,7 +17,7 @@ const GetPriceButton = () => {
       {/* Кнопка "Get Price", видна только на экранах больше 480px */}
       <button
         onClick={toggleModal}
-        className='hidden md:inline-block bg-white text-black font-normal rounded-full 2lg:px-[30px] 2lg:py-[10px]  md:px-5 md:py-2 leading-[34px] 2lg:text-[22px] md:text-[14px] transition-all hover:bg-black hover:text-white cursor-pointer'
+        className='hidden md:inline-block bg-white text-black font-normal rounded-full 2lg:px-[30px] 2lg:py-[10px]  md:px-5 md:py-2 leading-[34px] 2lg:text-[22px] md:text-[14px] transition-all hover:bg-secondary hover:text-white cursor-pointer duration-300 ease-in-out'
         aria-label='Get Price'
       >
         Get Price
@@ -32,7 +32,7 @@ const GetPriceButton = () => {
               <LogoB />
               <button
                 onClick={toggleModal}
-                className='bg-black text-white font-normal rounded-full 2lg:px-[30px] 2lg:py-[10px]  md:px-5 md:py-2 leading-[34px] 2lg:text-[22px] md:text-[14px] transition-all hover:bg-gray-800'
+                className='bg-black text-white font-normal rounded-full 2lg:px-[30px] 2lg:py-[10px]  md:px-5 md:py-2 leading-[34px] 2lg:text-[22px] md:text-[14px] transition-all hover:bg-secondary duration-300 ease-in-out'
                 aria-label='Close modal'
               >
                 Close

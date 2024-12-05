@@ -1,8 +1,36 @@
-export default function ProjectItem({ title }) {
+import Link from 'next/link'
+import Image from 'next/image'
+//TODO adaptive image
+export default function ProjectItem({ id, mainImage, title, works }) {
   return (
-    <div className='bg-footer p-4 rounded-lg hover:bg-secondary transition'>
-      <h3 className='text-lg font-bold'>{title}</h3>
-      <p>Project description goes here...</p>
-    </div>
+    <article className='relative group w-full overflow-hidden rounded-[20px] 2lg:h-full max-md:w-[728px] sm:h-[416px] max-sm:max-h-[340px] max-sm:max-w-[440px]'>
+      {/* Ссылка на страницу проекта */}
+      <Link
+        href={`/projects/${id}`}
+        className='block'
+      >
+        {/* Изображение на всю ширину экрана */}
+        <Image
+          src={mainImage}
+          alt={`${title} main image`}
+          width={1920} // Задаем реальную ширину для Next.js Image
+          height={1080} // Задаем пропорциональную высоту
+          className='w-full h-full object-cover group-hover:scale-105 transition-all duration-300 ease-in-out max-md:w-[728px]  md:h-[416px] max-sm:h-[340px] max-sm:w-[440px]'
+          priority={true} // SEO: Высокий приоритет загрузки
+        />
+        {/* Текст в левом нижнем углу */}
+        <div className='absolute bottom-10 left-10 hidden group-hover:block'>
+          <h2
+            className='text-white 2lg:text-[50px] text-3xl  2lg:leading-[62px] leading-9'
+            style={{ whiteSpace: 'pre-line' }}
+          >
+            {title}
+          </h2>
+          <p className='text-white 2lg:text-[26px] text-base font-light 2lg:leading-8 leading-5'>
+            {works.join(', ')}
+          </p>
+        </div>
+      </Link>
+    </article>
   )
 }

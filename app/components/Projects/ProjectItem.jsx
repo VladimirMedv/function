@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
-//TODO adaptive image
+
 export default function ProjectItem({ id, mainImage, title, works }) {
   return (
-    <article className='relative group w-full overflow-hidden rounded-[20px] 2lg:h-full max-md:w-[728px] sm:h-[416px] max-sm:max-h-[340px] max-sm:max-w-[440px]'>
+    <article className='relative group w-full overflow-hidden rounded-[20px] 2lg:h-[704px] max-md:w-[728px] sm:h-[416px] max-sm:h-[340px]'>
       {/* Ссылка на страницу проекта */}
       <Link
         href={`/projects/${id}`}
@@ -15,7 +15,7 @@ export default function ProjectItem({ id, mainImage, title, works }) {
           alt={`${title} main image`}
           width={1920} // Задаем реальную ширину для Next.js Image
           height={1080} // Задаем пропорциональную высоту
-          className='w-full h-full object-cover group-hover:scale-105 transition-all duration-300 ease-in-out max-md:w-[728px]  md:h-[416px] max-sm:h-[340px] max-sm:w-[440px]'
+          className='w-full h-full object-cover group-hover:scale-105 transition-all duration-300 ease-in-out 2lg:h-[704px] max-md:w-[728px]  sm:h-[416px] max-sm:h-[340px]'
           priority={true} // SEO: Высокий приоритет загрузки
         />
         {/* Текст в левом нижнем углу */}

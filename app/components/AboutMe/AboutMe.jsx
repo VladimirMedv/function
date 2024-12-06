@@ -3,11 +3,12 @@ import SocialLinks from './SocialLinks'
 
 export default function AboutMe() {
   return (
-    <section className='bg-primary text-text py-16 flex items-center'>
+    <section className='bg-primary text-text py-16 flex 2lg:px-56 md:px-36 px-5'>
       <Avatar />
-      <div className='ml-8'>
-        <h2 className='text-4xl font-bold mb-4'>About Me</h2>
-        <p>Short bio about yourself goes here...</p>
+      <div className='2lg:ml-36 2lg:text-[40px] md:ml-[5.813rem] ml-5 text-[25px] leading-[50px] 2lg:w-[874px] md:w-[550px] sm:w-[429px] max-sm:w-[325]'>
+        Fëdor Beltugov — Founder and owner of Function Design Studio.
+        Multidisciplinary designer & art director, focused on brand identity &
+        UI/UX design. Work experience: 17 years
         <SocialLinks />
       </div>
     </section>

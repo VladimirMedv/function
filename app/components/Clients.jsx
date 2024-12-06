@@ -19,77 +19,80 @@ const Clients = () => {
     '/images/clients/logo12.svg',
   ]
 
-  // Состояние для отслеживания видимых строк
-  const [visibleRows, setVisibleRows] = useState([])
-  const rowRefs = useRef([])
+  const [isVisible, setIsVisible] = useState(false)
+  const containerRef = useRef(null)
 
+  // Наблюдаем за появлением компонента в области видимости
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setVisibleRows((prev) => [...new Set([...prev, index])])
-          }
-        })
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true)
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     )
 
-    rowRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref)
-    })
+    if (containerRef.current) {
+      observer.observe(containerRef.current)
+    }
 
     return () => {
-      rowRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref)
-      })
+      if (containerRef.current) observer.unobserve(containerRef.current)
     }
   }, [])
 
-  // Разделение логотипов на строки
-  const rows = []
-  for (let i = 0; i < logos.length; i += 6) {
-    rows.push(logos.slice(i, i + 6)) // По 6 логотипов в строке
-  }
-
   return (
-    <div className='w-full flex flex-col items-center'>
-      <h2 className='text-3xl 2lg:text-5xl font-normal mb-8'>Clients</h2>
-      <div className='space-y-8'>
-        {' '}
-        {/* Контейнер для строк с отступами */}
-        {rows.map((row, rowIndex) => (
-          <div
-            key={rowIndex}
-            ref={(el) => (rowRefs.current[rowIndex] = el)}
-            className={`grid grid-cols-2 gap-4 max-3xl:grid-cols-6 max-md:grid-cols-5 transition-opacity duration-500 ${
-              visibleRows.includes(rowIndex) ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            {row.map((logo, index) => (
-              <div
-                key={index}
-                className='flex items-center justify-center'
-              >
-                <Image
-                  src={logo}
-                  alt={`Client logo ${index + 1}`}
-                  width={234.81}
-                  height={119.94}
-                  className='
-                    w-[165px] h-[84.28px]
-                    max-md:w-[139px] max-md:h-[71px]
-                    max-2lg:w-[142.5px] max-2lg:h-[72.79px]
-                    2lg:w-[234.81px] 2lg:h-[119.94px]
-                  '
-                  priority
-                />
-              </div>
+    <section className='bg-primary text-text py-16 flex items-center justify-center 2lg:px-56 md:px-36 px-5'>
+      <div
+        ref={containerRef}
+        // className='w-full flex flex-col items-start mx-auto overflow-hidden'
+        className='lg:w-[1468px] max-2lg:w-[890px] max-md:w-[728px] max-sm:w-[440px] mx-auto overflow-hidden'
+      >
+        <h2 className='text-3xl 2lg:text-5xl font-normal mb-8'>Clients</h2>
+
+        {/* Контейнер для строк */}
+        <div
+          className={`relative w-full h-[150px] 2lg:h-[250px] ${
+            isVisible ? 'opacity-100' : 'opacity-0'
+          } transition-opacity duration-1000`}
+        >
+          {/* Верхний ряд */}
+          <div className='absolute top-0 w-full flex items-center space-x-4 animate-scroll-left'>
+            {[...logos, ...logos].map((logo, index) => (
+              <Image
+                key={`top-${index}`}
+                src={logo}
+                alt={`Client logo ${index + 1}`}
+                width={234.81}
+                height={119.94}
+                className='w-[165px] h-[84.28px] 
+                max-md:w-[139px] max-md:h-[71px] 
+                max-2lg:w-[142.5px] max-2lg:h-[72.79px] 
+                2lg:w-[234.81px] 2lg:h-[119.94px]'
+                priority
+              />
             ))}
           </div>
-        ))}
+
+          {/* Нижний ряд */}
+          <div className='absolute bottom-0 w-full flex items-center justify-end space-x-4 animate-scroll-right'>
+            {[...logos, ...logos].map((logo, index) => (
+              <Image
+                key={`bottom-${index}`}
+                src={logo}
+                alt={`Client logo ${index + 1}`}
+                width={234.81}
+                height={119.94}
+                className='w-[165px] h-[84.28px] 
+                max-md:w-[139px] max-md:h-[71px] 
+                max-2lg:w-[142.5px] max-2lg:h-[72.79px] 
+                2lg:w-[234.81px] 2lg:h-[119.94px]'
+                priority
+              />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

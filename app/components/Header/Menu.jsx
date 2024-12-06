@@ -2,7 +2,16 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { HiMenu, HiX } from 'react-icons/hi'
+import { HiMenu } from 'react-icons/hi'
+import LogoB from './LogoB' // Компонент логотипа
+import Contacts from '../Footer/Contacts.jsx' // Корректный путь к Footer/Contacts
+
+const menuItems = [
+  { href: '/projects', label: 'Projects' },
+  { href: '/services', label: 'Services' },
+  { href: '/about', label: 'About' },
+  { href: '/contacts', label: 'Contact Us' },
+]
 
 const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -11,93 +20,71 @@ const Menu = () => {
     setIsMenuOpen((prev) => !prev)
   }
 
+  const renderMenuItems = (onClick) =>
+    menuItems.map(({ href, label }) => (
+      <li key={href}>
+        <Link
+          href={href}
+          className={`hover:underline hover:text-secondary transition-all  ${
+            isMenuOpen ? 'text-black' : 'text-text'
+          }`}
+          onClick={onClick}
+        >
+          {label}
+        </Link>
+      </li>
+    ))
+
   return (
     <nav className='flex items-center justify-between'>
       {/* Основное меню */}
-      <ul className='hidden md:flex space-x-[20px] md:space-x-[40px] font-light 2lg:text-[22px] md:text-sm text-text'>
-        <li>
-          <Link
-            href='/projects'
-            className=' hover:underline hover:text-secondary transition-all'
-          >
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link
-            href='/services'
-            className='hover:underline hover:text-secondary transition-all'
-          >
-            Services
-          </Link>
-        </li>
-        <li>
-          <Link
-            href='/about'
-            className='hover:underline hover:text-secondary transition-all'
-          >
-            About
-          </Link>
-        </li>
-        <li>
-          <Link
-            href='/contacts'
-            className='hover:underline hover:text-secondary transition-all'
-          >
-            Contact Us
-          </Link>
-        </li>
+      <ul className='hidden md:flex space-x-[20px] md:space-x-[40px] font-light 2lg:text-[22px] md:text-sm    '>
+        {renderMenuItems()}
       </ul>
 
       {/* Бургер-меню */}
       <button
-        className='md:hidden text-text focus:outline-none font-normal 2lg:text-[1.375rem] md:text-sm'
+        className={`md:hidden focus:outline-none font-normal 2lg:text-[1.375rem] md:text-sm transition-transform transform ${
+          isMenuOpen ? 'rotate-90' : ''
+        }`}
         onClick={toggleMenu}
         aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
       >
-        {isMenuOpen ? <HiX size={30} /> : <HiMenu size={30} />}
+        <HiMenu
+          size={30}
+          className='text-text'
+        />
       </button>
 
       {/* Выпадающее меню для мобильных */}
       {isMenuOpen && (
-        <ul className='absolute top-16 left-0 w-full bg-primary shadow-lg p-6 flex flex-col space-y-4'>
-          <li>
-            <Link
-              href='/projects'
-              className='text-lg text-text hover:underline hover:text-secondary transition-all'
-              onClick={toggleMenu}
+        <div
+          className={`absolute top-0 left-0 w-full h-full bg-white z-50 flex flex-col overflow-hidden transform transition-transform duration-300 ease-in-out ${
+            isMenuOpen
+              ? 'translate-y-0 opacity-100'
+              : '-translate-y-full opacity-0'
+          }`}
+        >
+          <div
+            className='flex items-center justify-between p-5'
+            onClick={toggleMenu}
+          >
+            <LogoB />
+            <button
+              className='text-black font-normal transition-transform transform rotate-90'
+              aria-label='Close menu'
             >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              href='/services'
-              className='text-lg text-text hover:underline hover:text-secondary transition-all'
-              onClick={toggleMenu}
-            >
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link
-              href='/about'
-              className='text-lg text-text hover:underline hover:text-secondary transition-all'
-              onClick={toggleMenu}
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              href='/about'
-              className='text-lg text-text hover:underline hover:text-secondary transition-all'
-              onClick={toggleMenu}
-            >
-              Contact Us
-            </Link>
-          </li>
-        </ul>
+              <HiMenu size={30} />
+            </button>
+          </div>
+          <ul className='flex flex-col items-start mt-3 space-y-4 p-5 font-medium text-[33px] leading-10 gap-2'>
+            {renderMenuItems(toggleMenu)}
+          </ul>
+          {/* Компонент Footer/Contacts */}
+          <div className='mt-[160px] p-5 text-dark-gray'>
+            <Contacts />
+          </div>
+        </div>
       )}
     </nav>
   )

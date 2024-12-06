@@ -13,6 +13,7 @@ module.exports = {
         primary: '#292929', // Основной фон
         secondary: '#fd3d18', // Заголовки
         text: '#ffffff', // Основной текст
+        'dark-gray': '#1C1F22',
         footer: '#181818', // Фон футера
       },
       fontFamily: {
@@ -26,14 +27,19 @@ module.exports = {
         'max-2lg': { max: '1200px' },
         'max-3xl': { max: '1920px' },
       },
-      keyframes: {
-        fadeInUp: {
-          '0%': { opacity: 0, transform: 'translateY(20px)' },
-          '100%': { opacity: 1, transform: 'translateY(0)' },
-        },
-      },
       animation: {
-        fadeInUp: 'fadeInUp 0.5s ease-out',
+        'scroll-left': 'scroll-left 30s linear infinite',
+        'scroll-right': 'scroll-right 30s linear infinite',
+      },
+      keyframes: {
+        'scroll-left': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        'scroll-right': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
       },
     },
   },

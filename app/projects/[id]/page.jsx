@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
     (typeof window !== 'undefined' ? window.location.origin : '')
 
   return {
-    title: `${title} - My Projects`,
+    title: `${title} - Projects`,
     description: `Explore the details of ${title}. Check out the services, gallery, and video of this project.`,
     keywords: `${title}, projects, portfolio, web development`,
     openGraph: {

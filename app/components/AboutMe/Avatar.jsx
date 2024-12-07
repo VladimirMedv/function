@@ -12,7 +12,8 @@ export default function Avatar() {
         sm:w-[8.063rem] sm:h-[8.063rem] 
         md:w-[8.438rem] md:h-[8.438rem] 
         2lg:w-[13.75rem] 2lg:h-[13.75rem]
-        rounded-full grayscale transition-all duration-300 hover:grayscale-0'
+        rounded-full grayscale transition-all duration-300 hover:grayscale-0
+        -mt-20'
     />
   )
 }

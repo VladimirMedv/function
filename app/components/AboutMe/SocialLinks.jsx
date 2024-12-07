@@ -4,17 +4,17 @@ import { RiWhatsappFill, RiLinkedinFill } from 'react-icons/ri'
 
 const socialLinks = [
   {
-    href: 'https://wa.me/your-number',
+    href: 'https://wa.me/79264266855',
     ariaLabel: 'WhatsApp',
     icon: RiWhatsappFill,
   },
   {
-    href: 'https://t.me/your-username',
+    href: 'https://t.me/Fedor_Beltugov',
     ariaLabel: 'Telegram',
     icon: FaTelegramPlane,
   },
   {
-    href: 'https://linkedin.com/in/your-profile',
+    href: 'https://www.linkedin.com/in/fedor-beltugov-a6896a37/',
     ariaLabel: 'LinkedIn',
     icon: RiLinkedinFill,
   },

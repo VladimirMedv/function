@@ -106,15 +106,6 @@ body {
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #727272; /* Цвет для заголовков */
-}
-
 footer {
   background-color: #181818; /* Фон футера */
   color: #ffffff; /* Цвет текста футера */

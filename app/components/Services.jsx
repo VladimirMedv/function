@@ -35,7 +35,9 @@ export default function Services() {
           className='flex items-center text-3xl 2lg:text-5xl flex-wrap'
           style={{ wordBreak: 'keep-all', wordWrap: 'break-word' }} // Сохраняем целостность слов и предложений
         >
-          <h2 className='font-normal inline-block mr-2'>Services</h2>
+          <h2 className='font-normal inline-block mr-2 text-gray-title'>
+            Services
+          </h2>
           {/* Список сервисов с переходом на страницы */}
           {[
             {

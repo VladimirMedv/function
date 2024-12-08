@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function ProjectItem({ id, mainImage, title, works }) {
   return (
-    <article className='relative group w-full overflow-hidden rounded-[20px] 2lg:h-[704px] max-md:w-[728px] sm:h-[416px] max-sm:h-[340px]'>
+    <article className='relative group w-full overflow-hidden 2lg:rounded-[20px] sm:rounded-[10px] max-sm:rounded-[6.51px] 2lg:h-[704px] max-md:w-[728px] sm:h-[416px] max-sm:h-[340px]'>
       {/* Ссылка на страницу проекта */}
       <Link
         href={`/projects/${id}`}

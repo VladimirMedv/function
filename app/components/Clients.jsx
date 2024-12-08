@@ -47,7 +47,9 @@ const Clients = () => {
         // className='w-full flex flex-col items-start mx-auto overflow-hidden'
         className='lg:w-[1468px] max-2lg:w-[890px] max-md:w-[728px] max-sm:w-[440px] mx-auto overflow-hidden'
       >
-        <h2 className='text-3xl 2lg:text-5xl font-normal mb-8'>Clients</h2>
+        <h2 className='text-3xl 2lg:text-5xl font-normal mb-8 text-gray-title'>
+          Clients
+        </h2>
 
         {/* Контейнер для строк */}
         <div

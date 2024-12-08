@@ -14,6 +14,7 @@ module.exports = {
         secondary: '#fd3d18', // Заголовки
         text: '#ffffff', // Основной текст
         'dark-gray': '#1C1F22',
+        'gray-title': '#727272', // Для заголовков
         footer: '#181818', // Фон футера
         'light-gray': '#B6BAAF', // Текст в форме в футере
         'light-gray-2': '#D9D9D9', // Бордер в форме в футере

@@ -97,7 +97,7 @@ const Menu = () => {
             {renderMenuItems(toggleMenu)}
           </ul>
           {/* Компонент Footer/Contacts */}
-          <div className='mt-[120px] mb-[40px] p-5 text-dark-gray'>
+          <div className='absolute w-full flex flex-col items-center justify-center bottom-0 mb-[40px] p-5 text-dark-gray'>
             <Contacts />
             <DiscoverLink />
           </div>

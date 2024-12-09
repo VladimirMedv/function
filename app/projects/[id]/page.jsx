@@ -4,7 +4,7 @@ import projects from '../../data/projects'
 
 // Генерация метаданных для SEO
 export async function generateMetadata({ params }) {
-  const { id } = params
+  const { id } = await params
 
   // Ищем проект по id
   const project = projects.find((proj) => proj.id === id)
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ProjectPage({ params }) {
-  const { id } = params
+  const { id } = await params
 
   // Ищем проект по id
   const project = projects.find((proj) => proj.id === id)

@@ -11,7 +11,7 @@ export default function Projects() {
     <section className='bg-primary text-text py-16'>
       <div className=' 2lg:px-10 px-5'>
         {/* Список проектов в столбик */}
-        <div className='flex flex-col gap-12'>
+        <div className='flex flex-col 2lg:gap-10 gap-5'>
           {projects
             .filter((project) => project.showOnMainPage) // Отображаем только проекты с `showOnMainPage: true`
             .map((project) => (

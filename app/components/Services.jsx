@@ -32,7 +32,7 @@ export default function Services() {
     <section className='bg-primary text-text py-16 flex items-center justify-center 2lg:px-56 md:px-36 px-[20px]'>
       <div className='2lg:w-[1468px] max-2lg:w-[890px] max-md:w-[728px] max-sm:w-[440px] mx-auto'>
         <div
-          className='flex items-center text-3xl 2lg:text-5xl flex-wrap'
+          className='flex items-center text-3xl 2lg:text-5xl flex-wrap 2lg:leading-[4.063rem] leading-[2.375rem]'
           style={{ wordBreak: 'keep-all', wordWrap: 'break-word' }} // Сохраняем целостность слов и предложений
         >
           <h2 className='font-normal inline-block mr-2 text-gray-title'>

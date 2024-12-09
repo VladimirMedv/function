@@ -62,7 +62,7 @@ export default function ContactForm() {
 
   return (
     <div className='flex flex-row 2lg:px-56 md:px-36 mb-14'>
-      <div className='flex-1 max-sm:flex-none 2lg:text-[3.125rem] text-3xl text-left'>
+      <div className='flex-1 max-sm:flex-none 2lg:text-[3.125rem] text-3xl text-left 2lg:leading-[4.063rem] leading-[2.375rem]'>
         Order
         <br />a service
       </div>
@@ -139,7 +139,7 @@ export default function ContactForm() {
           {isSubmitting ? 'Sending...' : 'Send'}
         </button>
 
-        <p className='text-gray-400 text-sm text-start mt-4'>
+        <p className='text-gray-400 2lg:text-sm text-[0.563rem] text-start mt-4'>
           By clicking on the "Send" button,
           <br />I consent to the processing of personal data
         </p>

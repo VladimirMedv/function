@@ -66,84 +66,90 @@ export default function ContactForm() {
         Order
         <br />a service
       </div>
-      <form
-        onSubmit={handleSubmit}
-        className=' max-sm:pl-11 max-sm:pr-0 max-sm:pt-0 bg-footer text-light-gray space-y-4 flex flex-col gap-5 flex-1 w-500px'
-      >
-        <div className='max-w-[31.25rem]'>
-          <label
-            htmlFor='name'
-            className='sr-only'
+      <div className='max-w-500px flex-1'>
+        <div className='flex justify-center'>
+          <form
+            onSubmit={handleSubmit}
+            className='max-sm:pl-11 max-sm:pr-0 max-sm:pt-0 bg-footer text-light-gray flex flex-col gap-5'
           >
-            Your name
-          </label>
-          <input
-            type='text'
-            id='name'
-            name='name'
-            value={formData.name}
-            onChange={handleInputChange}
-            placeholder='Your name'
-            className='w-full border-b border-light-gray-2 bg-footer text-light-gray focus:outline-none focus:border-red-500 py-2 px-5'
-          />
-          {errors.name && <p className='text-red-500 text-sm'>{errors.name}</p>}
+            <div>
+              <label
+                htmlFor='name'
+                className='sr-only'
+              >
+                Your name
+              </label>
+              <input
+                type='text'
+                id='name'
+                name='name'
+                value={formData.name}
+                onChange={handleInputChange}
+                placeholder='Your name'
+                className='w-full border-b border-light-gray-2 bg-footer text-light-gray focus:outline-none focus:border-red-500 py-2 px-5'
+              />
+              {errors.name && (
+                <p className='text-red-500 text-sm'>{errors.name}</p>
+              )}
+            </div>
+
+            <div>
+              <label
+                htmlFor='phone'
+                className='sr-only'
+              >
+                Phone
+              </label>
+              <input
+                type='text'
+                id='phone'
+                name='phone'
+                value={formData.phone}
+                onChange={handleInputChange}
+                placeholder='Phone'
+                className='w-full border-b border-light-gray-2 bg-footer text-light-gray focus:outline-none focus:border-red-500 py-2 px-5'
+              />
+              {errors.phone && (
+                <p className='text-red-500 text-sm'>{errors.phone}</p>
+              )}
+            </div>
+
+            <div>
+              <label
+                htmlFor='email'
+                className='sr-only'
+              >
+                Email
+              </label>
+              <input
+                type='email'
+                id='email'
+                name='email'
+                value={formData.email}
+                onChange={handleInputChange}
+                placeholder='Email'
+                className='w-full border-b border-light-gray-2 bg-footer text-light-gray focus:outline-none focus:border-red-500 py-2 px-5'
+              />
+              {errors.email && (
+                <p className='text-red-500 text-sm'>{errors.email}</p>
+              )}
+            </div>
+
+            <button
+              type='submit'
+              className=' bg-text hover:bg-secondary text-black font-medium py-[10px] px-[30px] rounded-full w-fit'
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Sending...' : 'Send'}
+            </button>
+
+            <p className='text-light-gray 2lg:text-sm text-[0.563rem] text-start mt-4'>
+              By clicking on the "Send" button,
+              <br />I consent to the processing of personal data
+            </p>
+          </form>
         </div>
-
-        <div className='max-w-[31.25rem]'>
-          <label
-            htmlFor='phone'
-            className='sr-only'
-          >
-            Phone
-          </label>
-          <input
-            type='text'
-            id='phone'
-            name='phone'
-            value={formData.phone}
-            onChange={handleInputChange}
-            placeholder='Phone'
-            className='w-full border-b border-light-gray-2 bg-footer text-light-gray focus:outline-none focus:border-red-500 py-2 px-5'
-          />
-          {errors.phone && (
-            <p className='text-red-500 text-sm'>{errors.phone}</p>
-          )}
-        </div>
-
-        <div className='max-w-[31.25rem]'>
-          <label
-            htmlFor='email'
-            className='sr-only'
-          >
-            Email
-          </label>
-          <input
-            type='email'
-            id='email'
-            name='email'
-            value={formData.email}
-            onChange={handleInputChange}
-            placeholder='Email'
-            className='w-full border-b border-light-gray-2 bg-footer text-light-gray focus:outline-none focus:border-red-500 py-2 px-5'
-          />
-          {errors.email && (
-            <p className='text-red-500 text-sm'>{errors.email}</p>
-          )}
-        </div>
-
-        <button
-          type='submit'
-          className=' bg-text hover:bg-secondary text-black font-medium py-[10px] px-[30px] rounded-full w-fit'
-          disabled={isSubmitting}
-        >
-          {isSubmitting ? 'Sending...' : 'Send'}
-        </button>
-
-        <p className='text-gray-400 2lg:text-sm text-[0.563rem] text-start mt-4'>
-          By clicking on the "Send" button,
-          <br />I consent to the processing of personal data
-        </p>
-      </form>
+      </div>
     </div>
   )
 }

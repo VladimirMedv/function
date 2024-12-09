@@ -63,9 +63,9 @@ const projects = [
     },
   },
   {
-    id: 'project-2',
+    id: 'Test',
     showOnMainPage: false,
-    mainImage: '/images/projects/project-2/main.jpg',
+    mainImage: '/images/projects/test.jpg',
     title: 'Project 2',
     works: ['Logo', 'Brand Identity', 'Brand Guideline', 'AD Key-Visual'],
     projectPage: {

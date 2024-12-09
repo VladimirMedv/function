@@ -1,7 +1,11 @@
-import React from 'react'
+import ProjectsPage from '../components/Projects/ProjectsPage'
 
 function Projects() {
-  return <div>Projects</div>
+  return (
+    <div>
+      <ProjectsPage />
+    </div>
+  )
 }
 
 export default Projects

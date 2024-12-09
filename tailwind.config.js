@@ -18,6 +18,7 @@ module.exports = {
         footer: '#181818', // Фон футера
         'light-gray': '#B6BAAF', // Текст в форме в футере
         'light-gray-2': '#D9D9D9', // Бордер в форме в футере
+        'gray-cop': '#5B5B5B',
       },
       fontFamily: {
         sans: ['"Cera Pro"', 'sans-serif'], // Подключаем Cera Pro

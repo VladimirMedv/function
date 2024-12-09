@@ -10,18 +10,18 @@ module.exports = {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
-        primary: '#292929', // Основной фон
-        secondary: '#fd3d18', // Заголовки
-        text: '#ffffff', // Основной текст
+        primary: '#292929',
+        secondary: '#fd3d18',
+        text: '#ffffff',
         'dark-gray': '#1C1F22',
-        'gray-title': '#727272', // Для заголовков
-        footer: '#181818', // Фон футера
-        'light-gray': '#B6BAAF', // Текст в форме в футере
-        'light-gray-2': '#D9D9D9', // Бордер в форме в футере
+        'gray-title': '#727272',
+        footer: '#181818',
+        'light-gray': '#B6BAAF',
+        'light-gray-2': '#D9D9D9',
         'gray-cop': '#5B5B5B',
       },
       fontFamily: {
-        sans: ['"Cera Pro"', 'sans-serif'], // Подключаем Cera Pro
+        sans: ['"Cera Pro"', 'sans-serif'],
       },
       screens: {
         sm: '480px',
@@ -34,6 +34,8 @@ module.exports = {
       animation: {
         'scroll-left': 'scroll-left 30s linear infinite',
         'scroll-right': 'scroll-right 30s linear infinite',
+        fadeIn: 'fadeIn 1s ease-out forwards', // Плавное появление
+        fadeInDelay: 'fadeInDelay 1.5s ease-out forwards', // Плавное появление с задержкой
       },
       keyframes: {
         'scroll-left': {
@@ -43,6 +45,14 @@ module.exports = {
         'scroll-right': {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(100%)' },
+        },
+        fadeIn: {
+          '0%': { opacity: 0, transform: 'translateY(20px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+        fadeInDelay: {
+          '0%': { opacity: 0, transform: 'translateY(20px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
         },
       },
     },

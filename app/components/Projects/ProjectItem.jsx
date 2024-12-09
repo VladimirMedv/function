@@ -19,7 +19,7 @@ export default function ProjectItem({ id, mainImage, title, works }) {
           priority={true} // SEO: Высокий приоритет загрузки
         />
         {/* Текст в левом нижнем углу */}
-        <div className='absolute bottom-10 left-10 hidden group-hover:block'>
+        <div className='absolute bottom-10 left-10 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-in-out'>
           <h2
             className='text-white 2lg:text-[50px] text-3xl  2lg:leading-[62px] leading-9'
             style={{ whiteSpace: 'pre-line' }}

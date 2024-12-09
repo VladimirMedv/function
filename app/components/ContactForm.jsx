@@ -67,7 +67,7 @@ export default function ContactForm() {
         <br />a service
       </div>
       <div className='max-w-500px flex-1'>
-        <div className='flex justify-center'>
+        <div className='flex justify-start'>
           <form
             onSubmit={handleSubmit}
             className='max-sm:pl-11 max-sm:pr-0 max-sm:pt-0 bg-footer text-light-gray flex flex-col gap-5'

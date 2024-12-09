@@ -1,10 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { HiMenu } from 'react-icons/hi'
 import LogoB from './LogoB' // Компонент логотипа
 import Contacts from '../Footer/Contacts.jsx' // Корректный путь к Footer/Contacts
+import DiscoverLink from '../Footer/DiscoverLink'
 
 const menuItems = [
   { href: '/projects', label: 'Projects' },
@@ -19,6 +20,21 @@ const Menu = () => {
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev)
   }
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      // Отключить прокрутку при открытии меню
+      document.body.style.overflow = 'hidden'
+    } else {
+      // Включить прокрутку обратно
+      document.body.style.overflow = ''
+    }
+
+    return () => {
+      // Очистка при размонтировании компонента
+      document.body.style.overflow = ''
+    }
+  }, [isMenuOpen])
 
   const renderMenuItems = (onClick) =>
     menuItems.map(({ href, label }) => (
@@ -81,8 +97,9 @@ const Menu = () => {
             {renderMenuItems(toggleMenu)}
           </ul>
           {/* Компонент Footer/Contacts */}
-          <div className='mt-[160px] p-5 text-dark-gray'>
+          <div className='mt-[120px] mb-[40px] p-5 text-dark-gray'>
             <Contacts />
+            <DiscoverLink />
           </div>
         </div>
       )}

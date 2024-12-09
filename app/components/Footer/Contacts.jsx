@@ -29,7 +29,7 @@ function Contacts() {
         <span className='text-[1.875rem] max-2lg:text-lg font-normal sm:text-left'>
           Contact via Messenger:
         </span>
-        <div className='flex  flex-wrap gap-4 justify-center'>
+        <div className='flex flex-nowrap gap-4 justify-center'>
           {socialLinks.map(({ href, ariaLabel, label, icon: Icon }) => (
             <Link
               key={ariaLabel}

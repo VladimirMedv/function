@@ -33,6 +33,8 @@ export default function RootLayout({ children }) {
           rel='manifest'
           href='/site.webmanifest'
         />
+
+        <title>Function Design Studio</title>
       </head>
       <body>
         <Header />

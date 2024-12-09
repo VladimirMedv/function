@@ -61,14 +61,14 @@ export default function ContactForm() {
   }
 
   return (
-    <div className='flex flex-row 2lg:px-56 md:px-36 px-5 mb-14'>
+    <div className='flex flex-row 2lg:px-56 md:px-36 mb-14'>
       <div className='flex-1 max-sm:flex-none 2lg:text-[3.125rem] text-3xl text-left'>
         Order
         <br />a service
       </div>
       <form
         onSubmit={handleSubmit}
-        className=' p-6 bg-footer text-light-gray space-y-4 rounded-lg flex flex-col gap-5 flex-1 w-500px'
+        className=' max-sm:pl-11 max-sm:pr-0 max-sm:pt-0 bg-footer text-light-gray space-y-4 rounded-lg flex flex-col gap-5 flex-1 w-500px'
       >
         <div>
           <label

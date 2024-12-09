@@ -9,7 +9,7 @@ export default function Projects() {
 
   return (
     <section className='bg-primary text-text py-16'>
-      <div className=' px-10'>
+      <div className=' 2lg:px-10 px-5'>
         {/* Список проектов в столбик */}
         <div className='flex flex-col gap-12'>
           {projects

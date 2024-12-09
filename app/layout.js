@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
 
         <title>Function Design Studio</title>
       </head>
-      <body className='bg-primary'>
+      <body className='bg-primary scroll-smooth'>
         <Header />
         {children}
 

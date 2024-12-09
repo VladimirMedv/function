@@ -68,9 +68,9 @@ export default function ContactForm() {
       </div>
       <form
         onSubmit={handleSubmit}
-        className=' max-sm:pl-11 max-sm:pr-0 max-sm:pt-0 bg-footer text-light-gray space-y-4 rounded-lg flex flex-col gap-5 flex-1 w-500px'
+        className=' max-sm:pl-11 max-sm:pr-0 max-sm:pt-0 bg-footer text-light-gray space-y-4 flex flex-col gap-5 flex-1 w-500px'
       >
-        <div>
+        <div className='w-[31.25rem]'>
           <label
             htmlFor='name'
             className='sr-only'
@@ -89,7 +89,7 @@ export default function ContactForm() {
           {errors.name && <p className='text-red-500 text-sm'>{errors.name}</p>}
         </div>
 
-        <div>
+        <div className='w-[31.25rem]'>
           <label
             htmlFor='phone'
             className='sr-only'
@@ -110,7 +110,7 @@ export default function ContactForm() {
           )}
         </div>
 
-        <div>
+        <div className='w-[31.25rem]'>
           <label
             htmlFor='email'
             className='sr-only'

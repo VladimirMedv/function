@@ -21,7 +21,7 @@ function Contacts() {
     <div className='flex flex-col items-center justify-center mb-20'>
       <Link
         href='mailto:hello@functionaldesign.studio'
-        className='2lg:text-[5.5rem] md:text-[3.5rem] sm:text-[2.3rem] max-sm:text-[1.6rem] underline cursor-pointer hover:text-secondary -tracking-[0.03em]'
+        className='2lg:text-[5.5rem] md:text-[3.5rem] sm:text-[2.3rem] max-sm:text-[1.6rem] underline cursor-pointer hover:text-secondary -tracking-[0.03em] font-medium'
       >
         hello@functionaldesign.studio
       </Link>

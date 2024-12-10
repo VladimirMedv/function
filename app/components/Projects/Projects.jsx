@@ -38,7 +38,7 @@ export default function Projects() {
                 alt='arrow'
                 width={158}
                 height={22}
-                className='2lg:w-[158px] 2lg:h-[22px] w-[99.23px] h-[13.95px] transition-transform transition-opacity duration-300 group-hover:translate-x-2 group-hover:opacity-0'
+                className='transition duration-300 transform opacity-100 group-hover:translate-x-2 group-hover:opacity-0'
               />
               {/* Чёрная стрелка */}
               <Image
@@ -46,7 +46,7 @@ export default function Projects() {
                 alt='hover-arrow'
                 width={158}
                 height={22}
-                className='absolute left-0 2lg:w-[158px] 2lg:h-[22px] w-[99.23px] h-[13.95px]  transition-transform transition-opacity duration-300 opacity-0 group-hover:translate-x-2 group-hover:opacity-100'
+                className='absolute left-0 transition duration-300 transform translate-x-0 opacity-0 group-hover:translate-x-2 group-hover:opacity-100'
               />
             </div>
           </Link>

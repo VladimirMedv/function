@@ -64,13 +64,13 @@ export default function Services() {
               className='overflow-hidden flex items-center flex-wrap 2lg:leading-[4.063rem] leading-[2.375rem]' // Контейнер для эффекта "вылезания из щели"
             >
               <div
-                className={` text-3xl 2lg:text-5xl transform transition-transform duration-700 delay-[${
+                className={` text-3xl 2lg:text-5xl 2lg:leading-[4.063rem] leading-[2.375rem] transform transition-transform duration-700 delay-[${
                   index * 100
                 }ms] ${hasAnimated ? 'translate-y-0' : 'translate-y-full'}`}
               >
                 <Link
                   href={service.href}
-                  className='hover:underline hover:text-secondary transition-colors duration-300 whitespace-nowrap font-medium text-3xl 2lg:text-5xl  2lg:leading-[4.063rem] leading-[2.375rem]'
+                  className='hover:underline hover:text-secondary transition-colors duration-300 whitespace-nowrap font-medium text-3xl 2lg:text-5xl 2lg:leading-[4.063rem] leading-[2.375rem]'
                   aria-label={service.label}
                   title={service.label}
                 >

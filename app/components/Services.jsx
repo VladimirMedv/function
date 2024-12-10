@@ -80,7 +80,7 @@ export default function Services() {
             >
               <Link
                 href={service.href}
-                className='hover:underline hover:text-secondary whitespace-nowrap font-medium'
+                className='hover:underline hover:text-secondary transition-colors duration-300 whitespace-nowrap font-medium'
                 aria-label={service.label}
                 title={service.label}
               >

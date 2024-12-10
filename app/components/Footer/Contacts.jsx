@@ -35,7 +35,7 @@ function Contacts({ theme = 'w' }) {
 
       {/* Social links */}
       <div className='2lg:mt-14 md:mt-10 mt-8 flex flex-row max-sm:flex-col items-center max-sm:items-center'>
-        <span className='text-[1.875rem] max-2lg:text-lg 2lg:leading-[3.775rem] leading-[2.364rem] font-normal sm:text-left'>
+        <span className='text-[1.875rem] max-2lg:text-lg 2lg:leading-[3.775rem] leading-[2.364rem] font-medium sm:text-left'>
           Contact via Messenger:
         </span>
         <div className='flex flex-nowrap gap-4 justify-center max-sm:mt-4 2lg:ml-10 ml-5'>

@@ -62,7 +62,7 @@ export default function ContactForm() {
 
   return (
     <div className='flex flex-row 2lg:px-56 md:px-36 mb-14'>
-      <div className='flex-1 max-sm:flex-none 2lg:text-[3.125rem] text-3xl text-left 2lg:leading-[4.063rem] leading-[2.375rem]'>
+      <div className='flex-1 max-sm:flex-none 2lg:text-[3.125rem] text-3xl text-left 2lg:leading-[4.063rem] leading-[2.375rem] font-medium'>
         Order
         <br />a service
       </div>

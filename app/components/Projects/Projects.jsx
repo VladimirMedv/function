@@ -27,7 +27,7 @@ export default function Projects() {
         {/* Ссылка на страницу всех проектов */}
         <div className='flex justify-end text-center mt-8'>
           <Link
-            className='text-white hover:text-secondary 2lg:text-3xl text-lg  transition-colors duration-300 leading-9 flex items-center 2lg:gap-7 gap-4 group'
+            className='text-white hover:text-secondary 2lg:text-3xl text-lg  transition-colors duration-300 leading-9 flex items-center 2lg:gap-7 gap-4 group font-medium'
             href='/projects'
           >
             All Projects

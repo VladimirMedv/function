@@ -18,14 +18,14 @@ const SERVICES = [
 ]
 
 export default function Services() {
-  const [visibleItems, setVisibleItems] = useState(0)
+  const [hasAnimated, setHasAnimated] = useState(false)
   const sectionRef = useRef(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisibleItems(1) // Начать с первого элемента
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true) // Trigger animation once
         }
       },
       { threshold: 0.2 }
@@ -40,16 +40,7 @@ export default function Services() {
         observer.unobserve(sectionRef.current)
       }
     }
-  }, [])
-
-  useEffect(() => {
-    if (visibleItems > 0 && visibleItems <= SERVICES.length + 1) {
-      const timer = setTimeout(() => {
-        setVisibleItems((prev) => prev + 1)
-      }, 300) // Интервал появления (300 мс для мягкости)
-      return () => clearTimeout(timer)
-    }
-  }, [visibleItems])
+  }, [hasAnimated])
 
   return (
     <section
@@ -57,37 +48,37 @@ export default function Services() {
       className='bg-primary text-text py-16 flex items-center justify-center 2lg:px-56 md:px-36 px-[20px]'
     >
       <div className='2lg:w-[1468px] max-2lg:w-[890px] max-md:w-[728px] max-sm:w-[440px] mx-auto'>
-        <div className='flex items-center text-3xl 2lg:text-5xl flex-wrap 2lg:leading-[4.063rem] leading-[2.375rem]'>
-          {/* Заголовок */}
-          <h2
-            className={`font-medium inline-block mr-2 text-gray-title transition-all duration-1000 ease-out ${
-              visibleItems >= 1
-                ? 'opacity-100 translate-y-0 scale-100'
-                : 'opacity-0 translate-y-5 scale-95'
-            }`}
-          >
-            Services
-          </h2>
-          {/* Ссылки */}
-          {SERVICES.map((service, index) => (
-            <span
-              key={index}
-              className={`inline-block transition-all duration-1000 ease-out ${
-                visibleItems > index + 1
-                  ? 'opacity-100 translate-y-0 scale-100'
-                  : 'opacity-0 translate-y-5 scale-95'
+        <div className='flex flex-wrap mt-4'>
+          <div className='overflow-hidden flex items-center'>
+            <h2
+              className={`text-3xl 2lg:text-5xl font-medium text-gray-title transform transition-transform duration-700 mr-2 ${
+                hasAnimated ? 'translate-y-0' : 'translate-y-full'
               }`}
             >
-              <Link
-                href={service.href}
-                className='hover:underline hover:text-secondary transition-colors duration-300 whitespace-nowrap font-medium'
-                aria-label={service.label}
-                title={service.label}
+              Services
+            </h2>
+          </div>
+          {SERVICES.map((service, index) => (
+            <div
+              key={index}
+              className='overflow-hidden flex items-center flex-wrap 2lg:leading-[4.063rem] leading-[2.375rem]' // Контейнер для эффекта "вылезания из щели"
+            >
+              <div
+                className={` text-3xl 2lg:text-5xl transform transition-transform duration-700 delay-[${
+                  index * 100
+                }ms] ${hasAnimated ? 'translate-y-0' : 'translate-y-full'}`}
               >
-                {service.label}
-              </Link>
-              {index < SERVICES.length - 1 && <span>,&nbsp;</span>}
-            </span>
+                <Link
+                  href={service.href}
+                  className='hover:underline hover:text-secondary transition-colors duration-300 whitespace-nowrap font-medium text-3xl 2lg:text-5xl  2lg:leading-[4.063rem] leading-[2.375rem]'
+                  aria-label={service.label}
+                  title={service.label}
+                >
+                  {service.label}
+                </Link>
+                {index < SERVICES.length - 1 && <span>,&nbsp;</span>}
+              </div>
+            </div>
           ))}
         </div>
       </div>

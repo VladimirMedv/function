@@ -28,7 +28,7 @@ export default function Hero() {
       </div>
 
       {/* Описание */}
-      <p className='relative z-10 text-lg max-w-5xl mx-auto mt-3 2lg:text-[2.5rem] leading-[3.125rem]'>
+      <p className='relative z-10 text-lg max-w-5xl mx-auto mt-3 2lg:text-[2.5rem] leading-[3.125rem] font-medium'>
         Functional design for solving practical business challenges, driving
         growth, and entering new markets.
       </p>

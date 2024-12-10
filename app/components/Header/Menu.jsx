@@ -82,7 +82,7 @@ const Menu = () => {
         <Image
           src={
             isMenuOpen
-              ? '/images/icons/menu_mob_o.svg'
+              ? '/images/icons/menu_mob_b.svg'
               : '/images/icons/menu_mob_w.svg'
           }
           width={25}

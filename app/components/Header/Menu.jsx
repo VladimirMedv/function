@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { HiMenu } from 'react-icons/hi'
 import LogoB from './LogoB' // Компонент логотипа
 import Contacts from '../Footer/Contacts.jsx' // Корректный путь к Footer/Contacts
 import DiscoverLink from '../Footer/DiscoverLink'
+import Image from 'next/image'
 
 const menuItems = [
   { href: '/projects', label: 'Projects' },
@@ -16,9 +16,22 @@ const menuItems = [
 
 const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isContentVisible, setIsContentVisible] = useState(false)
 
   const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev)
+    if (isMenuOpen) {
+      // Закрытие меню: плавное исчезновение контента перед закрытием
+      setIsContentVisible(false)
+      setTimeout(() => {
+        setIsMenuOpen(false)
+      }, 300) // Длительность совпадает с CSS-анимацией
+    } else {
+      // Открытие меню: сначала показать меню, затем контент
+      setIsMenuOpen(true)
+      setTimeout(() => {
+        setIsContentVisible(true)
+      }, 10) // Небольшая задержка для плавной анимации
+    }
   }
 
   useEffect(() => {
@@ -54,20 +67,27 @@ const Menu = () => {
   return (
     <nav className='flex items-center justify-between'>
       {/* Основное меню */}
-      <ul className='hidden md:flex space-x-[20px] md:space-x-[40px] font-light 2lg:text-[22px] md:text-sm    '>
+      <ul className='hidden md:flex space-x-[20px] md:space-x-[40px] font-light 2lg:text-[22px] md:text-sm'>
         {renderMenuItems()}
       </ul>
 
       {/* Бургер-меню */}
       <button
-        className={`md:hidden focus:outline-none font-normal 2lg:text-[1.375rem] md:text-sm transition-transform transform ${
+        className={`md:hidden focus:outline-none font-normal 2lg:text-[1.375rem] md:text-sm transition-transform transform z-[51] ${
           isMenuOpen ? 'rotate-90' : ''
         }`}
         onClick={toggleMenu}
         aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
       >
-        <HiMenu
-          size={30}
+        <Image
+          src={
+            isMenuOpen
+              ? '/images/icons/menu_mob_o.svg'
+              : '/images/icons/menu_mob_w.svg'
+          }
+          width={25}
+          height={25}
+          alt='Open menu'
           className='text-text'
         />
       </button>
@@ -81,25 +101,24 @@ const Menu = () => {
               : '-translate-y-full opacity-0'
           }`}
         >
-          <div
-            className='flex items-center justify-between p-5'
-            onClick={toggleMenu}
-          >
+          <div className='flex items-center justify-between p-5'>
             <LogoB />
-            <button
-              className='text-black font-normal transition-transform transform rotate-90'
-              aria-label='Close menu'
-            >
-              <HiMenu size={30} />
-            </button>
           </div>
-          <ul className='flex flex-col items-start mt-3 space-y-4 p-5 font-medium text-[33px] leading-10 gap-2'>
+          <ul
+            className={`flex flex-col items-start mt-3 space-y-4 p-5 font-medium text-[33px] leading-10 gap-2 transition-opacity duration-300 ease-in-out ${
+              isContentVisible ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
             {renderMenuItems(toggleMenu)}
           </ul>
           {/* Компонент Footer/Contacts */}
-          <div className='absolute w-full flex flex-col items-center justify-center bottom-0 mb-[40px] p-5 text-dark-gray'>
-            <Contacts />
-            <DiscoverLink />
+          <div
+            className={`absolute w-full flex flex-col items-center justify-center bottom-0 mb-[40px] p-5 text-dark-gray transition-opacity duration-300 ease-in-out ${
+              isContentVisible ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <Contacts theme='b' />
+            <DiscoverLink theme='b' />
           </div>
         </div>
       )}

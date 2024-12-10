@@ -67,13 +67,13 @@ const Menu = () => {
   return (
     <nav className='flex items-center justify-between'>
       {/* Основное меню */}
-      <ul className='hidden md:flex space-x-[20px] md:space-x-[40px] font-light 2lg:text-[22px] md:text-sm'>
+      <ul className='hidden sm:flex space-x-[20px] md:space-x-[40px] font-light 2lg:text-[22px] sm:text-sm sm:leading-[17.6px] text-nowrap'>
         {renderMenuItems()}
       </ul>
 
       {/* Бургер-меню */}
       <button
-        className={`md:hidden focus:outline-none font-normal 2lg:text-[1.375rem] md:text-sm transition-transform transform z-[51] ${
+        className={`sm:hidden focus:outline-none font-normal 2lg:text-[1.375rem] md:text-sm transition-transform transform z-[51] ${
           isMenuOpen ? 'rotate-90' : ''
         }`}
         onClick={toggleMenu}

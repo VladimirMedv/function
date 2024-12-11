@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function Projects() {
   const arrowW = '/images/arrow-right_w.svg'
-  const arrow = '/images/arrow-right.svg'
+  const arrow = '/images/arrow-right_o.svg'
 
   return (
     <section>
@@ -28,7 +28,7 @@ export default function Projects() {
         <div className='flex justify-end text-center mt-8'>
           <Link
             href='/projects'
-            className='text-white hover:text-secondary 2lg:text-3xl text-lg flex items-center gap-4 group font-medium transition-colors duration-300'
+            className='text-text hover:text-secondary 2lg:text-3xl text-lg flex items-center gap-4 group font-medium transition-colors duration-300'
           >
             All Projects
             <div className='relative flex items-center'>

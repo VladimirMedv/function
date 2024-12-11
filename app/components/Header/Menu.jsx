@@ -95,7 +95,7 @@ const Menu = () => {
       {/* Выпадающее меню для мобильных */}
       {isMenuOpen && (
         <div
-          className={`absolute top-0 left-0 w-full h-full bg-white z-50 flex flex-col overflow-hidden transform transition-transform duration-300 ease-in-out ${
+          className={`absolute top-0 left-0 w-full h-full bg-bgwhite z-50 flex flex-col overflow-hidden transform transition-transform duration-300 ease-in-out ${
             isMenuOpen
               ? 'translate-y-0 opacity-100'
               : '-translate-y-full opacity-0'

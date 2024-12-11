@@ -1,10 +1,23 @@
-<svg width="144" height="73" viewBox="0 0 144 73" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_763_669)">
-<path d="M72.261 18.4531L79.3011 30.2052L72.261 41.9573L65.221 30.2912L72.261 18.4531ZM72.261 41.9573H85.9922L92.8577 53.4601H79.1266L72.261 41.9573ZM72.261 41.9573H58.5299L51.6643 53.4601H65.3954L72.261 41.9573Z" fill="white"/>
-</g>
-<defs>
-<clipPath id="clip0_763_669">
-<rect width="41.1847" height="35.007" fill="white" transform="translate(51.6643 18.4531)"/>
-</clipPath>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 200 100">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #f0ede8;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="Layer_1">
+      <g>
+        <path class="cls-2" d="M100,25.5l9.7,16.5-9.7,16.5-9.7-16.3,9.7-16.6ZM100,58.4h18.9l9.5,16.1h-18.9l-9.5-16.1ZM100,58.4h-18.9l-9.5,16.1h18.9l9.5-16.1Z"/>
+        <rect class="cls-1" width="200" height="100"/>
+      </g>
+    </g>
+  </g>
 </svg>

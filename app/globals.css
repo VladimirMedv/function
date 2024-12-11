@@ -124,8 +124,8 @@
 
 body {
   font-family: 'Cera Pro', sans-serif;
-  background-color: #292929; /* Основной фон */
-  color: #ffffff; /* Основной текст */
+  background-color: #151516; /* Основной фон */
+  color: #f0ede8; /* Основной текст */
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -133,8 +133,8 @@ body {
 }
 
 footer {
-  background-color: #181818; /* Фон футера */
-  color: #ffffff; /* Цвет текста футера */
+  background-color: #000000; /* Фон футера */
+  color: #f0ede8; /* Цвет текста футера */
   padding: 20px;
   text-align: center;
 }

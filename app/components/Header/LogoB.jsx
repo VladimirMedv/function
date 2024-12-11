@@ -14,13 +14,13 @@ const Logo = () => {
       const screenWidth = window.innerWidth
 
       if (screenWidth <= 480) {
-        setLogoSrc('/images/logo-f_b.svg')
+        setLogoSrc('/images/logo_f_b.svg')
         setSize({ width: 19.54, height: 30.81 })
       } else if (screenWidth <= 1200) {
-        setLogoSrc('/images/logo_b.svg')
+        setLogoSrc('/images/logo_function_b.svg')
         setSize({ width: 145.26, height: 31.93 })
       } else {
-        setLogoSrc('/images/logo_b.svg')
+        setLogoSrc('/images/logo_function_b.svg')
         setSize({ width: 232, height: 51 })
       }
     }

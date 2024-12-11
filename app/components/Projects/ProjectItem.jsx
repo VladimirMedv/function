@@ -21,12 +21,12 @@ export default function ProjectItem({ id, mainImage, title, works }) {
         {/* Текст в левом нижнем углу */}
         <div className='absolute bottom-10 left-10 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-in-out'>
           <h2
-            className='text-white 2lg:text-[50px] text-3xl  2lg:leading-[62px] leading-9 font-medium'
+            className='text-text 2lg:text-[50px] text-3xl  2lg:leading-[62px] leading-9 font-medium'
             style={{ whiteSpace: 'pre-line' }}
           >
             {title}
           </h2>
-          <p className='text-white 2lg:text-[26px] text-base font-light 2lg:leading-8 leading-5'>
+          <p className='text-text 2lg:text-[26px] text-base font-light 2lg:leading-8 leading-5'>
             {works.join(', ')}
           </p>
         </div>

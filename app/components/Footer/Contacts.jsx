@@ -45,7 +45,7 @@ function Contacts({ theme = 'w' }) {
               href={href}
               aria-label={ariaLabel}
               className={`group flex items-center justify-center font-medium ${
-                theme == 'w' ? 'text-white' : 'text-dark-gray'
+                theme == 'w' ? 'text-text' : 'text-dark-gray'
               } 2lg:leading-[3.775rem] leading-[2.364rem] transition-colors duration-300 text-[1.875rem] max-2lg:text-lg `}
               target='_blank'
               rel='noopener noreferrer'

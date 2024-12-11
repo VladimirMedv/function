@@ -20,6 +20,7 @@ module.exports = {
         'light-gray': '#B6BAAF',
         'light-gray-2': '#D9D9D9',
         'gray-cop': '#5B5B5B',
+        'gray-disabled': '#C8C8C8',
       },
       fontFamily: {
         sans: ['"Cera Pro"', 'sans-serif'],

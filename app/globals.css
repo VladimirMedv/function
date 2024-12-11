@@ -132,11 +132,30 @@ footer {
   padding: 20px;
   text-align: center;
 }
+/*
+a.underline,
+a.underline:hover,
+.hover\:underline:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em; */ /* Зависит от размера шрифта */ /*
+  text-decoration-thickness: 0.08em;*/ /* Толщина линии относительно текста */ /*
+}*/
 
 a.underline,
 a.underline:hover,
 .hover\:underline:hover {
   text-decoration: underline;
-  text-underline-offset: 0.25em; /* Зависит от размера шрифта */
-  text-decoration-thickness: 0.08em; /* Толщина линии относительно текста */
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: 0.08em;
+  text-decoration-skip-ink: auto; /* Обеспечивает аккуратное пересечение линий */
+}
+
+/* Специфическая корректировка для Safari */
+@supports (-webkit-text-decoration-thickness: 1px) {
+  a.underline,
+  a.underline:hover,
+  .hover\:underline:hover {
+    -webkit-text-decoration-thickness: 0.06em; /* Используется только в Safari */
+    text-decoration-thickness: initial; /* Убирает конфликт с другими браузерами */
+  }
 }

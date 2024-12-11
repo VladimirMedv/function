@@ -5,7 +5,7 @@ import DiscoverLink from './DiscoverLink'
 
 export default function Footer() {
   return (
-    <footer className='bg-footer text-text py-8'>
+    <footer className='bg-footer text-text 2lg:pt-[150px] sm:py-[80px] 2lg:pb-[100px] max-sm:py-[60px]'>
       <Contacts />
       <ContactForm />
       <div className='flex flex-row max-sm:flex-col items-center justify-between  max-sm:gap-10 2lg:px-56 md:px-36 px-5'>

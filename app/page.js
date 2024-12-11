@@ -6,7 +6,7 @@ import AboutMe from './components/AboutMe/AboutMe'
 
 export default function Home() {
   return (
-    <div>
+    <div className='bg-primary text-text flex flex-col 2lg:gap-[12.5rem] sm:gap-[9.375rem] max-sm:gap-[7.5rem]'>
       <Hero />
       <Projects />
       <Services />

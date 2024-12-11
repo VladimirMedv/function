@@ -28,7 +28,7 @@ export default function Services() {
           setHasAnimated(true) // Trigger animation once
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.5 }
     )
 
     if (sectionRef.current) {
@@ -45,7 +45,7 @@ export default function Services() {
   return (
     <section
       ref={sectionRef}
-      className='bg-primary text-text py-16 flex items-center justify-center 2lg:px-56 md:px-36 px-[20px]'
+      className='flex items-center justify-center 2lg:-mt-[3.75rem] -mt-[2.5rem] 2lg:px-56 md:px-36 px-[20px]'
     >
       <div className='2lg:w-[1468px] max-2lg:w-[890px] max-md:w-[728px] max-sm:w-[440px] mx-auto'>
         <div className='flex flex-wrap mt-4'>

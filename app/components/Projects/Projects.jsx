@@ -8,7 +8,7 @@ export default function Projects() {
   const arrow = '/images/arrow-right.svg'
 
   return (
-    <section className='bg-primary text-text py-16'>
+    <section>
       <div className='2lg:px-10 px-5'>
         {/* Список проектов в столбик */}
         <div className='flex flex-col 2lg:gap-10 gap-5'>

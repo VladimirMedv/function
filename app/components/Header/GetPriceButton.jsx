@@ -10,6 +10,21 @@ const GetPriceButton = () => {
   const [isMounted, setIsMounted] = useState(false) // Проверяем, что компонент смонтирован на клиенте
 
   useEffect(() => {
+    if (isModalOpen) {
+      // Отключить прокрутку при открытии меню
+      document.body.style.overflow = 'hidden'
+    } else {
+      // Включить прокрутку обратно
+      document.body.style.overflow = ''
+    }
+
+    return () => {
+      // Очистка при размонтировании компонента
+      document.body.style.overflow = ''
+    }
+  }, [isModalOpen])
+
+  useEffect(() => {
     setIsMounted(true) // Устанавливаем флаг при монтировании
   }, [])
 
@@ -51,8 +66,15 @@ const GetPriceButton = () => {
             </div>
 
             {/* Modal content */}
-            <div className='flex-1 overflow-y-auto p-6'>
-              <Constructor />
+            <div className='flex flex-row items-start justify-center'>
+              <div>
+                <h1 className='text-2xl font-bold'>
+                  Request for a commercial offer
+                </h1>
+              </div>
+              <div className='flex-1'>
+                <Constructor />
+              </div>
             </div>
           </div>,
           document.body // Этот код выполняется только после проверки isMounted

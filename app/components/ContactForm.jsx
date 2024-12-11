@@ -2,31 +2,65 @@
 
 import { useState } from 'react'
 
-export default function ContactForm() {
+export default function ContactForm({
+  selectedOffers,
+  selectedBranding,
+  btnBgColor = 'bg-text',
+  btnTextColor = 'text-black',
+}) {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     email: '',
   })
   const [errors, setErrors] = useState({})
+  const [touched, setTouched] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const validateForm = () => {
     const newErrors = {}
-    if (!formData.name.trim()) newErrors.name = 'Required field'
-    if (!formData.phone.trim()) newErrors.phone = 'Required field'
-    if (
-      !formData.email.trim() ||
-      !/^[^@]+@[^@]+\.[^@]+$/.test(formData.email)
-    ) {
-      newErrors.email = 'Invalid email'
+
+    if (!formData.name.trim()) {
+      newErrors.name = '!Required field'
+    } else if (!/^[a-zA-ZÀ-ÿ\s]+$/.test(formData.name)) {
+      newErrors.name = '! Letters only'
     }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = '!Required field'
+    } else if (!/^\d+$/.test(formData.phone.trim())) {
+      newErrors.phone = '!Numbers only'
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = '!Required field'
+    } else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(formData.email)) {
+      newErrors.email = '!Invalid email'
+    }
+
     return newErrors
   }
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
-    setFormData({ ...formData, [name]: value })
+    const filteredValue =
+      name === 'name'
+        ? value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')
+        : name === 'phone'
+        ? value.replace(/\D/g, '')
+        : value
+
+    setFormData({ ...formData, [name]: filteredValue })
+
+    if (touched[name]) {
+      setErrors(validateForm())
+    }
+  }
+
+  const handleBlur = (e) => {
+    const { name } = e.target
+    setTouched({ ...touched, [name]: true })
+    setErrors(validateForm())
   }
 
   const handleSubmit = async (e) => {
@@ -44,12 +78,13 @@ export default function ContactForm() {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, selectedOffers, selectedBranding }),
       })
 
       if (response.ok) {
         alert('Message sent successfully!')
         setFormData({ name: '', phone: '', email: '' })
+        setTouched({})
       } else {
         alert('Failed to send message. Please try again later.')
       }
@@ -61,94 +96,60 @@ export default function ContactForm() {
   }
 
   return (
-    <div className='flex flex-row 2lg:px-56 md:px-36 mb-14'>
-      <div className='flex-1 max-sm:flex-none 2lg:text-[3.125rem] text-3xl text-left 2lg:leading-[4.063rem] leading-[2.375rem] font-medium'>
-        Order
-        <br />a service
-      </div>
-      <div className='max-w-500px flex-1'>
-        <div className='flex justify-start'>
-          <form
-            onSubmit={handleSubmit}
-            className='max-sm:pl-11 max-sm:pr-0 max-sm:pt-0 bg-footer text-light-gray flex flex-col gap-5'
+    <div className='flex flex-col items-start justify-center w-full max-w-[400px] mx-auto'>
+      <form
+        onSubmit={handleSubmit}
+        className='w-full flex flex-col gap-6'
+      >
+        {['name', 'phone', 'email'].map((field) => (
+          <div
+            key={field}
+            className='relative'
           >
-            <div>
-              <label
-                htmlFor='name'
-                className='sr-only'
-              >
-                Your name
-              </label>
-              <input
-                type='text'
-                id='name'
-                name='name'
-                value={formData.name}
-                onChange={handleInputChange}
-                placeholder='Your name'
-                className='w-full border-b border-light-gray-2 bg-footer text-light-gray focus:outline-none focus:border-red-500 py-2 px-5'
-              />
-              {errors.name && (
-                <p className='text-red-500 text-sm'>{errors.name}</p>
-              )}
-            </div>
-
-            <div>
-              <label
-                htmlFor='phone'
-                className='sr-only'
-              >
-                Phone
-              </label>
-              <input
-                type='text'
-                id='phone'
-                name='phone'
-                value={formData.phone}
-                onChange={handleInputChange}
-                placeholder='Phone'
-                className='w-full border-b border-light-gray-2 bg-footer text-light-gray focus:outline-none focus:border-red-500 py-2 px-5'
-              />
-              {errors.phone && (
-                <p className='text-red-500 text-sm'>{errors.phone}</p>
-              )}
-            </div>
-
-            <div>
-              <label
-                htmlFor='email'
-                className='sr-only'
-              >
-                Email
-              </label>
-              <input
-                type='email'
-                id='email'
-                name='email'
-                value={formData.email}
-                onChange={handleInputChange}
-                placeholder='Email'
-                className='w-full border-b border-light-gray-2 bg-footer text-light-gray focus:outline-none focus:border-red-500 py-2 px-5'
-              />
-              {errors.email && (
-                <p className='text-red-500 text-sm'>{errors.email}</p>
-              )}
-            </div>
-
-            <button
-              type='submit'
-              className=' bg-text hover:bg-secondary text-black font-medium py-[10px] px-[30px] rounded-full w-fit transition-colors duration-300'
-              disabled={isSubmitting}
+            <label
+              htmlFor={field}
+              className='sr-only'
             >
-              {isSubmitting ? 'Sending...' : 'Send'}
-            </button>
+              {field === 'name'
+                ? 'Your name'
+                : field.charAt(0).toUpperCase() + field.slice(1)}
+            </label>
+            <input
+              type='text'
+              id={field}
+              name={field}
+              value={formData[field]}
+              onChange={handleInputChange}
+              onBlur={handleBlur}
+              placeholder={
+                field === 'name'
+                  ? 'Your name'
+                  : field.charAt(0).toUpperCase() + field.slice(1)
+              }
+              className={`w-full border-b border-light-gray-2 bg-transparent text-light-gray focus:outline-none py-2 px-5 placeholder:text-light-gray leading-[2.375rem] ${
+                errors[field] && touched[field] && 'border-secondary'
+              }`}
+              autoComplete='off'
+            />
+            {errors[field] && touched[field] && (
+              <span className='absolute right-2 top-1/2 transform -translate-y-1/2 text-secondary text-sm'>
+                {errors[field]}
+              </span>
+            )}
+          </div>
+        ))}
 
-            <p className='text-light-gray 2lg:text-sm text-[0.563rem] text-start mt-4'>
-              By clicking on the "Send" button,
-              <br />I consent to the processing of personal data
-            </p>
-          </form>
-        </div>
+        <button
+          type='submit'
+          className={`${btnBgColor} hover:bg-secondary ${btnTextColor} font-medium 2lg:text-[1.375rem] text-sm leading-[2.125rem] 2lg:px-[30px] 2lg:py-[10px] px-[20px] py-[2px] rounded-full w-fit transition-colors duration-300 2lg:mt-[30px] 2lg:mb-10 mt-[30px] mb-5`}
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? 'Sending...' : 'Send'}
+        </button>
+      </form>
+
+      <div className='text-light-gray 2lg:text-sm text-[0.563rem] text-start whitespace-pre-line'>
+        {`By clicking on the "Send" button,\nI consent to the processing of personal data`}
       </div>
     </div>
   )

@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
+import Constructor from '../components/Constructor'
 
 const SERVICES = [
   { href: '/services/corporate-identity', label: 'Corporate identity' },
@@ -79,6 +80,9 @@ export default function Services() {
             </div>
           </div>
         ))}
+      </div>
+      <div>
+        <Constructor />
       </div>
     </section>
   )

@@ -67,7 +67,7 @@ const Menu = () => {
   return (
     <nav className='flex items-center justify-between'>
       {/* Основное меню */}
-      <ul className='hidden sm:flex space-x-[20px] md:space-x-[40px] font-light 2lg:text-[22px] sm:text-sm sm:leading-[17.6px] text-nowrap'>
+      <ul className='hidden sm:flex space-x-[20px] md:space-x-[40px] font-normal text-sm leading-[1.1rem] text-nowrap'>
         {renderMenuItems()}
       </ul>
 

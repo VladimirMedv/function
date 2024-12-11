@@ -110,6 +110,10 @@
   font-style: italic;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Cera Pro', sans-serif;
   background-color: #151516; /* Основной фон */
@@ -118,6 +122,8 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none; /* Избежание скачков при прокрутке */
+  -webkit-font-smoothing: antialiased; /* Сглаживание текста */
 }
 
 footer {

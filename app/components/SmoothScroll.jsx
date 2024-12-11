@@ -6,7 +6,7 @@ export default function SmoothScroll() {
     const links = document.querySelectorAll("a[href^='#']")
 
     const smoothScroll = (target, duration = 800) => {
-      const startPosition = window.pageYOffset
+      const startPosition = window.scrollY
       const targetElement = document.querySelector(target)
       if (!targetElement) return
 

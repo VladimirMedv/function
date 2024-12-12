@@ -108,14 +108,16 @@ const Constructor = ({
   return (
     <div className='min-h-screen flex flex-col'>
       <div className='mb-8'>
-        <h2 className='text-lg font-semibold mb-4'>
-          What&apos;s Your Branding
+        <h2 className='2lg:text-[2.5rem] 2lg:leading-[3.125rem] text-2xl leading-[1.875rem] text-nowrap font-medium mb-7'>
+          What’s Your Branding?
         </h2>
         <div className='flex flex-wrap gap-4'>{renderBrandingOptions()}</div>
       </div>
 
       <div className='mb-8'>
-        <h2 className='text-lg font-semibold mb-4'>What We Offer</h2>
+        <h2 className='2lg:text-[2.5rem] 2lg:leading-[3.125rem] text-2xl leading-[1.875rem] text-nowrap font-medium mb-7'>
+          What We Offer
+        </h2>
         <div className='flex flex-wrap gap-4'>
           {renderOffers().map((offer) => (
             <button

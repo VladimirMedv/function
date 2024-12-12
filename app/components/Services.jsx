@@ -2,20 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
-
-const SERVICES = [
-  { href: '/services/corporate-identity', label: 'Corporate identity' },
-  { href: '/services/product-identity', label: 'Product identity' },
-  { href: '/services/personal-identity', label: 'Personal identity' },
-  { href: '/services/brand-support', label: 'Brand support' },
-  { href: '/services/naming', label: 'Naming' },
-  { href: '/services/logo', label: 'Logo' },
-  { href: '/services/packaging', label: 'Packaging' },
-  { href: '/services/brand-guidelines', label: 'Brand guidelines' },
-  { href: '/services/ui-ux', label: 'UI/UX' },
-  { href: '/services/promo-design', label: 'Promo design' },
-  { href: '/services/content-design', label: 'Content design' },
-]
+import SERVICES from '../data/services'
 
 export default function Services() {
   const [hasAnimated, setHasAnimated] = useState(false)

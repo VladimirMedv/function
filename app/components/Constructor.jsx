@@ -60,7 +60,10 @@ const brandingOptions = [
   },
 ]
 
-const Constructor = () => {
+const Constructor = ({
+  btnBgColor = 'bg-gray-disabled',
+  btnBgActiveColor = 'bg-const-dark-gray',
+}) => {
   const [selectedBranding, setSelectedBranding] = useState(
     brandingOptions[0].id
   )
@@ -83,10 +86,10 @@ const Constructor = () => {
     return brandingOptions.map((option) => (
       <button
         key={option.id}
-        className={`px-4 py-2 rounded-full font-medium transition-colors duration-300 ${
+        className={`rounded-full font-medium transition-colors duration-300 2lg:text-[1.375rem] text-sm leading-[2.125rem] 2lg:px-[30px] 2lg:py-[10px] px-[20px] py-[2px]  ${
           selectedBranding === option.id
-            ? 'bg-black text-text'
-            : 'bg-gray-disabled text-text hover:bg-secondary hover:text-black'
+            ? btnBgActiveColor + ' text-text'
+            : btnBgColor + ' text-text hover:bg-secondary hover:text-black'
         }`}
         onClick={() => handleBrandingSelection(option.id)}
       >
@@ -103,7 +106,7 @@ const Constructor = () => {
   }
 
   return (
-    <div className='min-h-screen flex flex-col p-10'>
+    <div className='min-h-screen flex flex-col'>
       <div className='mb-8'>
         <h2 className='text-lg font-semibold mb-4'>
           What&apos;s Your Branding
@@ -117,10 +120,11 @@ const Constructor = () => {
           {renderOffers().map((offer) => (
             <button
               key={offer}
-              className={`px-4 py-2 rounded-full font-medium transition-colors duration-300 ${
+              className={`2lg:text-[1.375rem] text-sm leading-[2.125rem] 2lg:px-[30px] 2lg:py-[10px] px-[20px] py-[2px]  rounded-full font-medium transition-colors duration-300 ${
                 selectedOffers.includes(offer)
-                  ? 'bg-black text-text'
-                  : 'bg-gray-disabled text-text hover:bg-secondary hover:text-black'
+                  ? btnBgActiveColor + ' text-text'
+                  : btnBgColor +
+                    ' text-text hover:bg-secondary hover:text-black'
               }`}
               onClick={() => toggleOfferSelection(offer)}
             >
@@ -133,7 +137,7 @@ const Constructor = () => {
       <ContactForm
         selectedOffers={selectedOffers}
         selectedBranding={selectedBranding}
-        btnBgColor={'bg-black'}
+        btnBgColor={'bg-gray-disabled'}
         btnTextColor={'text-text'}
       />
     </div>

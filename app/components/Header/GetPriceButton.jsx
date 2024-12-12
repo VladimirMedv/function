@@ -66,10 +66,13 @@ const GetPriceButton = () => {
             </div>
 
             {/* Modal content */}
-            <div className='flex flex-row items-start justify-center'>
+            <div className='flex flex-row max-sm:flex-col items-start justify-center px-[10%] mb-14 mt-10 2lg:gap-48 md:gap-32 sm:gap-20 gap-10 overflow-auto text-const-dark-gray'>
               <div>
-                <h1 className='text-2xl font-bold'>
-                  Request for a commercial offer
+                <h1 className='2lg:text-[3.125rem] sm:text-3xl sm:leading-[38px] 2lg:leading-[65px] font-medium max-sm:hidden whitespace-pre-line'>
+                  {`Request for\n a commercial\n offer`}
+                </h1>
+                <h1 className='hidden max-sm:block text-2xl leading-[30px] font-medium whitespace-pre-line'>
+                  {`Request for\n a commercial offer`}
                 </h1>
               </div>
               <div className='flex-1'>

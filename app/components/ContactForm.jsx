@@ -96,7 +96,7 @@ export default function ContactForm({
   }
 
   return (
-    <div className='flex flex-col items-start justify-center w-full max-w-[400px] mx-auto'>
+    <div className='flex flex-col items-start justify-center w-full 2lg:max-w-[400px] ml-4 max-2lg:pr-5'>
       <form
         onSubmit={handleSubmit}
         className='w-full flex flex-col gap-6'

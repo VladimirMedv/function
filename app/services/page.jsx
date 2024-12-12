@@ -19,70 +19,81 @@ const SERVICES = [
 ]
 
 export default function Services() {
-  const [hasAnimated, setHasAnimated] = useState(false)
-  const sectionRef = useRef(null)
+  // const [hasAnimated, setHasAnimated] = useState(false)
+  // const sectionRef = useRef(null)
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setHasAnimated(true) // Trigger animation once
-        }
-      },
-      { threshold: 0.5 }
-    )
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       if (entry.isIntersecting && !hasAnimated) {
+  //         setHasAnimated(true) // Trigger animation once
+  //       }
+  //     },
+  //     { threshold: 0.5 }
+  //   )
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
+  //   if (sectionRef.current) {
+  //     observer.observe(sectionRef.current)
+  //   }
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
-      }
-    }
-  }, [hasAnimated])
+  //   return () => {
+  //     if (sectionRef.current) {
+  //       observer.unobserve(sectionRef.current)
+  //     }
+  //   }
+  // }, [hasAnimated])
 
   return (
     <section
-      ref={sectionRef}
-      className='flex flex-col items-center justify-center md:px-10 px-5 2lg:py-[12.5rem] sm:py-[9.375rem] max-sm:py-[7.5rem] overflow-hidden'
+      // ref={sectionRef}
+      className='flex flex-col items-center justify-center md:px-10 px-5 2lg:py-[12.5rem] sm:py-[9.375rem] max-sm:py-[7.5rem] overflow-hidden  gap-[12.5rem]'
     >
-      {/* <div className='overflow-hidden flex items-center'> */}
-      <h2
-        className={`text-[12.813rem] md:text-[20rem] 2lg:text-[31.875rem] text-secondary transform transition-transform duration-700 2lg:leading-[641.07px] md:leading-[402.24px] leading-[257.68px] font-bold ${
-          hasAnimated ? 'translate-y-0' : 'translate-y-full'
-        }`}
-      >
-        Services.
-      </h2>
-      {/* </div> */}
-      <div className='flex flex-wrap 2lg:-mt-[11.4rem] md:-mt-[7rem] -mt-[5.1rem] z-10'>
-        {SERVICES.map((service, index) => (
-          <div
-            key={index}
-            className='overflow-hidden flex items-center flex-wrap 2lg:leading-[4.063rem] leading-[2.375rem]' // Контейнер для эффекта "вылезания из щели"
-          >
+      <div className='flex flex-col items-center justify-center'>
+        {/* <div className='overflow-hidden flex items-center'> */}
+        <h2
+          className={`text-[12.813rem] md:text-[20rem] 2lg:text-[31.875rem] text-secondary transform transition-transform duration-700 2lg:leading-[641.07px] md:leading-[402.24px] leading-[257.68px] font-bold `}
+        >
+          Services.
+        </h2>
+        {/* </div> */}
+        <div className='flex flex-wrap justify-between 2lg:-mt-[11.4rem] md:-mt-[7rem] -mt-[5.1rem] z-10 max-w-[100vw] md:px-10 px-5'>
+          {SERVICES.map((service, index) => (
             <div
-              className={` text-3xl 2lg:text-5xl 2lg:leading-[4.063rem] leading-[2.375rem] transform transition-transform duration-700 delay-[${
-                index * 100
-              }ms] ${hasAnimated ? 'translate-y-0' : 'translate-y-full'}`}
+              key={index}
+              className='overflow-hidden flex items-center flex-wrap 2lg:leading-[4.063rem] leading-[2.375rem]' // Контейнер для эффекта "вылезания из щели"
             >
-              <Link
-                href={service.href}
-                className='hover:underline  transition-colors duration-300 whitespace-nowrap font-medium text-3xl 2lg:text-5xl 2lg:leading-[4.063rem] leading-[2.375rem]'
-                aria-label={service.label}
-                title={service.label}
+              <div
+                className={` text-3xl 2lg:text-5xl 2lg:leading-[4.063rem] leading-[2.375rem] transform transition-transform duration-700 `}
               >
-                {service.label}
-              </Link>
-              {index < SERVICES.length - 1 && <span>,&nbsp;</span>}
+                <Link
+                  href={service.href}
+                  className='hover:underline  transition-colors duration-300 whitespace-nowrap font-medium text-3xl 2lg:text-5xl 2lg:leading-[4.063rem] leading-[2.375rem]'
+                  aria-label={service.label}
+                  title={service.label}
+                >
+                  {service.label}
+                </Link>
+                {index < SERVICES.length - 1 && <span>,&nbsp;</span>}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-      <div>
-        <Constructor />
+      <div className='flex flex-row max-sm:flex-col items-start justify-center px-[10%] mb-14 mt-10 2lg:gap-48 md:gap-32 sm:gap-20 gap-10 text-text'>
+        <div>
+          <h1 className='2lg:text-[3.125rem] sm:text-3xl sm:leading-[38px] 2lg:leading-[65px] font-medium max-sm:hidden whitespace-pre-line'>
+            {`Request for\n a commercial\n offer`}
+          </h1>
+          <h1 className='hidden max-sm:block text-2xl leading-[30px] font-medium whitespace-pre-line'>
+            {`Request for\n a commercial offer`}
+          </h1>
+        </div>
+        <div className='flex-1'>
+          <Constructor
+            btnBgColor='bg-gray-title'
+            btnBgActiveColor='bg-secondary'
+          />
+        </div>
       </div>
     </section>
   )

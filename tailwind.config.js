@@ -21,6 +21,8 @@ module.exports = {
         'light-gray-2': '#D9D9D9',
         'gray-cop': '#5B5B5B',
         'gray-disabled': '#C8C8C8',
+        'const-dark-gray': '#20201E',
+        'const-gray-line': '#5A5A5A',
       },
       fontFamily: {
         sans: ['"Cera Pro"', 'sans-serif'],

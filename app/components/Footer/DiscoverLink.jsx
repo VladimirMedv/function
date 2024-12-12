@@ -31,10 +31,10 @@ const socialLinks = [
 function DiscoverLink({ theme = 'w' }) {
   return (
     <div className='flex flex-row max-sm:flex-col items-center max-sm:items-center'>
-      <span className='text-xl max-2lg:text-xs font-light sm:text-left max-sm:text-center 2lg:mr-7 mr-5 max-sm:mr-0 max-sm:mb-4'>
+      <span className='text-xl max-2lg:text-xs font-light sm:text-left max-sm:text-center 2lg:mr-7 mr-5 max-sm:mr-0 max-sm:mb-4 text-nowrap'>
         Discover our work on:
       </span>
-      <div className='flex gap-4 justify-center flex-nowrap'>
+      <div className='flex 2lg:gap-[1.875rem] gap-[0.938rem] justify-center flex-nowrap'>
         {socialLinks.map(({ href, ariaLabel, icon }) => (
           <Link
             key={ariaLabel}

@@ -37,7 +37,7 @@ const GetPriceButton = () => {
       {/* Button "Get Price" visible only on screens wider than 480px */}
       <button
         onClick={toggleModal}
-        className='hidden sm:inline-block bg-bgwhite text-black font-normal rounded-full text-sm leading-[2.125rem] px-[20px] py-[2px] transition-all hover:bg-secondary hover:text-text cursor-pointer duration-300 ease-in-out sm:text-nowrap'
+        className='hidden sm:inline-block bg-bgwhite text-black font-normal rounded-full text-[0.875rem] leading-[2.125rem] px-[20px] py-[2px] transition-all hover:bg-secondary hover:text-text cursor-pointer duration-300 ease-in-out sm:text-nowrap'
         aria-label='Get Price'
       >
         Get Price
@@ -58,7 +58,7 @@ const GetPriceButton = () => {
               <LogoB />
               <button
                 onClick={toggleModal}
-                className='bg-black text-text font-normal rounded-full text-sm leading-[2.125rem] px-[20px] py-[2px] transition-all hover:bg-secondary duration-300 ease-in-out'
+                className='bg-black text-text font-normal rounded-full text-[0.875rem] leading-[2.125rem] px-[20px] py-[2px] transition-all hover:bg-secondary duration-300 ease-in-out'
                 aria-label='Close modal'
               >
                 Close

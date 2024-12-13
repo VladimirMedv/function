@@ -106,6 +106,11 @@ const ServiceDetails = () => {
           ))}
         </div>
       </div>
+      <div>
+        <h2 className='text-[3.125rem] font-medium text-gray-title'>
+          Completed Projects
+        </h2>
+      </div>
     </section>
   )
 }

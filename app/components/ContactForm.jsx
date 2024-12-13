@@ -1,11 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function ContactForm({
   selectedOffers,
   selectedBranding,
-  btnBgColor = 'bg-text',
+  btnBgColor = 'bg-gray-title',
   btnTextColor = 'text-black',
   inputTextColor = 'text-light-gray',
 }) {
@@ -17,6 +17,12 @@ export default function ContactForm({
   const [errors, setErrors] = useState({})
   const [touched, setTouched] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isFormValid, setIsFormValid] = useState(false)
+
+  useEffect(() => {
+    const validationErrors = validateForm()
+    setIsFormValid(Object.keys(validationErrors).length === 0)
+  }, [formData])
 
   const validateForm = () => {
     const newErrors = {}
@@ -24,13 +30,11 @@ export default function ContactForm({
     if (!formData.name.trim()) {
       newErrors.name = '!Required field'
     } else if (!/^[a-zA-ZÀ-ÿ\s]+$/.test(formData.name)) {
-      newErrors.name = '! Letters only'
+      newErrors.name = '!Letters only'
     }
 
-    if (!formData.phone.trim()) {
-      newErrors.phone = '!Required field'
-    } else if (!/^\d+$/.test(formData.phone.trim())) {
-      newErrors.phone = '!Numbers only'
+    if (formData.phone.trim() && !/^\+?\d+$/.test(formData.phone.trim())) {
+      newErrors.phone = '!Numbers only, starting with + allowed'
     }
 
     if (!formData.email.trim()) {
@@ -48,7 +52,7 @@ export default function ContactForm({
       name === 'name'
         ? value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')
         : name === 'phone'
-        ? value.replace(/\D/g, '')
+        ? value.replace(/[^\d+]/g, '')
         : value
 
     setFormData({ ...formData, [name]: filteredValue })
@@ -68,6 +72,7 @@ export default function ContactForm({
     e.preventDefault()
     const validationErrors = validateForm()
     if (Object.keys(validationErrors).length > 0) {
+      setTouched({ name: true, phone: true, email: true })
       setErrors(validationErrors)
       return
     }
@@ -94,6 +99,23 @@ export default function ContactForm({
     } finally {
       setIsSubmitting(false)
     }
+  }
+
+  const handleFormReset = () => {
+    setFormData({ name: '', phone: '', email: '' })
+    setTouched({})
+    setErrors({})
+  }
+
+  useEffect(() => {
+    return () => handleFormReset()
+  }, [])
+
+  const getButtonClass = () => {
+    if (!isFormValid) {
+      return btnBgColor
+    }
+    return btnBgColor === 'bg-gray-title' ? 'bg-text' : 'bg-const-dark-gray'
   }
 
   return (
@@ -142,7 +164,7 @@ export default function ContactForm({
 
         <button
           type='submit'
-          className={`${btnBgColor} hover:bg-secondary ${btnTextColor} font-medium 2lg:text-[1.375rem] text-sm leading-[2.125rem] 2lg:px-[30px] 2lg:py-[10px] px-[20px] py-[2px] rounded-full w-fit transition-colors duration-300 2lg:mt-[30px] 2lg:mb-10 mt-[30px] mb-5`}
+          className={`${getButtonClass()} hover:bg-secondary ${btnTextColor} font-medium 2lg:text-[1.375rem] text-sm leading-[2.125rem] 2lg:px-[30px] 2lg:py-[10px] px-[20px] py-[2px] rounded-full w-fit transition-colors duration-300 2lg:mt-[30px] 2lg:mb-10 mt-[30px] mb-5`}
           disabled={isSubmitting}
         >
           {isSubmitting ? 'Sending...' : 'Send'}

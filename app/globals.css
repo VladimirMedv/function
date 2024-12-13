@@ -171,12 +171,27 @@ input:-webkit-autofill {
   transition: background-color 0s, color 0s; /* Убираем плавные переходы */
 }
 
-/* Дополнительно для всех браузеров с поддержкой автозаполнения */
+/* Дополнительно для всех браузеров с поддержкой автозаполнения */ /* Общий сброс стилей автозаполнения */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-  background-color: transparent !important; /* Убираем фон */
-  color: inherit !important; /* Используем пользовательский цвет текста */
-  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; /* Убираем тень */
-  box-shadow: 0 0 0px 1000px transparent inset !important; /* Убираем тень */
+  background-color: transparent !important;
+  color: inherit !important;
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  transition: background-color 0s, color 0s;
+}
+
+/* Для Safari */
+input:autofill {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+@layer utilities {
+  .no-autocomplete {
+    -webkit-autofill: off !important;
+    -moz-autofill: off !important;
+    autocomplete: off !important;
+  }
 }

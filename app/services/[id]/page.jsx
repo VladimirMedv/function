@@ -81,21 +81,28 @@ const ServiceDetails = () => {
                 <div className='flex flex-col gap-4 3xl:max-w-[45.25rem] 2lg:max-w-[27.25rem] md:max-w-[22.125rem]'>
                   <p className='text-text 3xl:text-[1.625rem] 3xl:leading-[2.5rem] text-[1.5rem] leading-[1.875rem] whitespace-pre-line'>
                     {step.details + '\n'}
-                    {step.note && (
-                      <Link
-                        href={step.note.note_url}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='text-secondary underline '
-                      >
-                        {step.note.note_text}
-                      </Link>
-                    )}
+
+                    {step.note &&
+                      step.note?.note_links.map((link, index) => (
+                        <React.Fragment key={index}>
+                          <Link
+                            href={link.url}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='text-secondary underline'
+                          >
+                            {link.text}
+                          </Link>
+                          {index < step.note.note_links.length - 1 && ', '}
+                        </React.Fragment>
+                      ))}
                   </p>
                   <div className='flex md:flex-row flex-col 3xl:gap-[3.75rem] md:gap-10 gap-[2px] text-nowrap'>
-                    <p className='3xl:text-[1.625rem] 3xl:leading-[2.5rem] text-[1rem] leading-[1.625rem] text-gray-title'>
-                      {step.duration}
-                    </p>
+                    {step.duration && (
+                      <p className='3xl:text-[1.625rem] 3xl:leading-[2.5rem] text-[1rem] leading-[1.625rem] text-gray-title'>
+                        {step.duration}
+                      </p>
+                    )}
                     {step.revisions && (
                       <p className='3xl:text-[1.625rem] 3xl:leading-[2.5rem] text-[1rem] leading-[1.625rem] text-gray-title'>
                         {step.revisions}

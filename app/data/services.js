@@ -24,7 +24,10 @@ const SERVICES_DATA = [
         title: 'Brand Guidelines and Materials',
         details: `Development of a brand guidelines document with recommendations on the use of visual elements, and the systematization of all brand assets, including logos, fonts, color schemes, and other components.`,
         duration: '8+ business days',
-        note: 'Click here to view a sample brand guidelines PDF.',
+        note: {
+          note_text: 'Click here to view a sample brand guidelines PDF.',
+          note_url: 'https://link.com',
+        },
       },
     ],
   },

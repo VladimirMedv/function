@@ -23,6 +23,7 @@ module.exports = {
         'gray-disabled': '#C8C8C8',
         'const-dark-gray': '#20201E',
         'const-gray-line': '#5A5A5A',
+        'border-services': '#454545',
       },
       fontFamily: {
         sans: ['"Cera Pro"', 'sans-serif'],

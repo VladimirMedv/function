@@ -63,10 +63,10 @@ const projects = [
     },
   },
   {
-    id: 'Test',
+    id: 'Caspian gold',
     showOnMainPage: false,
-    mainImage: '/images/projects/test.jpg',
-    title: 'Project 2',
+    mainImage: '/images/projects/cover_caspian-gold.jpg',
+    title: 'Caspian gold',
     works: ['Logo', 'Brand Identity', 'Brand Guideline', 'AD Key-Visual'],
     projectPage: {
       pageTitle: 'Project 2 - Discover the Story',

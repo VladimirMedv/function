@@ -148,6 +148,8 @@ a.underline:hover,
   text-underline-offset: 0.25em;
   text-decoration-thickness: 0.08em;
   text-decoration-skip-ink: auto; /* Обеспечивает аккуратное пересечение линий */
+  -webkit-font-smoothing: antialiased; /* Для сглаживания */
+  -moz-osx-font-smoothing: grayscale; /* Для Firefox */
 }
 
 /* Специфическая корректировка для Safari */
@@ -157,5 +159,24 @@ a.underline:hover,
   .hover\:underline:hover {
     -webkit-text-decoration-thickness: 0.06em; /* Используется только в Safari */
     text-decoration-thickness: initial; /* Убирает конфликт с другими браузерами */
+    -webkit-font-smoothing: antialiased; /* Для сглаживания */
+    -moz-osx-font-smoothing: grayscale; /* Для Firefox */
   }
+}
+
+/* Убираем стандартные стили автозаполнения */
+input:-webkit-autofill {
+  background-color: transparent !important; /* Убираем фон */
+  color: inherit !important; /* Используем цвет текста, заданный пользователем */
+  transition: background-color 0s, color 0s; /* Убираем плавные переходы */
+}
+
+/* Дополнительно для всех браузеров с поддержкой автозаполнения */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  background-color: transparent !important; /* Убираем фон */
+  color: inherit !important; /* Используем пользовательский цвет текста */
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; /* Убираем тень */
+  box-shadow: 0 0 0px 1000px transparent inset !important; /* Убираем тень */
 }

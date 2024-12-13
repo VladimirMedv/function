@@ -122,7 +122,8 @@ export default function ContactForm({
     <div className='flex flex-col items-start justify-center w-full 2lg:max-w-[400px] ml-4 max-2lg:pr-5'>
       <form
         onSubmit={handleSubmit}
-        className='w-full flex flex-col gap-6 2lg:text-[1.563rem] text-[0.938rem] 2lg:leading-[2.375rem] leading-6 '
+        className='w-full flex flex-col gap-6 2lg:text-[1.563rem] text-[0.938rem] 2lg:leading-[2.375rem] leading-6'
+        autoComplete='off'
       >
         {['name', 'phone', 'email'].map((field) => (
           <div

@@ -106,8 +106,8 @@ const Constructor = ({
   }
 
   return (
-    <div className='min-h-screen flex flex-col'>
-      <div className='mb-8'>
+    <div className='min-h-screen flex flex-col 2lg:gap-20 gap-[3.75rem]'>
+      <div className=''>
         <h2 className='2lg:text-[2.5rem] 2lg:leading-[3.125rem] text-2xl leading-[1.875rem] text-nowrap font-medium mb-7'>
           What’s Your Branding?
         </h2>
@@ -116,7 +116,7 @@ const Constructor = ({
         </div>
       </div>
 
-      <div className='mb-8'>
+      <div className=''>
         <h2 className='2lg:text-[2.5rem] 2lg:leading-[3.125rem] text-2xl leading-[1.875rem] text-nowrap font-medium mb-7'>
           What We Offer
         </h2>

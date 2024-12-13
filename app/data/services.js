@@ -2,30 +2,30 @@ const SERVICES_DATA = [
   {
     href: '/services/corporate-identity',
     label: 'Corporate identity',
-    description: `Creating a brand identity that reflects the uniqueness of the brand and strengthens its competitive advantages. A complete process — from research and concept development to finalized materials and brand guidelines — aimed at shaping a cohesive and recognizable brand image.`,
+    description: `Creating a brand identity that reflects the uniqueness of the brand and strengthens its competitive advantages. A complete process — from research and concept development to finalized materials and brand guidelines — aimed at shaping a cohesive and recognizable brand image.`,
     steps: [
       {
-        title: 'Research and Analysis',
-        details: `Brand, target audience, competitor, market, and current trend analysis. Creation of a mood board to define the visual direction of the brand identity.`,
+        title: 'Research and Analysis',
+        details: `Brand, target audience, competitor, market, and current trend analysis. Creation of a mood board to define the visual direction of the brand identity.`,
         duration: '20+ business days',
       },
       {
         title: 'Brand Visual Concept',
-        details: `Development of the brand's visual concept: logo, brand mark, color palette, typography, graphic elements, visual patterns, photographic style, and brand blocks.`,
+        details: `Development of the brand's visual concept: logo, brand mark, color palette, typography, graphic elements, visual patterns, photographic style, and brand blocks.`,
         duration: '15+ business days',
         revisions: '1 concept, 2 rounds of revisions',
       },
       {
-        title: 'Creation of Brand Materials',
-        details: `Adaptation of the brand’s visual concept for various channels and materials, tailored to the brand’s characteristics and objectives. This includes the creation of business documentation, corporate identity items, presentations, master mockups, advertising materials, and other brand elements.`,
+        title: 'Creation of Brand Materials',
+        details: `Adaptation of the brand’s visual concept for various channels and materials, tailored to the brand’s characteristics and objectives. This includes the creation of business documentation, corporate identity items, presentations, master mockups, advertising materials, and other brand elements.`,
         duration: '10+ business days',
       },
       {
-        title: 'Brand Guidelines and Materials',
-        details: `Development of a brand guidelines document with recommendations on the use of visual elements, and the systematization of all brand assets, including logos, fonts, color schemes, and other components.`,
+        title: 'Brand Guidelines and Materials',
+        details: `Development of a brand guidelines document with recommendations on the use of visual elements, and the systematization of all brand assets, including logos, fonts, color schemes, and other components.`,
         duration: '8+ business days',
         note: {
-          note_text: 'Click here to view a sample brand guidelines PDF.',
+          note_text: 'Click here to view a sample brand guidelines PDF.',
           note_url: 'https://link.com',
         },
       },

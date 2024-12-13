@@ -143,6 +143,7 @@ const Constructor = ({
         selectedBranding={selectedBranding}
         btnBgColor={'bg-gray-disabled'}
         btnTextColor={'text-text'}
+        inputTextColor='text-const-dark-gray'
       />
     </div>
   )

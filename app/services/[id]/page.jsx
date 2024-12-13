@@ -5,6 +5,8 @@ import SERVICES from '../../data/services'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import ContactForm from '../../components/ContactForm'
+import Projects from '../../components/Projects/Projects'
+import Services from '../../components/Services'
 
 const ServiceDetails = () => {
   const pathname = usePathname()
@@ -21,8 +23,8 @@ const ServiceDetails = () => {
   }
 
   return (
-    <section>
-      <div className='text-text p-6 3xl:px-[12.5rem] md:px-[9.375rem] px-5 3xl:py-[12.5rem] pb-[9.375rem]'>
+    <>
+      <section className='text-text p-6 3xl:px-[12.5rem] md:px-[9.375rem] px-5 3xl:py-[12.5rem] pb-[9.375rem]'>
         <h2 className='text-[3.125rem] font-medium text-gray-title'>
           Services
         </h2>
@@ -105,13 +107,18 @@ const ServiceDetails = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div>
-        <h2 className='text-[3.125rem] font-medium text-gray-title'>
+      </section>
+      <section>
+        <h2 className='text-[3.125rem] font-medium text-gray-title p-6 3xl:px-[12.5rem] md:px-[9.375rem] px-5 pb-[1.875rem]'>
           Completed Projects
         </h2>
-      </div>
-    </section>
+        <Projects />
+      </section>
+      <Services
+        justify='justify-between'
+        sectionStyle='2lg:-mt-[3.75rem] -mt-[2.5rem] 2lg:py-[12.5rem] py-[9.375rem] px-5'
+      />
+    </>
   )
 }
 

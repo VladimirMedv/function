@@ -9,7 +9,7 @@ export default function Home() {
     <div className='bg-primary text-text flex flex-col 2lg:gap-[12.5rem] sm:gap-[9.375rem] max-sm:gap-[7.5rem]'>
       <Hero />
       <Projects />
-      <Services />
+      <Services sectionStyle='2lg:-mt-[3.75rem] -mt-[2.5rem] 2lg:px-56 md:px-36 ' />
       <Clients />
       <AboutMe />
     </div>

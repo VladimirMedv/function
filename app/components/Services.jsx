@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import SERVICES from '../data/services'
 
-export default function Services() {
+export default function Services({ justify = '', sectionStyle = '' }) {
   const [hasAnimated, setHasAnimated] = useState(false)
   const sectionRef = useRef(null)
 
@@ -32,10 +32,10 @@ export default function Services() {
   return (
     <section
       ref={sectionRef}
-      className='flex items-center justify-center 2lg:-mt-[3.75rem] -mt-[2.5rem] 2lg:px-56 md:px-36 px-[20px]'
+      className={`flex items-center justify-center px-5 ${sectionStyle}`}
     >
       <div className='2lg:w-[1468px] max-2lg:w-[890px] max-md:w-[728px] max-sm:w-[440px] mx-auto'>
-        <div className='flex flex-wrap mt-4'>
+        <div className={`flex flex-wrap mt-4 ${justify}`}>
           <div className='overflow-hidden flex items-center'>
             <h2
               className={`text-3xl 2lg:text-5xl font-medium text-gray-title transform transition-transform duration-700 mr-2 ${

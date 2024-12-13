@@ -7,6 +7,7 @@ export default function ContactForm({
   selectedBranding,
   btnBgColor = 'bg-text',
   btnTextColor = 'text-black',
+  inputTextColor = 'text-light-gray',
 }) {
   const [formData, setFormData] = useState({
     name: '',
@@ -99,7 +100,7 @@ export default function ContactForm({
     <div className='flex flex-col items-start justify-center w-full 2lg:max-w-[400px] ml-4 max-2lg:pr-5'>
       <form
         onSubmit={handleSubmit}
-        className='w-full flex flex-col gap-6'
+        className='w-full flex flex-col gap-6 2lg:text-[1.563rem] text-[0.938rem] 2lg:leading-[2.375rem] leading-6 '
       >
         {['name', 'phone', 'email'].map((field) => (
           <div
@@ -126,7 +127,7 @@ export default function ContactForm({
                   ? 'Your name'
                   : field.charAt(0).toUpperCase() + field.slice(1)
               }
-              className={`w-full border-b border-light-gray-2 bg-transparent text-light-gray focus:outline-none py-2 px-5 placeholder:text-light-gray leading-[2.375rem] ${
+              className={`w-full border-b border-light-gray-2 bg-transparent ${inputTextColor} focus:outline-none py-2 px-5 placeholder:text-light-gray leading-[2.375rem] ${
                 errors[field] && touched[field] && 'border-secondary'
               }`}
               autoComplete='off'

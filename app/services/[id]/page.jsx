@@ -119,7 +119,7 @@ const ServiceDetails = () => {
         <h2 className='text-[3.125rem] font-medium text-gray-title p-6 3xl:px-[12.5rem] md:px-[9.375rem] px-5 pb-[1.875rem]'>
           Completed Projects
         </h2>
-        <Projects />
+        <Projects currentService={pathname} />
       </section>
       <Services
         justify='justify-between'

@@ -131,7 +131,7 @@ export default function ContactForm({
             className='relative'
           >
             <label
-              htmlFor={'asdf' + field}
+              htmlFor={field}
               className='sr-only'
             >
               {field === 'name'
@@ -141,7 +141,7 @@ export default function ContactForm({
             <input
               type='text'
               id={field}
-              name={'asdf' + field}
+              name={field}
               value={formData[field]}
               onChange={handleInputChange}
               onBlur={handleBlur}
@@ -153,7 +153,7 @@ export default function ContactForm({
               className={`w-full border-b border-light-gray-2 bg-transparent ${inputTextColor} focus:outline-none py-2 px-5 placeholder:text-light-gray leading-[2.375rem] no-autocomplete input-[autocomplete="off"] ${
                 errors[field] && touched[field] && 'border-secondary'
               }`}
-              autoComplete='new-password'
+              autoComplete='off'
             />
             {errors[field] && touched[field] && (
               <span className='absolute right-2 top-1/2 transform -translate-y-1/2 text-secondary text-sm'>

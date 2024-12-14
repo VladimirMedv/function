@@ -3,7 +3,7 @@ import ProjectsPage from '../components/Projects/ProjectsPage'
 function Projects() {
   return (
     <div>
-      <ProjectsPage />
+      <ProjectsPage showAll />
     </div>
   )
 }

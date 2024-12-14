@@ -5,6 +5,7 @@ const projects = [
     mainImage: '/images/projects/cover_arshaluys.jpg', // Главное фото
     title: 'Arshaluys', // Название проекта
     works: ['Logo', 'Product Branding'], // Перечень работ/услуг
+    services: ['/services/corporate-identity', '/services/product-identity'], // Привязка к сервисам
     projectPage: {
       pageTitle: 'Project 1 - Detailed View', // Заголовок для страницы проекта
       descriptions: [
@@ -26,6 +27,7 @@ const projects = [
     mainImage: '/images/projects/cover_who.jpg', // Главное фото
     title: 'Cancer screening\ncampaign in Moscow', // Название проекта
     works: ['Key-visual'], // Перечень работ/услуг
+    services: ['/services/personal-identity'], // Привязка к сервисам
     projectPage: {
       pageTitle: 'Project 1 - Detailed View', // Заголовок для страницы проекта
       descriptions: [
@@ -47,6 +49,7 @@ const projects = [
     mainImage: '/images/projects/cover_smartstroy.jpg', // Главное фото
     title: 'Smartstroy', // Название проекта
     works: ['Logo', 'Corporate identity'], // Перечень работ/услуг
+    services: ['/services/personal-identity'], // Привязка к сервисам
     projectPage: {
       pageTitle: 'Project 1 - Detailed View', // Заголовок для страницы проекта
       descriptions: [
@@ -68,6 +71,7 @@ const projects = [
     mainImage: '/images/projects/cover_caspian-gold.jpg',
     title: 'Caspian gold',
     works: ['Logo', 'Brand Identity', 'Brand Guideline', 'AD Key-Visual'],
+    services: ['/services/personal-identity'], // Привязка к сервисам
     projectPage: {
       pageTitle: 'Project 2 - Discover the Story',
       descriptions: [

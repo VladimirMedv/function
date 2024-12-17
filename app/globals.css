@@ -164,6 +164,11 @@ a.underline:hover,
   }
 }
 
+input {
+  -webkit-appearance: none; /* Открываем дорогу прямоугольным интерфейсам! */
+  border-radius: 0; /* Углы под надежным наблюдением */
+}
+
 /* Убираем стандартные стили автозаполнения */
 input:-webkit-autofill {
   background-color: transparent !important; /* Убираем фон */

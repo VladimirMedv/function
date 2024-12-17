@@ -150,7 +150,7 @@ export default function ContactForm({
                   ? 'Your name'
                   : field.charAt(0).toUpperCase() + field.slice(1)
               }
-              className={`w-full border-b border-light-gray-2 bg-transparent ${inputTextColor} focus:outline-none py-2 px-5 placeholder:text-light-gray leading-[2.375rem] no-autocomplete input-[autocomplete="off"] ${
+              className={`w-full border-b rounded-none border-light-gray-2 bg-transparent ${inputTextColor} focus:outline-none py-2 px-5 placeholder:text-light-gray leading-[2.375rem] no-autocomplete input-[autocomplete="off"] ${
                 errors[field] && touched[field] && 'border-secondary'
               }`}
               autoComplete='off'

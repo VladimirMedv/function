@@ -67,13 +67,13 @@ const Menu = () => {
   return (
     <nav className='flex items-center justify-between'>
       {/* Основное меню */}
-      <ul className='hidden sm:flex space-x-[20px] md:space-x-[40px] font-normal text-sm leading-[1.1rem] text-nowrap'>
+      <ul className='hidden md:flex 2lg:gap-10 gap-[1.875rem] font-normal text-sm leading-[1.1rem] text-nowrap'>
         {renderMenuItems()}
       </ul>
 
       {/* Бургер-меню */}
       <button
-        className={`sm:hidden focus:outline-none font-normal 2lg:text-[1.375rem] md:text-sm transition-transform transform z-[51] ${
+        className={`md:hidden focus:outline-none transition-transform transform z-[51] ${
           isMenuOpen ? 'rotate-90' : ''
         }`}
         onClick={toggleMenu}
@@ -105,7 +105,7 @@ const Menu = () => {
             <LogoB />
           </div>
           <ul
-            className={`flex flex-col items-start mt-3 space-y-4 p-5 font-medium text-[33px] leading-10 gap-2 transition-opacity duration-300 ease-in-out ${
+            className={`flex flex-col items-start mt-3 p-5 font-medium text-[33px] leading-10 gap-10 transition-opacity duration-300 ease-in-out ${
               isContentVisible ? 'opacity-100' : 'opacity-0'
             }`}
           >
@@ -113,7 +113,7 @@ const Menu = () => {
           </ul>
           {/* Компонент Footer/Contacts */}
           <div
-            className={`absolute w-full flex flex-col items-center justify-center bottom-0 mb-[40px] p-5 text-dark-gray transition-opacity duration-300 ease-in-out ${
+            className={`absolute w-full flex flex-col items-center justify-center bottom-0 gap-[3.125rem] mb-[40px] p-5 text-dark-gray transition-opacity duration-300 ease-in-out ${
               isContentVisible ? 'opacity-100' : 'opacity-0'
             }`}
           >

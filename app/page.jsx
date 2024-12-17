@@ -6,10 +6,10 @@ import AboutMe from './components/AboutMe/AboutMe'
 
 export default function Home() {
   return (
-    <div className='bg-primary text-text flex flex-col 2lg:gap-[12.5rem] sm:gap-[9.375rem] max-sm:gap-[7.5rem]'>
+    <div className='bg-primary text-text flex flex-col 3xl:gap-[12.5rem] md:gap-[9.375rem] sm:gap-[7.5rem]'>
       <Hero />
       <Projects />
-      <Services sectionStyle='2lg:-mt-[3.75rem] -mt-[2.5rem] 2lg:px-56 md:px-36 ' />
+      <Services sectionStyle='3xl:-mt-[3.75rem] -mt-[2.5rem] 3xl:px-56 2lg:px-40' />
       <Clients />
       <AboutMe />
     </div>

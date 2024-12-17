@@ -44,13 +44,13 @@ const Clients = () => {
   }, [hasAnimated])
 
   return (
-    <section className='flex items-center justify-center 2lg:px-56 md:px-36 px-5'>
+    <section className='flex items-center md:justify-center justify-between 3xl:px-56 2lg:px-40 px-5'>
       <div
         ref={containerRef}
-        className='lg:w-[1468px] max-2lg:w-[890px] max-md:w-[728px] max-sm:w-[440px] mx-auto'
+        // className='lg:w-[1468px] max-2lg:w-[890px] max-md:w-[728px] max-sm:w-[440px] mx-auto'
       >
         <h2
-          className={`text-3xl 2lg:text-5xl mb-8 text-gray-title font-medium transform transition-transform duration-700 ease-out ${
+          className={`3xl:text-[3.125rem] text-[1.875rem] 3xl:leading-[4.063rem] leading-[2.375rem] mb-8 text-gray-title font-medium transform transition-transform duration-700 ease-out ${
             hasAnimated
               ? 'translate-y-0 opacity-100'
               : 'translate-y-full opacity-0'
@@ -60,21 +60,17 @@ const Clients = () => {
         </h2>
 
         {/* Логотипы в два ряда */}
-        <div className='grid grid-cols-2 gap-4 md:grid-cols-5 lg:grid-cols-6'>
+        <div className='grid grid-cols-2 2lg:gap-14 md:gap-8 gap-5 md:grid-cols-5 2lg:grid-cols-6'>
           {logos.map((logo, index) => (
             <div
               key={index}
-              className='overflow-hidden'
+              className='overflow-hidden flex justify-center'
             >
               <Image
                 src={logo}
                 alt={`Client logo ${index + 1}`}
                 width={234.81}
                 height={119.94}
-                className='w-[165px] h-[84.28px] 
-                  max-md:w-[139px] max-md:h-[71px] 
-                  max-2lg:w-[142.5px] max-2lg:h-[72.79px] 
-                  2lg:w-[234.81px] 2lg:h-[119.94px]'
                 style={{
                   transform: hasAnimated ? 'translateY(0)' : 'translateY(65%)',
                   opacity: hasAnimated ? 1 : 0,

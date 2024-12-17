@@ -30,17 +30,17 @@ const socialLinks = [
 
 function DiscoverLink({ theme = 'w' }) {
   return (
-    <div className='flex flex-row max-sm:flex-col items-center max-sm:items-center'>
-      <span className='text-xl max-2lg:text-xs font-light sm:text-left max-sm:text-center 2lg:mr-7 mr-5 max-sm:mr-0 max-sm:mb-4 text-nowrap'>
+    <div className='flex md:flex-row flex-col items-center md:justify-start justify-center '>
+      <span className='3xl:text-xl text-xs 3xl:leading-[1.563rem] leading-[0.938rem] font-normal md:text-left text-center 3xl:mr-10 md:mr-5 mr-0 md:mb-0 mb-4 text-nowrap'>
         Discover our work on:
       </span>
-      <div className='flex 2lg:gap-[1.875rem] gap-[0.938rem] justify-center flex-nowrap'>
+      <div className='flex 3xl:gap-[1.875rem] gap-[0.938rem] justify-center flex-nowrap'>
         {socialLinks.map(({ href, ariaLabel, icon }) => (
           <Link
             key={ariaLabel}
             href={href}
             aria-label={ariaLabel}
-            className='relative  2lg:w-[47px] 2lg:h-[47px] max-2lg:w-[30px] max-2lg:h-[30px] flex items-center justify-center'
+            className='relative  3xl:w-[47px] 3xl:h-[47px] w-[30px] h-[30px] flex items-center justify-center'
             target='_blank'
             rel='noopener noreferrer'
           >

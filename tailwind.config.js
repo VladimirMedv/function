@@ -29,7 +29,7 @@ module.exports = {
         sans: ['"Cera Pro"', 'sans-serif'],
       },
       screens: {
-        sm: '480px',
+        sm: '360px',
         '2lg': '1200px',
         '3xl': '1920px',
         'max-sm': { max: '480px' },

@@ -34,11 +34,13 @@ export default function Services({ justify = '', sectionStyle = '' }) {
       ref={sectionRef}
       className={`flex items-center justify-center px-5 ${sectionStyle}`}
     >
-      <div className='2lg:w-[1468px] max-2lg:w-[890px] max-md:w-[728px] max-sm:w-[440px] mx-auto'>
+      <div
+      // className='3xl:w-[1468px] 2lg:w-[890px] md:w-[728px] sm:w-[440px] mx-auto'
+      >
         <div className={`flex flex-wrap mt-4 ${justify}`}>
           <div className='overflow-hidden flex items-center'>
             <h2
-              className={`text-3xl 2lg:text-5xl font-medium text-gray-title transform transition-transform duration-700 mr-2 ${
+              className={`3xl:text-[3.125rem] text-[1.875rem] 3xl:leading-[4.063rem] leading-[2.375rem] font-medium text-gray-title transform transition-transform duration-700 mr-2 ${
                 hasAnimated ? 'translate-y-0' : 'translate-y-full'
               }`}
             >
@@ -48,16 +50,16 @@ export default function Services({ justify = '', sectionStyle = '' }) {
           {SERVICES.map((service, index) => (
             <div
               key={index}
-              className='overflow-hidden flex items-center flex-wrap 2lg:leading-[4.063rem] leading-[2.375rem]' // Контейнер для эффекта "вылезания из щели"
+              className='overflow-hidden flex items-center flex-wrap 3xl:leading-[4.063rem] leading-[2.375rem]' // Контейнер для эффекта "вылезания из щели"
             >
               <div
-                className={` text-3xl 2lg:text-5xl 2lg:leading-[4.063rem] leading-[2.375rem] transform transition-transform duration-700 delay-[${
+                className={`3xl:text-[3.125rem] text-[1.875rem] 3xl:leading-[4.063rem] leading-[2.375rem] transform transition-transform duration-700 delay-[${
                   index * 100
                 }ms] ${hasAnimated ? 'translate-y-0' : 'translate-y-full'}`}
               >
                 <Link
                   href={service.href}
-                  className='hover:underline hover:text-secondary transition-colors duration-300 whitespace-nowrap font-medium text-3xl 2lg:text-5xl 2lg:leading-[4.063rem] leading-[2.375rem]'
+                  className='hover:underline hover:text-secondary transition-colors duration-300 whitespace-nowrap font-medium 3xl:text-[3.125rem] text-[1.875rem] 3xl:leading-[4.063rem] leading-[2.375rem]'
                   aria-label={service.label}
                   title={service.label}
                 >

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Copyright() {
   return (
-    <div className='text-sm max-2lg:text-[9px] text-gray-cop sm:ml-4 text-nowrap'>
+    <div className='3xl:text-sm text-[9px] left-3 text-gray-cop 2lg:ml-4 text-nowrap'>
       © Functional Design Studio. All rights reserved
     </div>
   )

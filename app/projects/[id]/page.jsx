@@ -62,7 +62,7 @@ export default async function ProjectPage({ params }) {
   const { descriptions, gallery, video } = projectPage
 
   return (
-    <main className='2lg:py-[12.5rem] sm:py-[9.375rem] max-sm:py-[7.5rem]  px-10 bg-primary text-text'>
+    <main className='3xl:py-[12.5rem] md:py-[9.375rem] py-[7.5rem] px-10 bg-primary text-text'>
       <div className='max-w-7xl mx-auto'>
         <h1 className='text-4xl font-bold mb-8'>{title}</h1>
         <Image

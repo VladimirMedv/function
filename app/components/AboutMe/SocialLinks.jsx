@@ -30,8 +30,8 @@ const socialLinks = [
 
 export default function SocialLinks() {
   return (
-    <div className='mt-6 flex flex-row max-sm:flex-col items-center max-sm:items-start'>
-      <span className='text-xl max-2lg:text-xs font-light sm:text-left mr-7 max-2lg:mr-5'>
+    <div className='mt-6 flex md:flex-row flex-col items-start md:items-center'>
+      <span className='3xl:text-[1.25rem] text-[0.75rem] 3xl:leading-[2.375rem] leading-[1rem] font-normal text-left 3xl:mr-[1.875rem] md:mr-5'>
         Get in touch with me through:
       </span>
       <div className='flex flex-nowrap gap-4 justify-center'>
@@ -40,11 +40,11 @@ export default function SocialLinks() {
             key={ariaLabel}
             href={href}
             aria-label={ariaLabel}
-            className='group size-[35px] max-2lg:size-[22px] flex items-center justify-center transition-colors duration-300 max-sm:mt-4'
+            className='group 3xl:size-[2.188rem] size-[1.375rem] flex items-center justify-center transition-colors duration-300 md:mt-0 mt-4'
             target='_blank'
             rel='noopener noreferrer'
           >
-            <span className='relative w-8 h-8 max-2lg:w-6 max-2lg:h-6'>
+            <span className='relative 3xl:w-[2.188rem] 3xl:h-[2.188rem] w-[1.375rem] h-[1.375rem]'>
               <Image
                 src={icon.normal}
                 alt={`${ariaLabel} icon`}

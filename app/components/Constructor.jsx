@@ -86,7 +86,7 @@ const Constructor = ({
     return brandingOptions.map((option) => (
       <button
         key={option.id}
-        className={`rounded-full font-medium transition-colors duration-300 2lg:text-[1.375rem] text-sm leading-[2.125rem] 2lg:px-[30px] 2lg:py-[10px] px-[20px] py-[2px]  ${
+        className={`rounded-full font-medium transition-colors duration-300 3xl:text-[1.375rem] text-sm leading-[2.125rem] 3xl:px-[30px] 3xl:py-[10px] px-[20px] py-[2px]  ${
           selectedBranding === option.id
             ? btnBgActiveColor + ' text-text'
             : btnBgColor + ' text-text hover:bg-secondary hover:text-black'
@@ -106,25 +106,25 @@ const Constructor = ({
   }
 
   return (
-    <div className='min-h-screen flex flex-col 2lg:gap-20 gap-[3.75rem]'>
+    <div className='min-h-screen flex flex-col 3xl:gap-20 gap-[3.75rem]'>
       <div className=''>
-        <h2 className='2lg:text-[2.5rem] 2lg:leading-[3.125rem] text-2xl leading-[1.875rem] text-nowrap font-medium mb-7'>
+        <h2 className='3xl:text-[2.5rem] 3xl:leading-[3.125rem] text-2xl leading-[1.875rem] text-nowrap font-medium mb-7'>
           What’s Your Branding?
         </h2>
-        <div className='flex flex-wrap 2lg:gap-[1.875rem] gap-5'>
+        <div className='flex flex-wrap 3xl:gap-[1.875rem] gap-5'>
           {renderBrandingOptions()}
         </div>
       </div>
 
       <div className=''>
-        <h2 className='2lg:text-[2.5rem] 2lg:leading-[3.125rem] text-2xl leading-[1.875rem] text-nowrap font-medium mb-7'>
+        <h2 className='3xl:text-[2.5rem] 3xl:leading-[3.125rem] text-2xl leading-[1.875rem] text-nowrap font-medium mb-7'>
           What We Offer
         </h2>
-        <div className='flex flex-wrap 2lg:gap-[1.875rem] gap-5'>
+        <div className='flex flex-wrap 3xl:gap-[1.875rem] gap-5'>
           {renderOffers().map((offer) => (
             <button
               key={offer}
-              className={`2lg:text-[1.375rem] text-sm leading-[2.125rem] 2lg:px-[30px] 2lg:py-[10px] px-[20px] py-[2px]  rounded-full font-medium transition-colors duration-300 ${
+              className={`3xl:text-[1.375rem] text-sm leading-[2.125rem] 3xl:px-[30px] 3xl:py-[10px] px-[20px] py-[2px] rounded-full font-medium transition-colors duration-300 ${
                 selectedOffers.includes(offer)
                   ? btnBgActiveColor + ' text-text'
                   : btnBgColor +

@@ -13,7 +13,7 @@ const Logo = () => {
     const updateLogo = () => {
       const screenWidth = window.innerWidth
 
-      if (screenWidth <= 480) {
+      if (screenWidth <= 768) {
         setLogoSrc('/images/logo_f_b.svg')
         setSize({ width: 19.54, height: 30.81 })
       } else {

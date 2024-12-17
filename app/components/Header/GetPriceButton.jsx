@@ -58,7 +58,7 @@ const GetPriceButton = () => {
               <LogoB />
               <button
                 onClick={toggleModal}
-                className='bg-black text-text font-normal rounded-full 3xl:text-[22px] text-[0.875rem] leading-[2.125rem] 3xl:px-[30px] 3xl:py-[10px] px-[20px] py-[2px] transition-all hover:bg-secondary duration-300 ease-in-out'
+                className='bg-black text-text font-normal rounded-full text-[0.875rem] leading-[2.125rem] px-[20px] py-[2px] transition-all hover:bg-secondary duration-300 ease-in-out'
                 aria-label='Close modal'
               >
                 Close

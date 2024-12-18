@@ -32,7 +32,9 @@ const Menu = () => {
       <li key={href}>
         <Link
           href={href}
-          className='hover:underline hover:text-secondary transition-colors duration-300 text-const-dark-gray'
+          className={`hover:underline hover:text-secondary transition-colors duration-300 ${
+            isMenuOpen ? 'text-const-dark-gray' : 'text-text'
+          }`}
           onClick={onClick}
         >
           {label}

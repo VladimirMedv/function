@@ -37,8 +37,8 @@ function PageProjects() {
                   key={category}
                   className={`cursor-pointer ${
                     activeCategory === category
-                      ? 'text-secondary font-bold underline'
-                      : 'hover:text-secondary hover:underline'
+                      ? 'text-secondary underline'
+                      : 'hover:text-secondary hover:underline transition-colors duration-300'
                   }`}
                   onClick={() => setActiveCategory(category)}
                 >

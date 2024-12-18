@@ -143,6 +143,8 @@ a.underline:hover,
 
 a.underline,
 a.underline:hover,
+li.underline,
+li.underline:hover,
 .hover\:underline:hover {
   text-decoration: underline;
   text-underline-offset: 0.25em;
@@ -156,6 +158,8 @@ a.underline:hover,
 @supports (-webkit-text-decoration-thickness: 1px) {
   a.underline,
   a.underline:hover,
+  li.underline,
+  li.underline:hover,
   .hover\:underline:hover {
     -webkit-text-decoration-thickness: 0.06em; /* Используется только в Safari */
     text-decoration-thickness: initial; /* Убирает конфликт с другими браузерами */

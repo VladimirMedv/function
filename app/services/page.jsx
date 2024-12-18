@@ -1,6 +1,5 @@
 'use client'
 
-import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import Constructor from '../components/Constructor'
 
@@ -18,44 +17,15 @@ const SERVICES = [
   { href: '/services/content-design', label: 'Content design' },
 ]
 
-export default function Services() {
-  // const [hasAnimated, setHasAnimated] = useState(false)
-  // const sectionRef = useRef(null)
-
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     ([entry]) => {
-  //       if (entry.isIntersecting && !hasAnimated) {
-  //         setHasAnimated(true) // Trigger animation once
-  //       }
-  //     },
-  //     { threshold: 0.5 }
-  //   )
-
-  //   if (sectionRef.current) {
-  //     observer.observe(sectionRef.current)
-  //   }
-
-  //   return () => {
-  //     if (sectionRef.current) {
-  //       observer.unobserve(sectionRef.current)
-  //     }
-  //   }
-  // }, [hasAnimated])
-
+export default function PageServices() {
   return (
-    <section
-      // ref={sectionRef}
-      className='flex flex-col items-center justify-center md:px-10 px-5 2lg:py-[12.5rem] sm:py-[9.375rem] max-sm:py-[7.5rem] overflow-hidden  gap-[12.5rem]'
-    >
+    <section className='flex flex-col items-center justify-center md:px-10 px-5 2lg:py-[12.5rem] sm:py-[9.375rem] max-sm:py-[7.5rem] overflow-hidden  gap-[12.5rem]'>
       <div className='flex flex-col items-center justify-center'>
-        {/* <div className='overflow-hidden flex items-center'> */}
         <h2
           className={`text-[12.813rem] md:text-[20rem] 2lg:text-[31.875rem] text-secondary transform transition-transform duration-700 2lg:leading-[641.07px] md:leading-[402.24px] leading-[257.68px] font-bold `}
         >
           Services.
         </h2>
-        {/* </div> */}
         <div className='flex flex-wrap justify-between 2lg:-mt-[11.4rem] md:-mt-[7rem] -mt-[5.1rem] z-10 max-w-[100vw] md:px-10 px-5'>
           {SERVICES.map((service, index) => (
             <div

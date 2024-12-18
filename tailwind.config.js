@@ -43,6 +43,8 @@ module.exports = {
         fadeIn: 'fadeIn 1s ease-out forwards', // Плавное появление
         fadeInDelay: 'fadeInDelay 1.5s ease-out forwards', // Плавное появление с задержкой
         slideUp: 'slideUp 0.7s ease-out forwards',
+        disperse: 'disperse 1s ease-out forwards', // Эффект "уноса ветром"
+        appear: 'appear 1s ease-out forwards', // Плавное появление
       },
       keyframes: {
         'scroll-left': {
@@ -64,6 +66,36 @@ module.exports = {
         slideUp: {
           '0%': { transform: 'translateY(100%)' },
           '100%': { transform: 'translateY(0)' },
+        },
+        disperse: {
+          '0%': { opacity: 1, transform: 'translateX(0)', filter: 'blur(0px)' },
+          '50%': {
+            opacity: 0.5,
+            transform: 'translateX(-10px)',
+            filter: 'blur(2px)',
+          },
+          '100%': {
+            opacity: 0,
+            transform: 'translateX(-30px)',
+            filter: 'blur(5px)',
+          },
+        },
+        appear: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateX(30px)',
+            filter: 'blur(5px)',
+          },
+          '50%': {
+            opacity: 0.5,
+            transform: 'translateX(10px)',
+            filter: 'blur(2px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateX(0)',
+            filter: 'blur(0px)',
+          },
         },
       },
     },

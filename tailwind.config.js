@@ -33,6 +33,7 @@ module.exports = {
         sm: '480px',
         '2lg': '1200px',
         '3xl': '1920px',
+        'max-ssm': { max: '360px' },
         'max-sm': { max: '480px' },
         'max-2lg': { max: '1200px' },
         'max-3xl': { max: '1920px' },

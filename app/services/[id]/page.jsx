@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { notFound } from 'next/navigation'
 import SERVICES from '../../data/services'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -19,19 +20,19 @@ const ServiceDetails = () => {
   }
 
   if (!service) {
-    return <p className='text-red-500'>Service not found</p>
+    notFound()
   }
 
   return (
     <>
-      <section className='text-text p-6 3xl:px-[12.5rem] md:px-[9.375rem] px-5 3xl:py-[12.5rem] pb-[9.375rem]'>
+      <section className='text-text p-6 3xl:px-[12.5rem] 2lg:px-[9.688rem] md:px-[9.375rem] px-5 3xl:py-[12.5rem] pb-[9.375rem]'>
         <h2 className='text-[3.125rem] font-medium text-gray-title'>
           Services
         </h2>
         <h1 className='3xl:text-[5rem] text-[3.125rem] font-medium mb-4'>
           {service.label}
         </h1>
-        <p className='3xl:text-[2.5rem] 3xl:leading-[3.125rem] text-2xl mb-6 tracking-[-0.03em] max-w-[68.5rem]'>
+        <p className='3xl:text-[2.5rem] 3xl:leading-[3.125rem] text-2xl mb-6 tracking-[-0.03em] 3xl:max-w-[1096px] 2lg:max-w-[664px] md:max-w-[653px] sm:max-w-[440px] ssm:max-w-[300px]  max-w-[68.5rem]'>
           {service.description}
         </p>
 
@@ -65,7 +66,7 @@ const ServiceDetails = () => {
           {service.steps.map((step, index) => (
             <div
               key={index}
-              className={`p-4 flex flex-row 3xl:gap-[8.75rem] 2lg:gap-[5.625rem] md:gap-[3.125rem] gap-[5.625rem] tracking-[-0.03em] ${
+              className={`3xl:max-w-[1468px] 2lg:max-w-[892px] md:max-w-[728px] sm:max-w-[440px] ssm:max-w-[300px] p-4 flex flex-row 3xl:gap-[8.75rem] 2lg:gap-[5.625rem] md:gap-[3.125rem] gap-[5.625rem] tracking-[-0.03em] ${
                 index !== service.steps.length - 1
                   ? 'border-b border-b-border-services'
                   : ''

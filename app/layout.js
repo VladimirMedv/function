@@ -1,6 +1,7 @@
 import SmoothScroll from './components/SmoothScroll'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import { PageInfoProvider } from './context/PageInfoContext'
 import './globals.css'
 
 export default function RootLayout({ children }) {
@@ -39,11 +40,12 @@ export default function RootLayout({ children }) {
         <title>Function Design Studio</title>
       </head>
       <body className='bg-primary scroll-smooth'>
-        <SmoothScroll />
-        <Header />
-        {children}
-
-        <Footer />
+        <PageInfoProvider>
+          <SmoothScroll />
+          <Header />
+          {children}
+          <Footer />
+        </PageInfoProvider>
       </body>
     </html>
   )

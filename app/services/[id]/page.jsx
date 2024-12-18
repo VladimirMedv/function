@@ -25,14 +25,14 @@ const ServiceDetails = () => {
 
   return (
     <>
-      <section className='text-text p-6 3xl:px-[12.5rem] 2lg:px-[9.688rem] md:px-[9.375rem] px-5 3xl:py-[12.5rem] pb-[9.375rem]'>
+      <section className='text-text p-6 3xl:px-[12.5rem] 2lg:px-[9.688rem] 7md:px-[9.375rem] px-5 3xl:py-[12.5rem] pb-[9.375rem]'>
         <h2 className='text-[3.125rem] font-medium text-gray-title'>
           Services
         </h2>
         <h1 className='3xl:text-[5rem] text-[3.125rem] font-medium mb-4'>
           {service.label}
         </h1>
-        <p className='3xl:text-[2.5rem] 3xl:leading-[3.125rem] text-2xl mb-6 tracking-[-0.03em] 3xl:max-w-[1096px] 2lg:max-w-[664px] md:max-w-[653px] sm:max-w-[440px] ssm:max-w-[300px]  max-w-[68.5rem]'>
+        <p className='3xl:text-[2.5rem] 3xl:leading-[3.125rem] text-2xl mb-6 tracking-[-0.03em] 3xl:max-w-[1096px] 2lg:max-w-[664px] 7md:max-w-[653px]  4sm:max-w-[440px] 3sm:max-w-[300px]'>
           {service.description}
         </p>
 
@@ -40,7 +40,7 @@ const ServiceDetails = () => {
           {/* Кнопка отображается только если форма скрыта */}
           {!isFormVisible && (
             <button
-              className='3xl:text-[1.375rem] text-sm leading-[2.125rem] 3xl:px-[30px] 3xl:py-[10px] px-[20px] py-[2px] bg-text hover:bg-secondary rounded-full text-black mb-[9.375rem] 3xl:mt-[2.938rem] sm:mt-[2.625rem] mt-8'
+              className='3xl:text-[1.375rem] text-sm leading-[2.125rem] 3xl:px-[30px] 3xl:py-[10px] px-[20px] py-[2px] bg-text hover:bg-secondary rounded-full text-black mb-[9.375rem] 3xl:mt-[2.938rem]  4sm:mt-[2.625rem] mt-8'
               onClick={handleButtonClick}
             >
               Request
@@ -66,7 +66,7 @@ const ServiceDetails = () => {
           {service.steps.map((step, index) => (
             <div
               key={index}
-              className={`3xl:max-w-[1468px] 2lg:max-w-[892px] md:max-w-[728px] sm:max-w-[440px] ssm:max-w-[300px] p-4 flex flex-row 3xl:gap-[8.75rem] 2lg:gap-[5.625rem] md:gap-[3.125rem] gap-[5.625rem] tracking-[-0.03em] ${
+              className={`3xl:max-w-[1468px] 2lg:max-w-[892px] 7md:max-w-[728px]  4sm:max-w-[440px] 3sm:max-w-[300px] p-4 flex flex-row 3xl:gap-[8.75rem] 2lg:gap-[5.625rem] 7md:gap-[3.125rem] gap-[5.625rem] tracking-[-0.03em] ${
                 index !== service.steps.length - 1
                   ? 'border-b border-b-border-services'
                   : ''
@@ -75,11 +75,11 @@ const ServiceDetails = () => {
               <span className='text-[2.5rem] leading-[3.143rem] font-medium text-secondary'>
                 0{index + 1}
               </span>
-              <div className='flex md:flex-row flex-col 3xl:gap-[12.5rem] 2lg:gap-[8.375rem] md:gap-[5.625rem] gap-[1.375rem]'>
+              <div className='flex 7md:flex-row flex-col 3xl:gap-[12.5rem] 2lg:gap-[8.375rem] 7md:gap-[5.625rem] gap-[1.375rem]'>
                 <h2 className='3xl:text-[2.5rem] 3xl:leading-[3.143rem] text-[1.5rem] leading-[1.875rem] font-medium 3xl:max-w-[22rem] 2lg:max-w-[13rem] max-w-[12.75rem]'>
                   {step.title}
                 </h2>
-                <div className='flex flex-col gap-4 3xl:max-w-[45.25rem] 2lg:max-w-[27.25rem] md:max-w-[22.125rem]'>
+                <div className='flex flex-col gap-4 3xl:max-w-[45.25rem] 2lg:max-w-[27.25rem] 7md:max-w-[22.125rem]'>
                   <p className='text-text 3xl:text-[1.625rem] 3xl:leading-[2.5rem] text-[1.5rem] leading-[1.875rem] whitespace-pre-line'>
                     {step.details + '\n'}
 
@@ -98,7 +98,7 @@ const ServiceDetails = () => {
                         </React.Fragment>
                       ))}
                   </p>
-                  <div className='flex md:flex-row flex-col 3xl:gap-[3.75rem] md:gap-10 gap-[2px] text-nowrap'>
+                  <div className='flex 7md:flex-row flex-col 3xl:gap-[3.75rem] 7md:gap-10 gap-[2px] text-nowrap'>
                     {step.duration && (
                       <p className='3xl:text-[1.625rem] 3xl:leading-[2.5rem] text-[1rem] leading-[1.625rem] text-gray-title'>
                         {step.duration}
@@ -117,7 +117,7 @@ const ServiceDetails = () => {
         </div>
       </section>
       <section>
-        <h2 className='text-[3.125rem] font-medium text-gray-title p-6 3xl:px-[12.5rem] md:px-[9.375rem] px-5 pb-[1.875rem]'>
+        <h2 className='text-[3.125rem] font-medium text-gray-title p-6 3xl:px-[12.5rem] 7md:px-[9.375rem] px-5 pb-[1.875rem]'>
           Completed Projects
         </h2>
         <Projects currentService={pathname} />

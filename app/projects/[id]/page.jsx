@@ -62,7 +62,7 @@ export default async function ProjectPage({ params }) {
   const { descriptions, gallery, video } = projectPage
 
   return (
-    <main className='3xl:py-[12.5rem] md:py-[9.375rem] py-[7.5rem] px-10 bg-primary text-text'>
+    <main className='3xl:py-[12.5rem] 7md:py-[9.375rem] py-[7.5rem] px-10 bg-primary text-text'>
       <div className='max-w-7xl mx-auto'>
         <h1 className='text-4xl font-bold mb-8'>{title}</h1>
         <Image
@@ -90,7 +90,7 @@ export default async function ProjectPage({ params }) {
         {gallery && gallery.length > 0 && (
           <div className='mt-10'>
             <h2 className='text-2xl font-semibold mb-4'>Gallery:</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            <div className='grid grid-cols-1 7md:grid-cols-2 lg:grid-cols-3 gap-6'>
               {gallery.map((image, index) => (
                 <Image
                   key={index}

@@ -30,8 +30,8 @@ const socialLinks = [
 
 function DiscoverLink({ theme = 'w' }) {
   return (
-    <div className='flex md:flex-row flex-col items-center md:justify-start justify-center '>
-      <span className='3xl:text-xl text-xs 3xl:leading-[1.563rem] leading-[0.938rem] font-normal md:text-left text-center 3xl:mr-10 md:mr-5 mr-0 md:mb-0 mb-4 text-nowrap'>
+    <div className='flex 7md:flex-row flex-col items-center 7md:justify-start justify-center '>
+      <span className='3xl:text-xl text-xs 3xl:leading-[1.563rem] leading-[0.938rem] font-normal 7md:text-left text-center 3xl:mr-10 7md:mr-5 mr-0 7md:mb-0 mb-4 text-nowrap'>
         Discover our work on:
       </span>
       <div className='flex 3xl:gap-[1.875rem] gap-[0.938rem] justify-center flex-nowrap'>

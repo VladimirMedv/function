@@ -44,7 +44,7 @@ const Clients = () => {
   }, [hasAnimated])
 
   return (
-    <section className='flex items-center md:justify-center justify-between 3xl:px-56 2lg:px-40 px-5'>
+    <section className='flex items-center 7md:justify-center justify-between 3xl:px-56 2lg:px-40 px-5'>
       <div
         ref={containerRef}
         // className='lg:w-[1468px] max-2lg:w-[890px] max-md:w-[728px] max-sm:w-[440px] mx-auto'
@@ -60,7 +60,7 @@ const Clients = () => {
         </h2>
 
         {/* Логотипы в два ряда */}
-        <div className='grid grid-cols-2 2lg:gap-14 md:gap-8 gap-5 md:grid-cols-5 2lg:grid-cols-6'>
+        <div className='grid grid-cols-2 2lg:gap-14 7md:gap-8 gap-5 7md:grid-cols-5 2lg:grid-cols-6'>
           {logos.map((logo, index) => (
             <div
               key={index}

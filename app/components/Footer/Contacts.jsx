@@ -28,13 +28,13 @@ function Contacts({ theme = 'w' }) {
       {/* Email link */}
       <Link
         href='mailto:hello@functionaldesign.studio'
-        className='3xl:text-[6.563rem] 2lg:text-[5.125rem] md:text-[3.313rem] sm:text-[2rem] ssm:text-[1.5rem] underline cursor-pointer hover:text-secondary transition-colors duration-300 -tracking-[0.03em] font-medium 3xl:leading-[131px] 2lg:leading-[82px] md:leading-[66px] leading-[42px]'
+        className='3xl:text-[6.563rem] 2lg:text-[5.125rem] 7md:text-[3.313rem]  4sm:text-[2rem] 3sm:text-[1.5rem] underline cursor-pointer hover:text-secondary transition-colors duration-300 -tracking-[0.03em] font-medium 3xl:leading-[131px] 2lg:leading-[82px] 7md:leading-[66px] leading-[42px]'
       >
         hello@functionaldesign.studio
       </Link>
 
       {/* Social links */}
-      <div className='2lg:mt-14 md:mt-10 mt-8 flex md:flex-row flex-col items-center 3xl:gap-10 md:gap-[1.875rem] gap-[2px]'>
+      <div className='2lg:mt-14 7md:mt-10 mt-8 flex 7md:flex-row flex-col items-center 3xl:gap-10 7md:gap-[1.875rem] gap-[2px]'>
         <span className='3xl:text-[1.875rem] text-lg 3xl:leading-[3.775rem] leading-[2.364rem] font-normal'>
           Contact via Messenger:
         </span>

@@ -15,7 +15,7 @@ const Logo = () => {
 
       if (screenWidth <= 768) {
         setLogoSrc('/images/logo_f_w.svg')
-        setSize({ width: 19.54, height: 30.81 })
+        setSize({ width: 68.93, height: 39.91 })
       } else {
         setLogoSrc('/images/logo_function_w.svg')
         setSize({ width: 145.26, height: 31.93 })

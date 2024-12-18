@@ -15,7 +15,7 @@ export default function NotFound() {
 
   return (
     <div className='flex justify-center items-center flex-col font-medium 3xl:text-[50px] text-[30px] 3xl:leading-[65px] leading-[38px] py-[12.5rem] 3xl:h-[1000px]'>
-      <h1 className='-z-10 3xl:font-bold 3xl:text-[1160px] 2lg:text-[710px] md:text-[290px] sm:text-[200px] ssm:text-[150px] -tracking-[0.03em] text-secondary'>
+      <h1 className='-z-10 3xl:font-bold 3xl:text-[1160px] 2lg:text-[710px] 7md:text-[290px]  4sm:text-[200px] 3sm:text-[150px] -tracking-[0.03em] text-secondary'>
         404
       </h1>
       <div className='flex flex-row 3xl:px-[15rem] w-full'>

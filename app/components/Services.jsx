@@ -35,7 +35,7 @@ export default function Services({ justify = '', sectionStyle = '' }) {
       className={`flex items-center justify-center px-5 ${sectionStyle}`}
     >
       <div
-      // className='3xl:w-[1468px] 2lg:w-[890px] md:w-[728px] sm:w-[440px] mx-auto'
+      // className='3xl:w-[1468px] 2lg:w-[890px] 7md:w-[728px]  4sm:w-[440px] mx-auto'
       >
         <div className={`flex flex-wrap mt-4 ${justify}`}>
           <div className='overflow-hidden flex items-center'>

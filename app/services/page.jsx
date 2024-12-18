@@ -19,14 +19,14 @@ const SERVICES = [
 
 export default function PageServices() {
   return (
-    <section className='flex flex-col items-center justify-center md:px-10 px-5 2lg:py-[12.5rem] sm:py-[9.375rem] max-sm:py-[7.5rem] overflow-hidden  gap-[12.5rem]'>
+    <section className='flex flex-col items-center justify-center 7md:px-10 px-5 2lg:py-[12.5rem]  4sm:py-[9.375rem] max-sm:py-[7.5rem] overflow-hidden  gap-[12.5rem]'>
       <div className='flex flex-col items-center justify-center'>
         <h2
-          className={`text-[12.813rem] md:text-[20rem] 2lg:text-[31.875rem] text-secondary transform transition-transform duration-700 2lg:leading-[641.07px] md:leading-[402.24px] leading-[257.68px] font-bold `}
+          className={`text-[12.813rem] 7md:text-[20rem] 2lg:text-[31.875rem] text-secondary transform transition-transform duration-700 2lg:leading-[641.07px] 7md:leading-[402.24px] leading-[257.68px] font-bold `}
         >
           Services.
         </h2>
-        <div className='flex flex-wrap justify-between 2lg:-mt-[11.4rem] md:-mt-[7rem] -mt-[5.1rem] z-10 max-w-[100vw] md:px-10 px-5'>
+        <div className='flex flex-wrap justify-between 2lg:-mt-[11.4rem] 7md:-mt-[7rem] -mt-[5.1rem] z-10 max-w-[100vw] 7md:px-10 px-5'>
           {SERVICES.map((service, index) => (
             <div
               key={index}
@@ -49,9 +49,9 @@ export default function PageServices() {
           ))}
         </div>
       </div>
-      <div className='flex flex-row max-sm:flex-col items-start justify-center px-[10%] mb-14 mt-10 2lg:gap-48 md:gap-32 sm:gap-20 gap-10 text-text'>
+      <div className='flex flex-row max-sm:flex-col items-start justify-center px-[10%] mb-14 mt-10 2lg:gap-48 7md:gap-32 4sm:gap-20 gap-10 text-text'>
         <div>
-          <h1 className='2lg:text-[3.125rem] sm:text-3xl sm:leading-[38px] 2lg:leading-[65px] font-medium max-sm:hidden whitespace-pre-line'>
+          <h1 className='2lg:text-[3.125rem]  4sm:text-3xl 4sm:leading-[38px] 2lg:leading-[65px] font-medium max-sm:hidden whitespace-pre-line'>
             {`Request for\n a commercial\n offer`}
           </h1>
           <h1 className='hidden max-sm:block text-2xl leading-[30px] font-medium whitespace-pre-line'>

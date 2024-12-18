@@ -3,26 +3,17 @@ import Image from 'next/image'
 export default function Hero() {
   return (
     <section className='relative bg-primary text-text py-16 overflow-hidden'>
-      {/* Фоновое изображение */}
-      <Image
-        src='/images/logo-f_orange.svg'
-        alt='logo'
-        width={556}
-        height={877}
-        className='absolute inset-0 mx-auto w-[556px] h-[877px] z-0 hidden 2lg:block'
-      />
-
       {/* Заголовки */}
       <div className='relative z-10 text-center -space-y-44'>
         {' '}
         {/* Минимальный отступ между заголовками */}
-        <h1 className='2lg:text-[15rem] md:text-[9.75rem] font-bold translate-x-[-15%]'>
+        <h1 className='2lg:text-[15rem] 7md:text-[9.75rem] font-bold translate-x-[-15%]'>
           Think.
         </h1>
-        <h1 className='2lg:text-[15rem] md:text-[9.75rem] font-bold translate-x-[20%]'>
+        <h1 className='2lg:text-[15rem] 7md:text-[9.75rem] font-bold translate-x-[20%]'>
           Create.
         </h1>
-        <h1 className='2lg:text-[15rem] md:text-[9.75rem] font-bold translate-x-[-10%]'>
+        <h1 className='2lg:text-[15rem] 7md:text-[9.75rem] font-bold translate-x-[-10%]'>
           Function.
         </h1>
       </div>

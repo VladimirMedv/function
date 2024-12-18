@@ -37,7 +37,7 @@ const GetPriceButton = () => {
       {/* Button "Get Price" visible only on screens wider than 480px */}
       <button
         onClick={toggleModal}
-        className='hidden md:inline-block bg-bgwhite text-black font-normal rounded-full text-[0.875rem] leading-[2.125rem] px-[20px] py-[2px] transition-all hover:bg-secondary hover:text-text cursor-pointer duration-300 ease-in-out sm:text-nowrap'
+        className='hidden 7md:inline-block bg-bgwhite text-black font-normal rounded-full text-[0.875rem] leading-[2.125rem] px-[20px] py-[2px] transition-all hover:bg-secondary hover:text-text cursor-pointer duration-300 ease-in-out 4sm:text-nowrap'
         aria-label='Get Price'
       >
         Get Price
@@ -66,9 +66,9 @@ const GetPriceButton = () => {
             </div>
 
             {/* Modal content */}
-            <div className='flex md:flex-row flex-col items-start justify-center px-[10%] mb-14 pt-10 3xl:gap-[12.5rem] 2lg:gap-[8.375rem] md:gap-[5.688rem] gap-10 overflow-auto text-const-dark-gray'>
+            <div className='flex 7md:flex-row flex-col items-start justify-center px-[10%] mb-14 pt-10 3xl:gap-[12.5rem] 2lg:gap-[8.375rem] 7md:gap-[5.688rem] gap-10 overflow-auto text-const-dark-gray'>
               <div>
-                <h1 className='3xl:text-[3.125rem] text-3xl leading-[38px] 3xl:leading-[65px] font-medium hidden md:block whitespace-pre-line 3xl:-mt-[11px] 2lg:-mt-[7px] md:-mt-[6px]'>
+                <h1 className='3xl:text-[3.125rem] text-3xl leading-[38px] 3xl:leading-[65px] font-medium hidden 7md:block whitespace-pre-line 3xl:-mt-[11px] 2lg:-mt-[7px] 7md:-mt-[6px]'>
                   {`Request for\n a commercial\n offer`}
                 </h1>
                 <h1 className='md:hidden block text-2xl leading-[30px] font-medium whitespace-pre-line pt-48'>

@@ -67,7 +67,7 @@ const Menu = () => {
   return (
     <nav className='flex items-center justify-between'>
       {/* Основное меню */}
-      <ul className='hidden md:flex 2lg:gap-10 gap-[1.875rem] font-normal text-sm leading-[1.1rem] text-nowrap'>
+      <ul className='hidden 7md:flex 2lg:gap-10 gap-[1.875rem] font-normal text-sm leading-[1.1rem] text-nowrap'>
         {renderMenuItems()}
       </ul>
 
@@ -105,7 +105,7 @@ const Menu = () => {
             <LogoB />
           </div>
           <ul
-            className={`flex flex-col items-start mt-3 p-5 font-medium text-[33px] leading-10 md:gap-10 sm:gap-5 gap-3  transition-opacity duration-300 ease-in-out ${
+            className={`flex flex-col items-start mt-3 p-5 font-medium text-[33px] leading-10 7md:gap-10 4sm:gap-5 gap-3  transition-opacity duration-300 ease-in-out ${
               isContentVisible ? 'opacity-100' : 'opacity-0'
             }`}
           >

@@ -20,7 +20,7 @@ export default function ProjectsList({ activeCategory }) {
         )
 
   return (
-    <section className='bg-primary text-text 2lg:py-[12.5rem] sm:py-[9.375rem] max-sm:py-[7.5rem]'>
+    <section className='bg-primary text-text 2lg:py-[12.5rem]  4sm:py-[9.375rem] max-sm:py-[7.5rem]'>
       <div className='2lg:px-10 px-5'>
         {/* Список проектов */}
         <div className='flex flex-col 2lg:gap-10 gap-5'>

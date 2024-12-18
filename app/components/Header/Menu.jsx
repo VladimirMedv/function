@@ -105,7 +105,7 @@ const Menu = () => {
             <LogoB />
           </div>
           <ul
-            className={`flex flex-col items-start mt-3 p-5 font-medium text-[33px] leading-10 gap-10 transition-opacity duration-300 ease-in-out ${
+            className={`flex flex-col items-start mt-3 p-5 font-medium text-[33px] leading-10 md:gap-10 sm:gap-5 gap-3  transition-opacity duration-300 ease-in-out ${
               isContentVisible ? 'opacity-100' : 'opacity-0'
             }`}
           >

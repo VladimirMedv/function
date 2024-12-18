@@ -28,7 +28,7 @@ function Contacts({ theme = 'w' }) {
       {/* Email link */}
       <Link
         href='mailto:hello@functionaldesign.studio'
-        className='3xl:text-[6.563rem] 2lg:text-[5.125rem] md:text-[3.313rem] sm:text-[1.6rem] underline cursor-pointer hover:text-secondary transition-colors duration-300 -tracking-[0.03em] font-medium 3xl:leading-[131px] 2lg:leading-[82px] md:leading-[66px] leading-[42px]'
+        className='3xl:text-[6.563rem] 2lg:text-[5.125rem] md:text-[3.313rem] sm:text-[2rem] ssm:text-[1.5rem] underline cursor-pointer hover:text-secondary transition-colors duration-300 -tracking-[0.03em] font-medium 3xl:leading-[131px] 2lg:leading-[82px] md:leading-[66px] leading-[42px]'
       >
         hello@functionaldesign.studio
       </Link>

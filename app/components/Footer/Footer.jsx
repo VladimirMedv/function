@@ -14,7 +14,7 @@ export default function Footer() {
         <>
           <Contacts />
           <div className='flex flex-row 3xl:px-56 2lg:px-40 7md:px-[1.875rem]'>
-            <div className='md:flex-1 flex-none 3xl:text-[3.125rem] text-3xl text-left 3xl:leading-[4.063rem] leading-[2.375rem] font-medium flex flex-col justify-between'>
+            <div className='md:flex-1 flex-none 2lg:text-[3.125rem] text-3xl text-left 2lg:leading-[4.063rem] leading-[2.375rem] font-medium flex flex-col justify-between'>
               <div className=' whitespace-pre-line'>{`Order\na service`}</div>
             </div>
             <div className='flex-1 flex flex-col float-start justify-start gap-[66px] 3xl:gap-[100px]'>

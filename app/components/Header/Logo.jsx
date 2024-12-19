@@ -32,6 +32,7 @@ const Logo = () => {
     <Link
       href='/'
       aria-label='Home'
+      className='cursor-pointer'
     >
       <Image
         src={logoSrc}

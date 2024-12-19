@@ -47,10 +47,10 @@ const Clients = () => {
     <section className='flex items-center 7md:justify-center justify-between 3xl:px-56 2lg:px-40 px-5'>
       <div
         ref={containerRef}
-        // className='lg:w-[1468px] max-2lg:w-[890px] max-md:w-[728px] max-sm:w-[440px] mx-auto'
+        className='w-full'
       >
         <h2
-          className={`3xl:text-[3.125rem] text-[1.875rem] 3xl:leading-[4.063rem] leading-[2.375rem] mb-8 text-gray-title font-medium transform transition-transform duration-700 ease-out ${
+          className={`2lg:text-[3.125rem] text-[1.875rem] 2lg:leading-[4.063rem] leading-[2.375rem] mb-8 text-gray-title font-medium transform transition-transform duration-700 ease-out ${
             hasAnimated
               ? 'translate-y-0 opacity-100'
               : 'translate-y-full opacity-0'

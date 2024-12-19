@@ -38,7 +38,7 @@ function Slogan() {
   }, [currentIndex, slogans.length])
 
   return (
-    <div className='relative 3xl:w-[1194px] 3xl:text-[13.125rem] leading-[10rem] font-bold -tracking-[0.03em]'>
+    <div className='relative 3xl:w-[1194px] 2lg:w-[1120px] 3xl:text-[13.125rem] 2lg:text-[12.25rem] 3xl:leading-[10rem] 2lg:leading-[9.375rem] font-bold -tracking-[0.03em]'>
       {/* Статичные строки */}
       <div className='h-[10rem]'>OurCreative</div>
       <div className='h-[10rem]'>Approach</div>

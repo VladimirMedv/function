@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 function Slogan() {
   const slogans = [
@@ -13,32 +13,38 @@ function Slogan() {
     'Solutions',
   ]
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [isAnimating, setIsAnimating] = useState(true)
+  const containerRef = useRef(null)
+  const isResetting = useRef(false)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsAnimating(true)
-      setCurrentIndex((prevIndex) =>
-        prevIndex === slogans.length ? 1 : prevIndex + 1
-      )
-    }, 3000)
+      if (isResetting.current) return // Блокируем обновление, если идет ресет
+      setCurrentIndex((prevIndex) => prevIndex + 1)
+    }, 3000) // Интервал между прокрутками
 
     return () => clearInterval(interval)
-  }, [slogans.length])
+  }, [])
 
   useEffect(() => {
-    if (currentIndex === slogans.length) {
-      const timeout = setTimeout(() => {
-        setIsAnimating(false)
-        setCurrentIndex(0)
-      }, 1000)
+    const container = containerRef.current
 
-      return () => clearTimeout(timeout)
+    if (currentIndex === slogans.length) {
+      isResetting.current = true // Устанавливаем флаг ресета
+      setTimeout(() => {
+        // Ждем завершения анимации
+        container.style.transition = 'none' // Убираем анимацию
+        setCurrentIndex(0) // Сбрасываем индекс
+        container.style.transform = `translateY(0px)` // Возвращаем к началу
+        setTimeout(() => {
+          container.style.transition = 'transform 1s ease-in-out' // Возвращаем анимацию
+          isResetting.current = false // Снимаем флаг ресета
+        }, 50) // Даем небольшой промежуток для применения стилей
+      }, 1000) // Длительность текущей анимации (1s)
     }
   }, [currentIndex, slogans.length])
 
   return (
-    <div className='relative 3xl:w-[1194px] 2lg:w-[1120px] 3xl:text-[13.125rem] 2lg:text-[12.25rem] 3xl:leading-[10rem] 2lg:leading-[9.375rem] font-bold -tracking-[0.03em]'>
+    <div className='relative 3xl:w-[1194px] 2lg:w-[836px] 3xl:text-[13.125rem] 2lg:text-[9.188rem] 3xl:leading-[10rem] 2lg:leading-[7rem] font-bold -tracking-[0.03em]'>
       {/* Статичные строки */}
       <div className='h-[10rem]'>OurCreative</div>
       <div className='h-[10rem]'>Approach</div>
@@ -46,15 +52,17 @@ function Slogan() {
         <span>to</span>
         {/* Область для анимации */}
         <div
-          className='relative overflow-hidden h-[12.4rem] text-secondary mt-8'
+          className='relative overflow-hidden h-[12.6rem] text-secondary mt-[2.75rem]'
           style={{ width: '100%' }}
         >
           <div
-            className={`absolute transition-transform duration-[1000ms] ease-in-out ${
-              isAnimating ? '' : 'transition-none'
-            }`}
+            ref={containerRef}
+            className='absolute w-full'
             style={{
-              transform: `translateY(-${currentIndex * 14}rem)`, // Увеличиваем расстояние между словами
+              transform: `translateY(-${currentIndex * 14}rem)`,
+              transition: isResetting.current
+                ? 'none'
+                : 'transform 1s ease-in-out',
             }}
           >
             {slogans.concat(slogans[0]).map((slogan, index) => (

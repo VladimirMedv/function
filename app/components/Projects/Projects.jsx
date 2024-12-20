@@ -20,8 +20,8 @@ export default function Projects({ currentService, showAll }) {
 
   return (
     <section>
-      <div className='2lg:px-10 px-5'>
-        <div className='flex flex-col 3xl:gap-10 gap-5'>
+      <div className='2lg:px-5 px-2.5'>
+        <div className='flex flex-col 2lg:gap-5 gap-2.5'>
           {filteredProjects.map((project) => (
             <ProjectItem
               key={project.id}

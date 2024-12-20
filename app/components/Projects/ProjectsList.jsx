@@ -20,10 +20,10 @@ export default function ProjectsList({ activeCategory }) {
         )
 
   return (
-    <section className='bg-primary text-text 2lg:py-[12.5rem]  4sm:py-[9.375rem] max-sm:py-[7.5rem]'>
-      <div className='2lg:px-10 px-5'>
+    <section className='bg-primary text-text max-sm:py-[7.5rem]'>
+      <div className='2lg:px-5 px-2.5'>
         {/* Список проектов */}
-        <div className='flex flex-col 2lg:gap-10 gap-5'>
+        <div className='flex flex-col 2lg:gap-5 gap-2.5'>
           {filteredProjects.map((project) => (
             <ProjectItem
               key={project.id}

@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function ProjectItem({ id, mainImage, title, works }) {
   return (
-    <article className='relative group w-full overflow-hidden 2lg:rounded-[20px]  4sm:rounded-[10px] max-sm:rounded-[6.51px] 2lg:h-[704px] max-md:w-[728px]  4sm:h-[416px] max-sm:h-[340px]'>
+    <article className='relative group w-full overflow-hidden 7md:rounded-[5px] rounded-[6.51px] 2lg:h-auto 4sm:h-[416px] 3sm:h-[340px]'>
       {/* Ссылка на страницу проекта */}
       <Link
         href={`/projects/${id}`}
@@ -15,18 +15,18 @@ export default function ProjectItem({ id, mainImage, title, works }) {
           alt={`${title} main image`}
           width={1920} // Задаем реальную ширину для Next.js Image
           height={1080} // Задаем пропорциональную высоту
-          className='w-full h-full object-cover group-hover:scale-105 transition-all duration-[850ms] ease-in-out 2lg:h-[704px] max-md:w-[728px]  4sm:h-[416px] max-sm:h-[340px]'
+          className='w-full h-full object-cover group-hover:scale-105 transition-all duration-[850ms] ease-in-out 2lg:h-auto 4sm:h-[416px] 3sm:h-[340px]'
           priority={true} // SEO: Высокий приоритет загрузки
         />
         {/* Текст в левом нижнем углу */}
         <div className='absolute 3xl:bottom-[60px] 3xl:left-[60px] 7md:bottom-[40px] 7md:left-[40px] bottom-5 left-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-in-out'>
           <h2
-            className='text-text text-3xl leading-[37.71px] font-medium'
+            className='text-text 3xl:text-[3.125rem] text-3xl 3xl:leading-[62.85px] leading-[37.71px] font-medium'
             style={{ whiteSpace: 'pre-line' }}
           >
             {title}
           </h2>
-          <p className='text-text text-base font-normal leading-[20.11px] tracking-[-0.03em]'>
+          <p className='text-text 3xl:text-[1.625rem] text-base font-normal 3xl:leading-[2.043] leading-[20.11px] tracking-[-0.03em]'>
             {works.join(', ')}
           </p>
         </div>

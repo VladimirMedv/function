@@ -19,19 +19,19 @@ function PageProjects() {
 
   return (
     <section className='relative 2lg:py-[12.5rem] 2lg:px-10'>
-      <div className='flex 2lg:flex-col 3xl:flex-row'>
+      <div className='flex flex-col 2lg:flex-row'>
         {/* Контент */}
         <main className=''>
           <Slogan />
         </main>
 
         {/* Вертикальное меню */}
-        <div className='flex flex-col 3xl:pl-[100px] 3xl:mt-0 mt-[80px]'>
-          <span className='2lg:text-[1.375rem] 2lg:leading-[2.125rem] font-normal'>
+        <div className='flex flex-col 3xl:pl-[100px] 2lg:mt-0 mt-[80px] 3xl:ml-[100px] 2lg:ml-8'>
+          <span className='3xl:text-[1.375rem] 3xl:leading-[2.125rem] text-sm leading-[23.87px] font-normal'>
             Choose a Category
           </span>
-          <aside className='3xl:h-[420px] 2lg:h-[180px] font-medium 2lg:text-[2.5rem] 2lg:leading-[60px]'>
-            <ul className='flex 3xl:flex-col 2lg:flex-row gap-2 2lg:flex-wrap'>
+          <aside className='3xl:h-[420px] 2lg:h-[295px] 7md:h-[99px] 4sm:h-[132px] 3sm:h-[120px] font-medium 3xl:text-[2.5rem] 2lg:text-[1.75rem] text-[1.375rem] 3xl:leading-[60px] 2lg:leading-[2.633rem] leading-[2.063rem]'>
+            <ul className='flex 2lg:flex-col flex-row gap-2 2lg:flex-nowrap flex-wrap'>
               {categories.map((category) => (
                 <li
                   key={category}

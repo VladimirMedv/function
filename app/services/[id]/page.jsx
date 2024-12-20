@@ -49,7 +49,7 @@ const ServiceDetails = () => {
 
           {/* Форма отображается только если она видима */}
           {isFormVisible && (
-            <div className='pb-[100px] justify-center'>
+            <div className='pb-[12.5rem] pt-[6.25rem] justify-center'>
               <div className='flex flex-row w-full'>
                 <div className='flex-1 max-sm:flex-none 2lg:text-[3.125rem] text-3xl text-left 2lg:leading-[4.063rem] leading-[2.375rem] font-medium flex flex-col justify-between'>
                   <div className=' whitespace-pre-line'>{`Order\na service`}</div>
@@ -79,7 +79,7 @@ const ServiceDetails = () => {
                 <h2 className='3xl:text-[2.5rem] 3xl:leading-[3.143rem] text-[1.5rem] leading-[1.875rem] font-medium 3xl:max-w-[22rem] 2lg:max-w-[13rem] max-w-[12.75rem]'>
                   {step.title}
                 </h2>
-                <div className='flex flex-col gap-4 3xl:max-w-[45.25rem] 2lg:max-w-[27.25rem] 7md:max-w-[22.125rem]'>
+                <div className='flex flex-col gap-[1.125rem] 3xl:max-w-[45.25rem] 2lg:max-w-[27.25rem] 7md:max-w-[22.125rem]'>
                   <p className='text-text 3xl:text-[1.625rem] 3xl:leading-[2.5rem] text-[1.5rem] leading-[1.875rem] whitespace-pre-line'>
                     {step.details + '\n'}
 
@@ -98,7 +98,7 @@ const ServiceDetails = () => {
                         </React.Fragment>
                       ))}
                   </p>
-                  <div className='flex 7md:flex-row flex-col 3xl:gap-[3.75rem] 7md:gap-10 gap-[2px] text-nowrap'>
+                  <div className='flex 7md:flex-row flex-col 3xl:gap-[3.75rem] 7md:gap-10 gap-[2px] text-nowrap pb-8'>
                     {step.duration && (
                       <p className='3xl:text-[1.625rem] 3xl:leading-[2.5rem] text-[1rem] leading-[1.625rem] text-gray-title'>
                         {step.duration}

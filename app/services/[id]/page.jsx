@@ -26,7 +26,7 @@ const ServiceDetails = () => {
   return (
     <>
       <section className='text-text p-6 3xl:px-[12.5rem] 2lg:px-[9.688rem] px-5 3xl:py-[12.5rem] pb-[9.375rem]'>
-        <h2 className='text-[3.125rem] font-medium text-gray-title'>
+        <h2 className='3xl:text-[3.125rem] text-3xl 3xl:leading-[65px] leading-[38px] font-medium text-gray-title'>
           Services
         </h2>
         <h1 className='3xl:text-[5rem] text-[3.125rem] font-medium mb-4'>

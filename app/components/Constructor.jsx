@@ -106,7 +106,7 @@ const Constructor = ({
   }
 
   return (
-    <div className='min-h-screen flex flex-col 3xl:gap-20 gap-[3.75rem]'>
+    <div className='flex flex-col 3xl:gap-20 gap-[3.75rem]'>
       <div className=''>
         <h2 className='3xl:text-[2.5rem] 3xl:leading-[3.125rem] text-2xl leading-[1.875rem] text-nowrap font-medium mb-7'>
           What’s Your Branding?

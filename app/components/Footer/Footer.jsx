@@ -9,7 +9,11 @@ export default function Footer() {
   const { pageInfo } = usePageInfo()
 
   return (
-    <footer className='bg-footer text-text 3xl:pt-[150px] 7md:py-[80px] py-[60px] 3xl:pb-[100px] 3xl:gap-[6.25rem] flex flex-col gap-16 bottom-0 w-full'>
+    <footer
+      className={`bg-footer text-text 3xl:pt-[150px] 7md:py-[80px] py-[60px] 3xl:pb-[100px] 3xl:gap-[6.25rem] flex flex-col gap-16 ${
+        pageInfo?.is404 && 'absolute bottom-0'
+      } w-full`}
+    >
       {!pageInfo?.is404 && (
         <>
           <Contacts />

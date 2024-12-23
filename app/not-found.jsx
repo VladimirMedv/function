@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { useEffect } from 'react'
 import { usePageInfo } from './context/PageInfoContext'
+import Image from 'next/image'
 
 export default function NotFound() {
   const { setPageInfo } = usePageInfo() // Достаем функцию для обновления информации
@@ -15,9 +16,13 @@ export default function NotFound() {
 
   return (
     <div className='flex justify-center items-center flex-col font-medium 3xl:text-[50px] text-[30px] 3xl:leading-[65px] leading-[38px] py-[12.5rem] 3xl:h-[1000px]'>
-      <h1 className='-z-10 3xl:font-bold 3xl:text-[1160px] 2lg:text-[710px] 7md:text-[290px]  4sm:text-[200px] 3sm:text-[150px] -tracking-[0.03em] text-secondary'>
-        404
-      </h1>
+      <Image
+        src='/images/404.svg'
+        alt='404'
+        width={1920}
+        height={1200}
+        className='-z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover'
+      />
       <div className='flex flex-row 3xl:px-[15rem] w-full'>
         <p className='whitespace-pre-line 3xl:pl-10'>{`Well, isn't this just f*ing great?\nHow did you even get here?`}</p>
         <Link

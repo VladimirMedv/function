@@ -40,7 +40,7 @@ export default function PageServices() {
             {SERVICES.map((service, index) => (
               <div
                 key={index}
-                className='overflow-hidden flex items-center flex-wrap 3xl:leading-[110px] 2lg:leading-[67px] leading-[43px]' // Контейнер для эффекта "вылезания из щели"
+                className='flex items-center flex-wrap 3xl:leading-[110px] 2lg:leading-[67px] leading-[43px]' // Контейнер для эффекта "вылезания из щели"
               >
                 <div
                   className={` 3xl:text-[105px] 2lg:text-[64px] text-[40px] 3xl:leading-[110px] 2lg:leading-[67px] leading-[43px] transform transition-transform duration-700 `}

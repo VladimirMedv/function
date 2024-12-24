@@ -106,7 +106,7 @@ function AnimatedText({ phrases }) {
         animationTimeout.current = setTimeout(() => {
           if (!containerRef.current || !isMounted.current) return
 
-          container.style.transition = 'transform 0.3s ease-in-out'
+          container.style.transition = 'transform 0.4s ease-in-out'
           isResetting.current = false
         }, 50)
       }, 1000)
@@ -128,7 +128,7 @@ function AnimatedText({ phrases }) {
           transform: `translateY(-${currentIndex * height}rem)`,
           transition: isResetting.current
             ? 'none'
-            : 'transform 0.3s ease-in-out',
+            : 'transform 0.4s ease-in-out',
           boxSizing: 'content-box',
         }}
       >

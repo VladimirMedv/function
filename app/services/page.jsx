@@ -31,7 +31,7 @@ export default function PageServices() {
           className='w-full h-auto object-cover'
         />
         {/* Секция с текстом, который будет под изображением */}
-        <section className='flex flex-col items-center justify-center px-5 7md:px-10 py-0 3xl:-mt-[110px] 2lg:-mt-[67px] -mt-[43px]'>
+        <section className='flex flex-col items-center justify-center px-5 7md:px-10 py-0 3xl:-mt-[103px] 2lg:-mt-[63px] -mt-[39px]'>
           <div className='flex flex-col items-center justify-center'>
             <div className='flex flex-wrap justify-between'>
               {SERVICES.map((service, index) => (

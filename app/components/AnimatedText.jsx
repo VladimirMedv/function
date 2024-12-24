@@ -6,17 +6,18 @@ function AnimatedText({ phrases }) {
   const isResetting = useRef(false)
   const animationTimeout = useRef(null)
   const isMounted = useRef(true)
-  const [height, setHeight] = useState(15) // Общая высота блока
-  const [clipHeight, setClipHeight] = useState(10) // Высота, на которой текст начинает исчезать
+  const [height, setHeight] = useState(15)
+  const [clipHeight, setClipHeight] = useState(10)
+  const animationFrame = useRef(null)
+  const lastTime = useRef(null)
 
   useEffect(() => {
-    // Функция для определения высоты
     const getHeightsForScreen = () => {
-      if (window.innerWidth >= 1920) return { height: 15, clipHeight: 12.5 } // 3xl
-      if (window.innerWidth >= 1200) return { height: 15, clipHeight: 11 } // 2lg
-      if (window.innerWidth >= 768) return { height: 10.5, clipHeight: 8.75 } // md
-      if (window.innerWidth >= 480) return { height: 5.75, clipHeight: 4.75 } // sm
-      return { height: 3.9, clipHeight: 3.45 } // default
+      if (window.innerWidth >= 1920) return { height: 15, clipHeight: 12.5 }
+      if (window.innerWidth >= 1200) return { height: 15, clipHeight: 11 }
+      if (window.innerWidth >= 768) return { height: 10.5, clipHeight: 8.75 }
+      if (window.innerWidth >= 480) return { height: 5.75, clipHeight: 4.75 }
+      return { height: 3.9, clipHeight: 3.45 }
     }
 
     const handleResize = () => {
@@ -26,8 +27,6 @@ function AnimatedText({ phrases }) {
     }
 
     window.addEventListener('resize', handleResize)
-
-    // Устанавливаем начальные значения
     const { height, clipHeight } = getHeightsForScreen()
     setHeight(height)
     setClipHeight(clipHeight)
@@ -45,17 +44,49 @@ function AnimatedText({ phrases }) {
       if (animationTimeout.current) {
         clearTimeout(animationTimeout.current)
       }
+      if (animationFrame.current) {
+        cancelAnimationFrame(animationFrame.current)
+      }
     }
   }, [])
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (isResetting.current || !containerRef.current) return
-      setCurrentIndex((prevIndex) => prevIndex + 1)
-    }, 3000)
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        if (animationFrame.current) {
+          cancelAnimationFrame(animationFrame.current)
+        }
+      } else {
+        startAnimation()
+      }
+    }
 
-    return () => clearInterval(interval)
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+
+    startAnimation()
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+    }
   }, [])
+
+  const startAnimation = () => {
+    if (!isMounted.current || !containerRef.current) return
+
+    const step = (timestamp) => {
+      if (!lastTime.current) lastTime.current = timestamp
+      const elapsed = timestamp - lastTime.current
+
+      if (elapsed > 3000) {
+        setCurrentIndex((prevIndex) => prevIndex + 1)
+        lastTime.current = timestamp
+      }
+
+      animationFrame.current = requestAnimationFrame(step)
+    }
+
+    animationFrame.current = requestAnimationFrame(step)
+  }
 
   useEffect(() => {
     if (!containerRef.current || !isMounted.current) return
@@ -70,12 +101,12 @@ function AnimatedText({ phrases }) {
 
         container.style.transition = 'none'
         setCurrentIndex(0)
-        container.style.transform = `translateY(0px)` // сброс позиции
+        container.style.transform = `translateY(0px)`
 
         animationTimeout.current = setTimeout(() => {
           if (!containerRef.current || !isMounted.current) return
 
-          container.style.transition = 'transform 1s ease-in-out'
+          container.style.transition = 'transform 0.3s ease-in-out'
           isResetting.current = false
         }, 50)
       }, 1000)
@@ -86,16 +117,18 @@ function AnimatedText({ phrases }) {
     <div
       className='relative w-full overflow-hidden'
       style={{
-        height: `${height}rem`, // Высота всего блока
-        clipPath: `inset(${height - clipHeight}rem 0 0 0)`, // Обрезаем область видимости сверху
+        height: `${height}rem`,
+        clipPath: `inset(${height - clipHeight}rem 0 0 0)`,
       }}
     >
       <div
         ref={containerRef}
         className='absolute w-full'
         style={{
-          transform: `translateY(-${currentIndex * height}rem)`, // Динамическая высота
-          transition: isResetting.current ? 'none' : 'transform 1s ease-in-out',
+          transform: `translateY(-${currentIndex * height}rem)`,
+          transition: isResetting.current
+            ? 'none'
+            : 'transform 0.3s ease-in-out',
           boxSizing: 'content-box',
         }}
       >
@@ -104,9 +137,9 @@ function AnimatedText({ phrases }) {
             key={index}
             className='text-secondary font-bold'
             style={{
-              height: `${height}rem`, // Высота строки
-              lineHeight: `${height}rem`, // Вертикальное выравнивание текста
-              textAlign: 'left', // Текст выравнивается по левому краю
+              height: `${height}rem`,
+              lineHeight: `${height}rem`,
+              textAlign: 'left',
             }}
           >
             {phrase}

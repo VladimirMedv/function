@@ -76,11 +76,11 @@ const ServiceDetails = () => {
                 0{index + 1}
               </span>
               <div className='flex 7md:flex-row flex-col 3xl:gap-[12.5rem] 2lg:gap-[8.375rem] 7md:gap-[5.625rem] gap-[1.375rem]'>
-                <h2 className='3xl:text-[2.5rem] 3xl:leading-[3.143rem] text-[1.5rem] leading-[1.875rem] font-medium 3xl:min-w-[22rem] 2lg:min-w-[13rem] min-w-[12.75rem]'>
+                <h2 className='flex-none 3xl:text-[2.5rem] 3xl:leading-[3.143rem] text-[1.5rem] leading-[1.875rem] font-medium 3xl:w-[22rem] 2lg:w-[13rem] w-[12.75rem]'>
                   {step.title}
                 </h2>
                 <div className='flex flex-col gap-[1.125rem] 3xl:min-w-[45.25rem] 2lg:min-w-[27.25rem] 7md:min-w-[22.125rem]'>
-                  <p className='text-text 3xl:text-[1.625rem] 3xl:leading-[2.5rem] text-[1.5rem] leading-[1.875rem] whitespace-pre-line'>
+                  <p className='text-text 3xl:text-[1.625rem] 3xl:leading-[2.5rem] text-[1rem] leading-[1.625rem] whitespace-pre-line'>
                     {step.details + '\n'}
 
                     {step.note &&

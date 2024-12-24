@@ -19,7 +19,7 @@ function PageProjects() {
 
   return (
     <>
-      <section className='relative 3xl:pt-[12.5rem] 2lg:pt-[9.375rem] pt-[6.25rem] 3xl:pb-[9.375rem] 2lg:pb-[6.25rem] pb-10 2lg:px-10'>
+      <section className='relative 3xl:pt-[12.5rem] 2lg:pt-[9.375rem] pt-[6.25rem] 3xl:pb-[9.375rem] 2lg:pb-[6.25rem] pb-10 2lg:px-10 px-5'>
         <div className='flex flex-col 2lg:flex-row'>
           {/* Контент */}
           <main className=''>

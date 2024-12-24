@@ -38,7 +38,7 @@ const SERVICES_DATA = [
   {
     href: '/services/product-identity',
     label: 'Product Identity',
-    description: `Creating an identity that reflects the uniqueness of the product and enhances its competitive advantages in the market. A complete process — from research and concept development to preparation of materials and guidelines — aimed at forming a cohesive and recognizable brand image.`,
+    description: `Creating an identity that reflects the uniqueness of the product and enhances its competitive advantages in the market. A complete process — from research and concept development to preparation of materials and guidelines — aimed at forming a cohesive and recognizable brand image.`,
     steps: [
       {
         title: 'Research and Analysis',

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import AnimatedText from '../AnimatedText'
 
 function Slogan() {
   const slogans = [
@@ -55,7 +56,11 @@ function Slogan() {
       <div className='3xl:h-[10rem] 2lg:h-[7rem] 7md:h-[6.5rem] 4sm:h-[4.1rem] flex items-center'>
         <span>to</span>
         {/* Область для анимации */}
-        <div
+        <AnimatedText
+          phrases={slogans}
+          animationSpeed={3000}
+        />
+        {/* <div
           className='relative overflow-hidden 3xl:h-[12.6rem] 2lg:h-[9.6rem] 7md:h-[6.5rem]  4sm:h-[4rem] text-secondary mt-[2.75rem]'
           style={{ width: '100%' }}
         >
@@ -79,7 +84,7 @@ function Slogan() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

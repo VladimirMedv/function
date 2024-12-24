@@ -21,7 +21,7 @@ const SERVICES = [
 export default function PageServices() {
   return (
     <>
-      <div className='relative 3xl:py-[12.5rem] 7md:pb-[9.4rem] 2lg:pt-[5.625rem] 7md:pt-[3.75rem] py-[6.25rem]'>
+      <div className='relative 3xl:py-[6.875rem] 2lg:py-20 py-[3.75rem]'>
         {/* Изображение с точным позиционированием */}
         <Image
           src={'/images/services.svg'}
@@ -31,7 +31,7 @@ export default function PageServices() {
           className='w-full h-auto object-cover'
         />
         {/* Секция с текстом, который будет под изображением */}
-        <section className='flex flex-col items-center justify-center px-5 7md:px-10 py-0 3xl:-mt-[103px] 2lg:-mt-[63px] -mt-[39px]'>
+        <section className='flex flex-col items-center justify-center px-5 7md:px-10 py-0 3xl:-mt-[103px] 2lg:-mt-[63px] -mt-[38px]'>
           <div className='flex flex-col items-center justify-center'>
             <div className='flex flex-wrap justify-between'>
               {SERVICES.map((service, index) => (

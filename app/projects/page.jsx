@@ -32,7 +32,7 @@ function PageProjects() {
               Choose a Category
             </span>
             <aside className='3xl:h-[420px] 2lg:h-[295px] 7md:w-[707px] 3sm:w-[370px] font-medium 3xl:text-[2.5rem] 2lg:text-[1.75rem] text-[1.375rem] 3xl:leading-[60px] 2lg:leading-[2.633rem] leading-[2.063rem]'>
-              <ul className='flex 2lg:flex-col flex-row 2lg:gap-2 2lg:flex-nowrap flex-wrap'>
+              <ul className='flex 2lg:flex-col flex-row 3xl:gap-2 2lg:gap-1 2lg:flex-nowrap flex-wrap'>
                 {categories.map((category, index) => (
                   <>
                     <li

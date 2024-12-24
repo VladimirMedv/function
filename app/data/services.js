@@ -130,9 +130,9 @@ const SERVICES_DATA = [
         details: `Checking the availability of trademarks. Full legal registration is available through trusted partners in international markets.\n\nThe next stage of brand development:`,
         note: {
           note_links: [
-            { text: 'Corporate identity', url: 'https://link1.com' },
-            { text: 'Product identity', url: 'https://link2.com' },
-            { text: 'Logo', url: 'https://link3.com' },
+            { text: 'Corporate identity', url: '/services/corporate-identity' },
+            { text: 'Product identity', url: '/services/product-identity' },
+            { text: 'Logo', url: '/services/logo' },
           ],
         },
       },

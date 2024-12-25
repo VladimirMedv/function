@@ -48,7 +48,7 @@ function PageProjects() {
                     </li>
                     {/* Добавляем запятую только для маленьких экранов и не последнего элемента */}
                     {index < categories.length - 1 && (
-                      <span className='hidden max-2lg:inline text-text pr-2'>
+                      <span className='hidden max-2lg:inline text-text pr-1'>
                         ,
                       </span>
                     )}

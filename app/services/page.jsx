@@ -60,7 +60,7 @@ export default function PageServices() {
       </div>
       <section className='flex 7md:flex-row flex-col items-start justify-center px-[10%] 2lg:gap-48 7md:gap-32 4sm:gap-20 gap-10 text-text 3xl:pb-[12.5rem] 7md:pb-[9.4rem] pb-[6.25rem]'>
         <div>
-          <h1 className='2lg:text-[3.125rem]  4sm:text-3xl 4sm:leading-[38px] 2lg:leading-[65px] font-medium 4sm:block hidden whitespace-pre-line'>
+          <h1 className='2lg:text-[3.125rem]  4sm:text-3xl 4sm:leading-[38px] 2lg:leading-[65px] font-medium 4sm:block hidden whitespace-pre-line 3xl:-mt-[11px] 2lg:-mt-[27px] 7md:-mt-[6px]'>
             {`Request for\n a commercial\n offer`}
           </h1>
           <h1 className='4sm:hidden block text-2xl leading-[30px] font-medium whitespace-pre-line'>

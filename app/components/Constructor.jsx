@@ -34,20 +34,6 @@ const brandingOptions = [
     offers: ['Logo', 'Identity', 'Website', 'Content Design'],
   },
   {
-    id: 'retail',
-    label: 'Retail',
-    offers: [
-      'Naming',
-      'Logo',
-      'Identity',
-      'Packaging',
-      'Brand Guidelines',
-      'Website',
-      'Key Visual',
-      'Content Design',
-    ],
-  },
-  {
     id: 'support',
     label: 'Support',
     offers: [

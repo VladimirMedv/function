@@ -13,10 +13,10 @@ function AnimatedText({ phrases }) {
 
   useEffect(() => {
     const getHeightsForScreen = () => {
-      if (window.innerWidth >= 1920) return { height: 15, clipHeight: 12.5 }
-      if (window.innerWidth >= 1200) return { height: 15, clipHeight: 11 }
-      if (window.innerWidth >= 768) return { height: 10.5, clipHeight: 8.75 }
-      if (window.innerWidth >= 480) return { height: 5.75, clipHeight: 4.75 }
+      if (window.innerWidth >= 1920) return { height: 15, clipHeight: 13 }
+      if (window.innerWidth >= 1200) return { height: 15, clipHeight: 11.5 }
+      if (window.innerWidth >= 768) return { height: 10.5, clipHeight: 9.25 }
+      if (window.innerWidth >= 480) return { height: 5.75, clipHeight: 5.25 }
       return { height: 3.9, clipHeight: 3.45 }
     }
 
@@ -115,7 +115,7 @@ function AnimatedText({ phrases }) {
 
   return (
     <div
-      className='relative w-full overflow-hidden'
+      className='relative w-full overflow-hidden -z-10'
       style={{
         height: `${height}rem`,
         clipPath: `inset(${height - clipHeight}rem 0 0 0)`,

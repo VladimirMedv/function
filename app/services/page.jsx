@@ -14,7 +14,7 @@ const SERVICES = [
   { href: '/services/packaging', label: 'Packaging' },
   { href: '/services/brand-guidelines', label: 'Brand guidelines' },
   { href: '/services/ui-ux', label: 'UI/UX' },
-  { href: '/services/promo-design', label: 'Promo design' },
+  { href: '/services/promo-design', label: 'Key Visual' },
   { href: '/services/content-design', label: 'Content design' },
 ]
 

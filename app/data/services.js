@@ -172,10 +172,10 @@ const SERVICES_DATA = [
   },
   {
     href: '/services/promo-design',
-    label: 'Promo design',
+    label: 'Key Visual',
     description: `Creating promotional designs that effectively convey the brand’s message and engage the target audience.`,
     steps: [
-      // Add specific steps for Promo Design here
+      // Add specific steps for Key Visual here
     ],
   },
   {

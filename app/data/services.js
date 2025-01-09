@@ -141,49 +141,203 @@ const SERVICES_DATA = [
   {
     href: '/services/logo',
     label: 'Logo',
-    description: `Designing a logo that captures the brand’s identity and communicates its core message effectively and distinctively.`,
+    description: `Creation of a logo that accurately reflects the values and key characteristics of the brand. Development of concepts, including the selection of color schemes, typography, and stylistic elements, followed by the presentation of final versions adapted for different formats and media. The result is a logo that effectively conveys the brand's identity and serves as the foundation for further visual communication.`,
     steps: [
-      // Add specific steps for Logo here
+      {
+        title: 'Briefing and Research',
+        details: `Conducting a briefing to define the project's goals and the brand's values. Analyzing the audience, competitors, and cultural context to identify unique opportunities. Creating a mood board to visualize the brand’s style and character.`,
+        duration: '7+ business days',
+      },
+      {
+        title: 'Logo Development',
+        details: `Creation of a brand mark and logo: refining concepts, including color solutions, typography, and stylistic features. Presentation of final variants, including the brand mark, logo, permissible compositions, and color variations, adapted for various formats and media.`,
+        duration: '12+ business days',
+        revisions: '3 options, 1 rounds of revisions',
+      },
+      {
+        title: 'Logobook and Logo Assets',
+        details: `Development of a logobook with recommendations on logo usage across various media and in different formats and scales. Includes safe zone guidelines, typography, color palette, and source files in both vector and raster formats.`,
+        duration: '5+ business days',
+        note: {
+          note_links: [
+            {
+              text: 'Click here to view a sample logobook PDF.',
+              url: 'https://link.com',
+            },
+          ],
+        },
+        details_sub: 'The next stage of brand development:',
+        note_sub: {
+          note_links: [
+            { text: 'Corporate identity', url: '/services/corporate-identity' },
+            { text: 'Product identity', url: '/services/product-identity' },
+            {
+              text: 'Personal identity',
+              url: '/services/personal-identity',
+            },
+          ],
+        },
+      },
     ],
   },
   {
     href: '/services/packaging',
     label: 'Packaging',
-    description: `Creating impactful packaging designs that attract customers, enhance the unboxing experience, and align with the brand’s identity.`,
+    description: `Comprehensive packaging development: from product, audience, and competitor analysis to the preparation of production-ready materials. Packaging is designed to reflect brand identity, highlight competitive advantages, and meet market requirements. The design is adapted to various sizes and formats, ensuring versatility and brand consistency across all levels of communication.`,
     steps: [
-      // Add specific steps for Packaging here
+      {
+        title: 'Research and Analysis',
+        details: `Evaluation of the product, target audience, competitors, and market trends to identify unique characteristics and competitive advantages. Development of the brand’s visual and positioning direction, including the creation of a mood board that reflects the conceptual foundation of the brand identity.`,
+        duration: '15+ business days',
+      },
+      {
+        title: 'Concept and Design Development',
+        details: `Development of conceptual solutions that reflect the brand identity, including the selection of materials, shapes, and functional features of the packaging. Detailed elaboration of graphic elements: logo, brand mark, typography, and color palette.`,
+        duration: '25+ business days',
+        revisions: '1 concept, 2 rounds of revisions',
+      },
+      {
+        title: 'Design Adaptation and Prepress Preparation',
+        details: `Adaptation of the packaging design for product lines, sizes, and types of products. Preparation of final layouts and technical files for printing, including specifications required for production.`,
+        duration: '15+ business days',
+      },
+      {
+        title: 'Brand Guidelines and Materials',
+        details: `Development of a guide with recommendations for packaging usage, including logo placement, typography, color palette, and other design elements. Ensuring compliance with brand standards at all stages of production and application.`,
+        duration: '8+ business days',
+      },
     ],
   },
   {
     href: '/services/brand-guidelines',
     label: 'Brand guidelines',
-    description: `Developing comprehensive brand guidelines to ensure consistency in the use of visual elements and communication strategies.`,
+    description: `The development of Brand Guidelines is a key step in maintaining brand integrity. It includes the analysis of visual solutions, structuring of brand elements, and preparation of source materials. The guidelines standardize the application of brand components, ensuring consistency and brand recognition.`,
     steps: [
-      // Add specific steps for Brand Guidelines here
+      {
+        title: 'Style Analysis and Standardization',
+        details: `Audit of layouts and visual solutions. Identification of key elements, development of stylistic solutions, and rules for their application to form a unified brand concept.`,
+        duration: '3+ business days',
+      },
+      {
+        title: 'Brand Guidelines Structure Development',
+        details: `Structuring the Brand Guidelines: positioning, values, and key brand messages. Development of recommendations for the application of the logo, fonts, color palette, graphics, and other elements. Definition of a set of rules and technical requirements for each category.`,
+        duration: '4+ business days',
+      },
+      {
+        title: 'Material Adaptation and Description',
+        details: `Adaptation of graphics and layouts for different formats and media in a unified style. Detailed description of layouts and materials with recommendations for application and production.`,
+        duration: '4+ business days',
+      },
+      {
+        title: 'Preparation of Source Materials',
+        details: `Development of source files for logos, fonts, graphics, and other elements. Ensuring compliance with technical requirements for print and digital production.`,
+        duration: '4+ business days',
+
+        details_sub:
+          'The guidelines ensure brand integrity and standardize the use of visual elements across all communication levels. The development of Brand Guidelines is a key part of comprehensive work in creating',
+        note_sub: {
+          note_links: [
+            { text: 'Corporate identity', url: '/services/corporate-identity' },
+            { text: 'Product identity', url: '/services/product-identity' },
+            {
+              text: 'Personal identity',
+              url: '/services/personal-identity',
+            },
+          ],
+        },
+      },
     ],
   },
   {
     href: '/services/ui-ux',
     label: 'UI/UX',
-    description: `Designing user interfaces and experiences that prioritize usability, aesthetics, and user satisfaction.`,
+    description: `UI/UX design focuses on creating convenient, functional, and visually refined digital products. This includes the development of landing pages, corporate websites, e‑commerce platforms, mobile, and web applications tailored to the brand's goals.`,
     steps: [
-      // Add specific steps for UI/UX here
+      {
+        title: 'Research and Analysis',
+        details: `Assessment of the target audience, competitive environment, and industry trends. Formulating business objectives and defining functional requirements for further development.`,
+        duration: '5+ business days',
+      },
+      {
+        title: 'Wireframing and User Flow',
+        details: `Creation of wireframes for key screens and user flow diagrams, defining navigation logic and user experience.`,
+        duration: '10+ business days',
+      },
+      {
+        title: 'Content and Copywriting',
+        details: `Creation and integration of content (text, images, videos). Adapting materials for devices and platforms while considering the brand's concept. Developing text content and forming media assets.`,
+        duration: '12+ business days',
+      },
+      {
+        title: 'Interface Design Development',
+        details: `Designing key screens and product pages, including the homepage, internal templates, forms, and interface elements. Designing with the brand's visual characteristics, functionality, and user convenience in mind. This includes responsive design, dynamic content animation, and screen transitions.`,
+        duration: '20+ business days',
+      },
+      {
+        title: 'Development and Integration',
+        details: `Implementing UI/UX design into the product, including responsive layout and programming, using advanced technologies to create a functional digital product.`,
+        duration: '25+ business days',
+      },
+      {
+        title: 'Testing, Optimization, and Deployment',
+        details: `Testing on various devices to identify functional and operational defects. System optimization, error correction, and content finalization. Deploying the product on target platforms with ensured stable performance.`,
+        duration: '10+ business days',
+      },
+      {
+        title: 'Post-Launch Support',
+        details: `Providing technical support after the product launch: monitoring, identifying and fixing errors, optimizing functionality and performance based on analytics and user feedback. Adapting the product to changing requirements and continuous improvement.`,
+      },
     ],
   },
   {
     href: '/services/promo-design',
     label: 'Key Visual',
-    description: `Creating promotional designs that effectively convey the brand’s message and engage the target audience.`,
+    description: `The Key Visual strengthens the brand identity, expressing its uniqueness through visual elements and creating a unified concept for all advertising materials. The development of the key visual image complements the existing identity, enhancing brand recognition and maintaining consistency across all communication channels.`,
     steps: [
-      // Add specific steps for Key Visual here
+      {
+        title: 'Research and Analysis',
+        details: `Market research, target audience analysis, and competitor evaluation. Identifying audience needs and analyzing marketing trends. The results form the basis for creating a unique visual identity that reinforces the brand's positioning.`,
+        duration: '7+ business days',
+      },
+      {
+        title: 'Strategy and Concept',
+        details: `Development of the strategic foundation and key message that reflects the brand's values. Creation of a creative concept based on unique metaphors to effectively convey the core ideas.`,
+        duration: '10+ business days',
+      },
+      {
+        title: 'Key Visual Development',
+        details: `Creation of a visual image that complements the existing brand identity and strengthens its strategic message, forming a cohesive style that supports the brand’s perception.`,
+        duration: '12+ business days',
+        revisions: '3 options, 1 rounds of revisions',
+      },
+      {
+        title: 'Adaptation and Preparation of Materials',
+        details: `Adaptation of the Key Visual for various formats and communication channels: digital media, outdoor advertising, print materials, events, and other communications. Preparation of source files for use across all platforms, taking into account the requirements of each format.`,
+        duration: '5+ business days',
+      },
     ],
   },
   {
     href: '/services/content-design',
     label: 'Content design',
-    description: `Crafting visually appealing and engaging content that aligns with the brand’s identity and goals.`,
+    description: `Creating unified content for all platforms and social networks, forming a system of materials that ensures brand identity. Designing profiles, posts, stories, highlights, and other formats in accordance with the brand's identity.`,
     steps: [
-      // Add specific steps for Content Design here
+      {
+        title: 'Analysis and Concept Formation',
+        details: `Researching the brand, its audience, and competitive landscape. Defining key goals, selecting social networks and platforms for communication. Developing a visual concept that strengthens the brand identity, taking platform specifics into account.`,
+        duration: '7+ business days',
+      },
+      {
+        title: 'Creative Development',
+        details: `Creating content in the unified brand style, ensuring recognition across all channels. Forming a content system with different types of materials. Designing profiles, posts, stories, highlights, and other formats that maintain the visual unity of the brand.`,
+        duration: '10+ business days',
+        revisions: '2 options, 1 rounds of revisions',
+      },
+      {
+        title: 'Content Adaptation and Preparation',
+        details: `Adapting content to the requirements of social networks and platforms. Preparing source files and templates according to technical specifications.`,
+        duration: '5+ business days',
+      },
     ],
   },
 ]

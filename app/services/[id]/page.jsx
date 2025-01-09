@@ -110,6 +110,27 @@ const ServiceDetails = () => {
                       </p>
                     )}
                   </div>
+                  {step.details_sub && (
+                    <p className='text-text 3xl:text-[1.625rem] 3xl:leading-[2.5rem] text-[1rem] leading-[1.625rem] whitespace-pre-line pt-6'>
+                      {step.details_sub + '\n'}
+
+                      {step.note_sub &&
+                        step.note_sub?.note_links.map((link, index) => (
+                          <React.Fragment key={index}>
+                            <Link
+                              href={link.url}
+                              target='_blank'
+                              rel='noopener noreferrer'
+                              className='text-secondary underline'
+                            >
+                              {link.text}
+                            </Link>
+                            {index < step.note_sub.note_links.length - 1 &&
+                              ', '}
+                          </React.Fragment>
+                        ))}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

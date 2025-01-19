@@ -7,7 +7,7 @@ export default function ContactForm({
   selectedBranding,
   btnBgColor = 'bg-gray-title',
   btnTextColor = 'text-black',
-  inputTextColor = 'text-light-gray',
+  inputTextColor = '',
 }) {
   const [formData, setFormData] = useState({
     name: '',

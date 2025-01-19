@@ -119,7 +119,7 @@ export default function ContactForm({
   }
 
   return (
-    <div className='flex flex-col items-start justify-center w-full 3xl:w-[500px] 2lg:w-[300px] 4sm:w-[270px] 3sm:w-[200px] ml-4 max-7md:pr-5'>
+    <div className='flex flex-col items-start justify-center w-full 3xl:w-[500px] 2lg:w-[300px] 4sm:w-[270px] 3sm:w-[200px] ml-4 '>
       <form
         onSubmit={handleSubmit}
         className='w-full flex flex-col gap-6 3xl:text-[1.563rem] text-[0.938rem] 3xl:leading-[2.375rem] leading-6 form-[autocomplete="off"]'

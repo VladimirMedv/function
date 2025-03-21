@@ -3,8 +3,8 @@ import Image from 'next/image'
 export default function Avatar() {
   return (
     <Image
-      src='/images/ava_2.jpg'
-      alt='Fëdor Beltugov Avatar'
+      src='/images/ava_2.webp'
+      alt='Ivan Ivanov Avatar'
       width={220}
       height={220}
       className='

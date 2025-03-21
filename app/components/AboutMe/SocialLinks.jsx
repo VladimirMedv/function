@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const socialLinks = [
   {
-    href: 'https://wa.me/79264266855',
+    href: 'https://wa.me/111111',
     ariaLabel: 'WhatsApp',
     icon: {
       normal: '/images/icons/icon_whatsapp_w.svg',
@@ -11,7 +11,7 @@ const socialLinks = [
     },
   },
   {
-    href: 'https://t.me/Fedor_Beltugov',
+    href: 'https://t.me/name_owner',
     ariaLabel: 'Telegram',
     icon: {
       normal: '/images/icons/icon_telegram_w.svg',
@@ -19,7 +19,7 @@ const socialLinks = [
     },
   },
   {
-    href: 'https://www.linkedin.com/in/fedor-beltugov-a6896a37/',
+    href: 'https://www.linkedin.com/in/name/',
     ariaLabel: 'LinkedIn',
     icon: {
       normal: '/images/icons/icon_linkedin_w.svg',

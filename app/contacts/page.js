@@ -1,7 +1,7 @@
 import React from 'react'
 
 function ContactUs() {
-  return <div>Contact Us</div>
+  return <></>
 }
 
 export default ContactUs

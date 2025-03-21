@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const socialLinks = [
   {
-    href: 'https://www.instagram.com/beltugov/',
+    href: 'https://www.instagram.com/name_owner/',
     ariaLabel: 'Instagram',
     icon: {
       normal: '/images/icons/icon_instagram_',
@@ -11,7 +11,7 @@ const socialLinks = [
     },
   },
   {
-    href: 'https://www.behance.net/fbeltugov',
+    href: 'https://www.behance.net/name_owner',
     ariaLabel: 'Behance',
     icon: {
       normal: '/images/icons/icon_behance_',
@@ -19,7 +19,7 @@ const socialLinks = [
     },
   },
   {
-    href: 'https://dribbble.com/fbeltugov',
+    href: 'https://dribbble.com/name_owner',
     ariaLabel: 'Dribbble',
     icon: {
       normal: '/images/icons/icon_dribbble_',

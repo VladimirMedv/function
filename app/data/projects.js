@@ -12,12 +12,12 @@ const projects = [
         'This is a high-level description of Project 1.', // Краткое описание
         'More details about Project 1, its goals, and the process.', // Дополнительное описание
       ],
-      mainPhoto: '/images/projects/project-1/main.jpg', // Главное фото (может быть тем же)
+      mainPhoto: '/images/projects/cover_arshaluys.jpg', // Главное фото (может быть тем же)
       video: '/videos/projects/project-1/presentation.mp4', // Видео-материал (если есть)
       gallery: [
-        '/images/projects/project-1/gallery-1.jpg',
-        '/images/projects/project-1/gallery-2.jpg',
-        '/images/projects/project-1/gallery-3.jpg',
+        '/images/projects/cover_arshaluys.jpg',
+        '/images/projects/cover_arshaluys.jpg',
+        '/images/projects/cover_arshaluys.jpg',
       ], // Галерея фото
     },
   },
@@ -34,12 +34,12 @@ const projects = [
         'This is a high-level description of Project 1.', // Краткое описание
         'More details about Project 1, its goals, and the process.', // Дополнительное описание
       ],
-      mainPhoto: '/images/projects/project-1/main.jpg', // Главное фото (может быть тем же)
+      mainPhoto: '/images/projects/cover_who.jpg', // Главное фото (может быть тем же)
       video: '/videos/projects/project-1/presentation.mp4', // Видео-материал (если есть)
       gallery: [
-        '/images/projects/project-1/gallery-1.jpg',
-        '/images/projects/project-1/gallery-2.jpg',
-        '/images/projects/project-1/gallery-3.jpg',
+        '/images/projects/cover_who.jpg',
+        '/images/projects/cover_who.jpg',
+        '/images/projects/cover_who.jpg',
       ], // Галерея фото
     },
   },
@@ -56,12 +56,12 @@ const projects = [
         'This is a high-level description of Project 1.', // Краткое описание
         'More details about Project 1, its goals, and the process.', // Дополнительное описание
       ],
-      mainPhoto: '/images/projects/project-1/main.jpg', // Главное фото (может быть тем же)
+      mainPhoto: '/images/projects/cover_smartstroy.jpg', // Главное фото (может быть тем же)
       video: '/videos/projects/project-1/presentation.mp4', // Видео-материал (если есть)
       gallery: [
-        '/images/projects/project-1/gallery-1.jpg',
-        '/images/projects/project-1/gallery-2.jpg',
-        '/images/projects/project-1/gallery-3.jpg',
+        '/images/projects/cover_smartstroy.jpg',
+        '/images/projects/cover_smartstroy.jpg',
+        '/images/projects/cover_smartstroy.jpg',
       ], // Галерея фото
     },
   },
@@ -78,11 +78,11 @@ const projects = [
         'This project focused on developing a strong visual identity.',
         'Comprehensive branding materials were created for the client.',
       ],
-      mainPhoto: '/images/projects/project-2/main.jpg',
+      mainPhoto: '/images/projects/cover_caspian-gold.jpg',
       video: null, // Если видео отсутствует
       gallery: [
-        '/images/projects/project-2/gallery-1.jpg',
-        '/images/projects/project-2/gallery-2.jpg',
+        '/images/projects/cover_caspian-gold.jpg',
+        '/images/projects/cover_caspian-gold.jpg',
       ],
     },
   },

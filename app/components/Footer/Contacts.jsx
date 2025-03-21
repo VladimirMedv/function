@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const socialLinks = [
   {
-    href: 'https://wa.me/79264266855',
+    href: 'https://wa.me/111111',
     ariaLabel: 'WhatsApp',
     label: 'WhatsApp',
     icon: {
@@ -12,7 +12,7 @@ const socialLinks = [
     },
   },
   {
-    href: 'https://t.me/Fedor_Beltugov',
+    href: 'https://t.me/name_owner',
     ariaLabel: 'Telegram',
     label: 'Telegram',
     icon: {

@@ -35,7 +35,7 @@ Function Design Studio — это демо сайт дизайнерской с�
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/your-username/function-design-studio.git](https://github.com/VladimirMedv/function.git
+git clone https://github.com/VladimirMedv/function.git
 ```
 
 2. Установите зависимости:

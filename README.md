@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Function Design Studio
 
-## Getting Started
+![Project Preview]([https://function.vercel.app/preview.jpg](https://portfolio-v2-ivory-rho.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FhFbs4ymL%2Ffunction-1.png&w=1920&q=75)) <!-- Замените на актуальный URL превью -->
 
-First, run the development server:
+## О проекте
 
+Function Design Studio — это демо сайт дизайнерской студии, специализирующейся на создании функциональных и эстетичных бренд-идентичностей. Студия помогает клиентам решать бизнес-задачи и выходить на новые рынки с помощью уникальных дизайн-решений.
+
+Данный проект представляет собой веб-сайт студии, разработанный по их же дизайну из Figma, с полной адаптацией под различные устройства.
+
+## Демо
+
+👉 [Посмотреть живую демонстрацию](https://function.vercel.app/)
+
+## Технологический стек
+
+- **Frontend Framework**: Next.js
+- **UI Library**: React
+- **Styling**: Tailwind CSS
+- **Icons**: React Icons
+- **Language**: TypeScript
+- **Markup**: HTML5
+- **Styling**: CSS3
+- **Interactivity**: JavaScript
+
+## Особенности
+
+- Полностью адаптивный дизайн (mobile-first подход)
+- Оптимизированная производительность
+- Современный и минималистичный UI
+- Интерактивные элементы для улучшения пользовательского опыта
+- Типизированный код с TypeScript
+
+## Установка и запуск
+
+1. Клонируйте репозиторий:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/function-design-studio.git](https://github.com/VladimirMedv/function.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Установите зависимости:
+```bash
+npm install
+# или
+yarn install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. Запустите development сервер:
+```bash
+npm run dev
+# или
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Откройте [http://localhost:3000](http://localhost:3000) в браузере.
 
-## Learn More
+## Скрипты
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `dev`: Запуск development сервера
+- `build`: Сборка production версии
+- `start`: Запуск production сервера
+- `lint`: Проверка кода с ESLint

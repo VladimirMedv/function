@@ -1,6 +1,6 @@
 # Function Design Studio
 
-![Project Preview]([https://function.vercel.app/preview.jpg](https://portfolio-v2-ivory-rho.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FhFbs4ymL%2Ffunction-1.png&w=1920&q=75)) <!-- Замените на актуальный URL превью -->
+![Project Preview](https://portfolio-v2-ivory-rho.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FhFbs4ymL%2Ffunction-1.png&w=1920&q=75)
 
 ## О проекте
 

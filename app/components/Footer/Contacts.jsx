@@ -27,10 +27,10 @@ function Contacts({ theme = 'w' }) {
     <div className='flex flex-col items-center justify-center'>
       {/* Email link */}
       <Link
-        href='mailto:hello@functionaldesign.studio'
+        href='mailto:hello@function.stud'
         className='3xl:text-[6.563rem] 2lg:text-[5.125rem] 7md:text-[3.313rem]  4sm:text-[2rem] 3sm:text-[1.5rem] underline cursor-pointer hover:text-secondary transition-colors duration-300 -tracking-[0.03em] font-medium 3xl:leading-[131px] 2lg:leading-[82px] 7md:leading-[66px] leading-[42px]'
       >
-        hello@functionaldesign.studio
+        hello@functionexemple.st
       </Link>
 
       {/* Social links */}
